@@ -7,7 +7,7 @@
     "serve": "http-server ./src",
     "prettier": "npx prettier . -w",
     "eslint": "npx eslint",
-    "format": "npx eslint-config-prettier ./src"
+    "prepare": "husky"
   },
   "keywords": [
     "performance",
@@ -24,6 +24,7 @@
     "eslint": "^9.8.0",
     "globals": "^15.9.0",
     "http-server": "^14.1.1",
+    "husky": "^9.1.4",
     "prettier": "^3.3.3"
   },
   "type": "module"
