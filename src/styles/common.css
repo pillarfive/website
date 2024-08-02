@@ -1,0 +1,26 @@
+:root {
+  /* Main colors */
+  --jet: #333333;
+  --charcoal: #2c3e50;
+  --white-smoke: #f5f5f5;
+  --pigment-green: #27ae60;
+  --vermilion: #e74c3c;
+}
+
+body {
+  background-color: var(--white-smoke);
+  color: var(--jet);
+}
+
+a {
+  color: var(--charcoal);
+}
+
+.button {
+  background-color: var(--pigment-green);
+  color: white;
+}
+
+.alert {
+  color: var(--vermilion);
+}

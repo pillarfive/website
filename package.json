@@ -1,0 +1,22 @@
+{
+  "name": "website",
+  "version": "0.0.1",
+  "description": "performance, accessibility, sustainability, security, and ethics",
+  "main": "index.js",
+  "scripts": {
+    "serve": "http-server ./src"
+  },
+  "keywords": [
+    "performance",
+    "accessibility",
+    "sustainability",
+    "security",
+    "and",
+    "ethics"
+  ],
+  "author": "JP and Dan",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
