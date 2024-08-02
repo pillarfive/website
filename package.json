@@ -27,6 +27,7 @@
     "http-server": "^14.1.1",
     "husky": "^9.1.4",
     "prettier": "^3.3.3",
+    "puppeteer": "^22.15.0",
     "stylelint": "^16.8.1",
     "stylelint-config-standard": "^36.0.1"
   },
