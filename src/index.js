@@ -1,1 +1,3 @@
-console.log("Hello Venus!")
+;(async () => {
+  console.log('Hello Venus!')
+})()
