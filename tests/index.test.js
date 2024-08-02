@@ -1,7 +1,7 @@
 import puppeteer from 'puppeteer'
 import { config } from './config.js'
 
-(async() => {
+;(async () => {
   const browser = await puppeteer.launch({
     headless: false,
   })
