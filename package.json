@@ -2,7 +2,6 @@
   "name": "website",
   "version": "0.0.1",
   "description": "performance, accessibility, sustainability, security, and ethics",
-  "main": "index.js",
   "scripts": {
     "prettier": "npx prettier . -w",
     "eslint": "npx eslint",
@@ -10,7 +9,7 @@
     "csslint": "npx stylelint src/**/*.css --fix",
     "test": "node tests/index.test.js",
     "start": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.js "
+    "build": "parcel build src/index.html"
   },
   "keywords": [
     "performance",
