@@ -1,26 +1,18 @@
 :root {
   /* Main colors */
-  --jet: #333;
-  --charcoal: #2c3e50;
-  --white-smoke: #f5f5f5;
-  --pigment-green: #27ae60;
-  --vermilion: #e74c3c;
+  --fg-colour: #333;
+  --bg-colour: #f5f5f5;
+  --d: 0.5rem;
 }
 
 body {
-  background-color: var(--white-smoke);
-  color: var(--jet);
+  background-color: var(--bg-colour);
+  color: var(--fg-colour);
 }
 
 a {
-  color: var(--charcoal);
-}
-
-.button {
-  background-color: var(--pigment-green);
-  color: white;
-}
-
-.alert {
-  color: var(--vermilion);
+  color: var(--fg-colour);
+  text-decoration: none;
+  padding-bottom: calc(var(--d) * 0.25);
+  border-bottom: 1px solid var(--fg-colour);
 }
