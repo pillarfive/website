@@ -1,4 +1,3 @@
 npm run prettier
 npm run eslint
 npm run csslint
-git add .
