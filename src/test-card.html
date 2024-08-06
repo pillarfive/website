@@ -4,41 +4,112 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/common.css" />
+    <link rel="stylesheet" href="./styles/test-card.css" />
     <title>Test Card</title>
   </head>
   <body>
-    <p>This is a paragraph.</p>
-    <h1>This is an H1 header.</h1>
-    <p>This is a paragraph.</p>
-    <div>This is a DIV</div>
-    <h2>This is an H2 header.</h2>
-    <p>This is a paragraph.</p>
-    <div>This is a DIV</div>
-    <h3>This is an H3 header.</h3>
-    <p>This is a paragraph.</p>
-    <div>This is a DIV</div>
-    <h4>This is an H4 header.</h4>
-    <p>This is a paragraph.</p>
-    <div>This is a DIV</div>
-    <h5>This is an H5 header.</h5>
-    <p>This is a paragraph.</p>
-    <div>This is a DIV</div>
-    <h6>This is an H6 header.</h6>
-    <p>This is a paragraph.</p>
-    <div>This is a DIV</div>
-    <div>
+    <header>
+      <h1>This is an h1 header inside a header</h1>
+      <nav>
+        <a href="./sitemap.html">human-readable sitemap in nav</a>
+      </nav>
+    </header>
+    <main>
+      <h2>This is an h2 header inside a main</h2>
+      <h3>This is an h3 header</h3>
+      <h4>This is an h4 header</h4>
+      <h5>This is an h5 header</h5>
+      <h6>This is an h6 header</h6>
+      <p>This is a paragraph.</p>
+      <div>This is a div</div>
       <blockquote cite="https://www.nngroup.com/videos/jakobs-law-internet-ux/">
-        <p>Users spend time on other sites.</p>
+        <p>This is a blockquote.</p>
       </blockquote>
       <p>
         <cite
           ><a
             href="https://www.nngroup.com/videos/jakobs-law-internet-ux/"
+            rel="noopener"
             target="_blank"
-            >Jakob's Law of Internet User Experience</a
+            >This is a link in a cite opening in a new tab</a
           ></cite
         >
       </p>
-    </div>
+      <div><span>This is a span in a div</span></div>
+      <a href="https://www.example.com">This is a standalone link</a>
+      <p>
+        <a href="https://www.the-public-good.com">This is a link in a p</a>
+      </p>
+      <div><abbr title="Mozilla Developer Network">MDN</abbr> abbreviation</div>
+      <section>
+        <article>
+          <h2>h2 header</h2>
+          <p>p inside an article inside a section</p>
+          <aside>aside inside an article</aside>
+        </article>
+      </section>
+      <p>
+        <code>This is code inside a p</code>
+      </p>
+      <ul>
+        <li>li 1 in ul</li>
+        <li>li 2 in ul</li>
+        <li></li>
+      </ul>
+      <dl>
+        <dt>dt 1 in dl</dt>
+        <dd>dd 1 in dl</dd>
+        <dt>dt 2 in dl</dt>
+        <dd>dd 2 in dl</dd>
+      </dl>
+      <form action="">
+        <fieldset>
+          <legend>legend</legend>
+          <label for="input-text">Label for the text input</label>
+          <input id="input-text" name="input-text" type="text" />
+          <button type="submit">
+            This is a submit button inside a fieldset inside a form
+          </button>
+        </fieldset>
+      </form>
+      <div class="flex-row">
+        <div class="square border flex-row is-fg">fg colour</div>
+        <div class="square border flex-row is-bg">bg colour</div>
+      </div>
+      <figure>
+        <img
+          src="https://solar.lowtechmagazine.com/2023/11/plastic-waste-in-the-fuel-tank/images/dithers/intro-plastic-waste-in-fuel-tank-gijs-schalkx_dithered.png"
+          alt="Image: This car drives on plastic. Image credit: Gijs Schalkx."
+        />
+        <figcaption>
+          figcaption:
+          <a
+            href="https://solar.lowtechmagazine.com/2023/11/plastic-waste-in-the-fuel-tank/"
+            >Plastic Waste in the Fuel Tank?</a
+          >
+        </figcaption>
+      </figure>
+      <details>
+        <summary>Details</summary>
+        <p>Something small enough to escape casual notice.</p>
+      </details>
+      <label for="ice-cream-choice">Choose a flavor:</label>
+      <input
+        list="ice-cream-flavors"
+        id="ice-cream-choice"
+        name="ice-cream-choice"
+      />
+
+      <datalist id="ice-cream-flavors">
+        <option value="Chocolate"></option>
+        <option value="Coconut"></option>
+        <option value="Mint"></option>
+        <option value="Strawberry"></option>
+        <option value="Vanilla"></option>
+      </datalist>
+    </main>
+    <footer>
+      <p>footer in p</p>
+    </footer>
   </body>
 </html>

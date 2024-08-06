@@ -1,0 +1,12 @@
+.square {
+  width: calc(10 * var(--d));
+  height: calc(10 * var(--d));
+}
+
+:is(.is-fg) {
+  color: var(--fg-colour);
+}
+
+:is(.is-bg) {
+  background-color: var(--bg-colour);
+}
