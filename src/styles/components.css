@@ -4,4 +4,28 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: var(--d);
+}
+
+.border {
+  padding: var(--d);
+  border: 1px solid var(--border-colour);
+  border-radius: var(--radius);
+}
+
+.square {
+  flex: 1 1 calc(20% - calc(var(--d) * 2)); /* Adjusts the box width based on the container width */
+  min-width: calc(var(--d) * 12);
+  max-width: calc(var(--d) * 24);
+  aspect-ratio: 1; /* Makes sure the boxes are always square */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--d);
+}
+
+.card {
+  aspect-ratio: 2;
 }

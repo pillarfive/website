@@ -1,16 +1,13 @@
 /* test-card page */
 
-.square {
-  width: calc(var(--w) * 10);
-  height: calc(var(--w) * 10);
-  min-width: calc(var(--d) * 12);
-  min-height: calc(var(--d) * 12);
-}
-
 :is(.is-fg) {
   color: var(--fg-colour);
 }
 
 :is(.is-bg) {
   background-color: var(--bg-colour);
+}
+
+:is(.is-border) {
+  background-color: var(--border-colour);
 }
