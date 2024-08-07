@@ -30,8 +30,9 @@
   border-radius: var(--radius);
 }
 
-:is(button, input, aside, fieldset, figure)
-  + :is(button, input, aside, fieldset, figure) {
+:is(button, input, aside, fieldset, figure, h2, h3, h4)
+  + :is(button, input, aside, fieldset, figure, details, label)
+  + :is(input) {
   margin-top: 0;
 }
 
@@ -50,11 +51,12 @@
   text-decoration: none;
 }
 
-:is(main, dd, li) {
+:is(main, dd, li, th, td) {
   padding: var(--d);
+  text-align: left;
 }
 
-:is(figcaption) {
+:is(figcaption, caption) {
   margin: var(--d) 0;
 }
 
