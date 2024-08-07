@@ -6,6 +6,8 @@
   --d: 0.5rem;
 }
 
+/* rules */
+
 * {
   accent-color: var(--fg-colour);
 }
@@ -23,6 +25,11 @@
   padding: var(--d);
   border-radius: calc(0.5 * var(--d));
   border: 1px solid var(--fg-border-colour);
+}
+
+:is(button, input, aside, fieldset, figure, .border)
+  + :is(button, input, aside, fieldset, figure, .border) {
+  margin-top: 0;
 }
 
 :is(a, a:visited) {
@@ -44,11 +51,11 @@
   padding: var(--d);
 }
 
-.flex-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+:is(figcaption) {
+  margin: var(--d) 0;
 }
+
+/* html elements */
 
 abbr {
   border-bottom-style: dashed;

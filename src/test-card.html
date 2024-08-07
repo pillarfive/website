@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/common.css" />
+    <link rel="stylesheet" href="./styles/components.css" />
     <link rel="stylesheet" href="./styles/test-card.css" />
     <title>Test Card</title>
   </head>
@@ -11,7 +12,7 @@
     <header>
       <h1>This is an h1 header inside a header</h1>
       <nav>
-        <a href="./sitemap.html">human-readable sitemap in nav</a>
+        <a href="./sitemap.html">Link to human-readable sitemap in nav</a>
       </nav>
     </header>
     <main>
@@ -41,12 +42,14 @@
         <a href="https://www.the-public-good.com">This is a link in a p</a>
       </p>
       <div><abbr title="Mozilla Developer Network">MDN</abbr> abbreviation</div>
+      <article>
+        <h2>h2 article header</h2>
+        <p>p inside an article</p>
+        <aside>aside inside an article</aside>
+      </article>
       <section>
-        <article>
-          <h2>h2 header</h2>
-          <p>p inside an article inside a section</p>
-          <aside>aside inside an article</aside>
-        </article>
+        <h2>h2 section header</h2>
+        <p>p inside a section</p>
       </section>
       <p>
         <code>This is code inside a p</code>
@@ -99,14 +102,7 @@
         id="ice-cream-choice"
         name="ice-cream-choice"
       />
-
-      <datalist id="ice-cream-flavors">
-        <option value="Chocolate"></option>
-        <option value="Coconut"></option>
-        <option value="Mint"></option>
-        <option value="Strawberry"></option>
-        <option value="Vanilla"></option>
-      </datalist>
+      `
     </main>
     <footer>
       <p>footer in p</p>
