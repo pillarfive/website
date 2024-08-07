@@ -1,8 +1,7 @@
 :root {
-  --fg-colour: #333;
+  --fg-colour: #232323;
   --border-colour: #aaa;
-  --bg-colour: #f5f5f5;
-  --bg-main-colour: #fff;
+  --bg-colour: #fff;
   --radius: calc(0.5 * var(--d));
   --d: 0.5rem;
   --w: 100vw / 100;
@@ -31,7 +30,9 @@
 }
 
 :is(button, input, aside, fieldset, figure, h2, h3, h4)
-  + :is(button, input, aside, fieldset, figure, details, label)
+  + :is(button, input, aside, fieldset, figure, details, table),
+:is(button, input, aside, fieldset, figure, h2, h3, h4)
+  + :is(label)
   + :is(input) {
   margin-top: 0;
 }
@@ -60,20 +61,18 @@
   margin: var(--d) 0;
 }
 
-/* specific selectors */
+/* element selectors */
 
 .body {
-  max-width: 60ch;
+  max-width: 75ch;
   margin: auto;
   padding: 0 var(--d);
   background-color: var(--bg-colour);
-  color: var(--fg-colour);
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
 }
 
 .main {
-  min-height: calc(var(--h) * 100);
-  background: var(--bg-main-colour);
+  min-height: calc(var(--h) * 100 - calc(var(--d) * 18));
 }
 
 /* html elements */
@@ -86,7 +85,21 @@ aside {
   text-align: center;
 }
 
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-size: 1rem;
+}
+
 img {
   max-width: 100%;
   height: auto;
+}
+
+p {
+  color: var(--fg-colour);
+  font-size: 1.2rem;
+  line-height: 1.8;
 }
