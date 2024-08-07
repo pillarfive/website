@@ -1,6 +1,10 @@
+/* test-card page */
+
 .square {
-  width: calc(10 * var(--d));
-  height: calc(10 * var(--d));
+  width: calc(var(--w) * 10);
+  height: calc(var(--w) * 10);
+  min-width: calc(var(--d) * 12);
+  min-height: calc(var(--d) * 12);
 }
 
 :is(.is-fg) {

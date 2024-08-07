@@ -4,12 +4,14 @@
   --bg-colour: #f5f5f5;
   --bg-main-colour: #fff;
   --d: 0.5rem;
+  --w: 100vw / 100;
+  --h: 100vh / 100;
 }
 
 /* rules */
 
 * {
-  accent-color: var(--fg-colour);
+  box-sizing: border-box;
 }
 
 *:empty:not(input, img) {
@@ -20,15 +22,15 @@
   margin: calc(var(--d) * 2) 0;
 }
 
-:is(button, input, aside, fieldset, figure, .border) {
+:is(button, input, aside, fieldset, figure) {
   margin: calc(var(--d) * 2) 0;
   padding: var(--d);
   border-radius: calc(0.5 * var(--d));
   border: 1px solid var(--fg-border-colour);
 }
 
-:is(button, input, aside, fieldset, figure, .border)
-  + :is(button, input, aside, fieldset, figure, .border) {
+:is(button, input, aside, fieldset, figure)
+  + :is(button, input, aside, fieldset, figure) {
   margin-top: 0;
 }
 
@@ -75,7 +77,8 @@ body {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 main {
