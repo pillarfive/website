@@ -9,7 +9,8 @@
     "csslint": "npx stylelint src/**/*.css --fix",
     "test": "node tests/index.test.js",
     "start": "parcel ./src/index.html",
-    "build": "parcel build src/index.html --dist-dir dist"
+    "build": "parcel build src/index.html --dist-dir dist",
+    "ibm": "npx achecker ./src"
   },
   "keywords": [
     "performance",
@@ -23,6 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "@eslint/js": "^9.8.0",
+    "accessibility-checker": "^3.1.74",
     "eslint": "^9.8.0",
     "globals": "^15.9.0",
     "husky": "^9.1.4",

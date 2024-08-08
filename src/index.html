@@ -11,11 +11,34 @@
     <header>
       <h1>Welcome to Pillar5</h1>
     </header>
-    <main class="main">All about…</main>
+    <main class="main">
+      <p>
+        The Test card page is pre-rendered using the
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API"
+          >Speculation Rules API</a
+        >.
+      </p>
+      <p>
+        <a href="./test-card.html">Link to our Test card.</a>
+      </p>
+      <p>
+        <a href="./components.html">Link to our Design system.</a>
+      </p>
+    </main>
     <footer>
       <nav>
         <a href="./sitemap.html">Link to human-readable sitemap in nav</a>
       </nav>
     </footer>
+    <script type="speculationrules">
+      {
+        "prerender": [
+          {
+            "urls": ["test-card.html"]
+          }
+        ]
+      }
+    </script>
   </body>
 </html>
