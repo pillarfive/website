@@ -5,7 +5,8 @@
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.fixAll.stylelint": "explicit"
+    "source.fixAll.stylelint": "explicit",
+    "deque-systems.vscode-axe-linter": "explicit"
   },
   "editor.formatOnSave": true,
   "editor.formatOnType": false
