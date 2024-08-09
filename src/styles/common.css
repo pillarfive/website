@@ -18,7 +18,7 @@
   display: none;
 }
 
-:is(nav, p) {
+:is(p) {
   margin: calc(var(--d) * 2) 0;
 }
 
@@ -71,10 +71,6 @@
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
 }
 
-.main {
-  min-height: calc(var(--h) * 100 - calc(var(--d) * 18));
-}
-
 /* html elements */
 
 abbr {
@@ -96,6 +92,10 @@ button {
 img {
   max-width: 100%;
   height: auto;
+}
+
+nav {
+  margin: calc(var(--d) * 8) 0;
 }
 
 p {
