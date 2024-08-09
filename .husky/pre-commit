@@ -1,3 +1,23 @@
+#!/usr/bin/env sh
+
+# Store the list of files that are about to be committed
+files=$(git diff --cached --name-only --diff-filter=ACM)
+
+# Run the linters and pretifiers 
 npm run prettier
 npm run eslint
 npm run csslint
+
+# Stage only the files that were originally staged and modified by linters
+for file in $files; do
+    if git diff --quiet "$file"; then
+        # File wasn't modified by linters, do nothing
+        :
+    else
+        # File was modified by linters, stage it
+        git add "$file"
+    fi
+done
+
+# If there are no changes, exit successfully
+git diff --cached --quiet || exit 0

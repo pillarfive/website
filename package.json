@@ -4,7 +4,7 @@
   "description": "performance, accessibility, sustainability, security, and ethics",
   "scripts": {
     "prettier": "npx prettier . -w",
-    "eslint": "npx eslint",
+    "eslint": "npx eslint --fix",
     "prepare": "husky",
     "csslint": "npx stylelint src/**/*.css --fix",
     "test": "node tests/index.test.js",
