@@ -5,7 +5,6 @@
   "scripts": {
     "prettier": "npx prettier . -w",
     "eslint": "npx eslint",
-    "prepare": "husky",
     "csslint": "npx stylelint src/**/*.css --fix",
     "test": "node tests/index.test.js",
     "start": "parcel ./src/index.html",
