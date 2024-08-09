@@ -7,10 +7,14 @@
     "eslint": "npx eslint",
     "csslint": "npx stylelint src/**/*.css --fix",
     "test": "node tests/index.test.js",
-    "start": "parcel ./src/index.html",
-    "build": "parcel build src/index.html --dist-dir dist",
+    "start": "parcel",
+    "build": "parcel build --dist-dir dist",
     "ibm": "npx achecker ./src"
   },
+  "source": [
+    "./src/index.html",
+    "./src/test-card-submit.html"
+  ],
   "keywords": [
     "performance",
     "accessibility",
@@ -37,8 +41,5 @@
     "main": {
       "optimize": true
     }
-  },
-  "source": [
-    "src/**/*.html"
-  ]
+  }
 }
