@@ -1,0 +1,12 @@
+.is-fg {
+  color: var(--fg-colour);
+}
+
+.is-bg {
+  background-color: var(--bg-colour);
+}
+
+.is-border {
+  background-color: var(--border-colour);
+}
+/*# sourceMappingURL=test-card-submit.56ad390a.css.map */

@@ -1,0 +1,95 @@
+:root {
+  --fg-colour: #232323;
+  --border-colour: #aaa;
+  --bg-colour: #fff;
+  --radius: calc(.5 * var(--d));
+  --d: .5rem;
+  --w: 100vw / 100;
+  --h: 100vh / 100;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:empty:not(input, img) {
+  display: none;
+}
+
+:is(p) {
+  margin: calc(var(--d) * 2) 0;
+}
+
+:is(*):not(h1, h2, h3, h4, h5, h6, code) {
+  font-size: 1.2rem;
+}
+
+:is(button, input, aside, fieldset, figure) {
+  margin: calc(var(--d) * 2) 0;
+  padding: var(--d);
+  border: 1px solid var(--border-colour);
+  border-radius: var(--radius);
+}
+
+:is(button, input, aside, fieldset, figure, h2, h3, h4) + :is(button, input, aside, fieldset, figure, details, table), :is(button, input, aside, fieldset, figure, h2, h3, h4) + :is(label) + :is(input) {
+  margin-top: 0;
+}
+
+:is(a, a:visited) {
+  color: var(--fg-colour);
+}
+
+button:hover {
+  border-color: var(--fg-colour);
+  outline: none;
+}
+
+:is(a, abbr) {
+  border-bottom: 1px solid var(--fg-colour);
+  padding-bottom: calc(var(--d) * .25);
+  text-decoration: none;
+}
+
+:is(main, dd, li, th, td) {
+  padding: var(--d);
+  text-align: left;
+}
+
+:is(figcaption, caption) {
+  margin: var(--d) 0;
+}
+
+.body {
+  padding: 0 var(--d);
+  background-color: var(--bg-colour);
+  max-width: 75ch;
+  margin: auto;
+  font-family: PT Serif, Georgia, Times New Roman, Times, serif;
+}
+
+abbr {
+  border-bottom-style: dashed;
+}
+
+aside {
+  text-align: center;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+nav {
+  margin: calc(var(--d) * 8) 0;
+}
+
+p {
+  color: var(--fg-colour);
+  line-height: 1.8;
+}
+/*# sourceMappingURL=index.a94e7003.css.map */
