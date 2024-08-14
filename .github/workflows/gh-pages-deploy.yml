@@ -1,38 +1,45 @@
-name: Deploy to GitHub Pages
+name: Test
 
-# Trigger the workflow on push to the 'main' branch or 'gh-pages' branch
 on:
   push:
     branches:
-      - gh-pages
+      - main
+  pull_request:
+    branches:
+      - main
 
-# Define the jobs to run in the workflow
+env:
+  CI: true
+
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+  run:
+    name: Node ${{ matrix.node }} / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+        node:
+          - 16
+          - 18
+          - 20
 
     steps:
-      # Checkout the repository content
-      - name: Checkout code
+      - name: Clone repository
         uses: actions/checkout@v4
 
-      # Set up Node.js environment (if you're using Node.js)
-      - name: Set up Node.js
+      - name: Set Node.js version
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Specify the Node.js version you need
+          node-version: ${{ matrix.node }}
 
-      # Install dependencies (assuming a Node.js project with a package.json file)
-      - name: Install dependencies
-        run: npm install
+      - run: node --version
+      - run: npm --version
 
-      # Run the build command
-      - name: Run build
-        run: npm run build
+      - name: Install npm dependencies
+        run: npm install # switch to `ci` when Node.js 6.x is dropped
 
-      # Deploy the content of the /dist directory to GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/`@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+      - name: Run tests
+        run: npm test
