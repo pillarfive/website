@@ -16,7 +16,7 @@
       "    <header>",
       "      <h1>${3:Page header}</h1>",
       "    </header>",
-      "    <main class=\"main\">${4:Add new content here…}</main>",
+      "    <main class=\"main\"></main>",
       "    <footer>",
       "      <nav>",
       "        <a href=\"/src/sitemap.html\">Link to human-readable sitemap in nav</a>",
