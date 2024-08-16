@@ -11,7 +11,7 @@
     "start": "parcel && npm run static",
     "build": "parcel build --dist-dir dist --public-url /website && npm run static",
     "ibm": "npx achecker ./src",
-    "publish": "gh-pages -d dist"
+    "publish": "rm -rf dist && rm -rf .parcel-cache && npm run build && gh-pages -d dist"
   },
   "source": [
     "./src/index.html",
