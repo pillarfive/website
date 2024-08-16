@@ -23,7 +23,10 @@
         </li>
         <li>
           Create a new script in package.json
-          <code>"publish": "gh-pages -d dist"</code>
+          <code
+            >"rm -rf dist && rm -rf .parcel-cache && npm run build && gh-pages
+            -d dist"</code
+          >
         </li>
         <li>
           Update the public url to match the GitHub repository name
