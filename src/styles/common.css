@@ -18,19 +18,10 @@
   display: none;
 }
 
-:is(p, li, hr) {
-  margin: calc(var(--d) * 2) 0;
-}
+/* only supported in newer browsers */
 
 :is(*):not(h1, h2, h3, h4, h5, h6) {
   font-size: 1.1rem;
-}
-
-:is(button, input, aside, fieldset, figure) {
-  margin: calc(var(--d) * 2) 0;
-  padding: var(--d);
-  border: 1px solid var(--border-colour);
-  border-radius: var(--radius);
 }
 
 :is(button, input, aside, fieldset, figure, h2, h3, h4)
@@ -39,30 +30,6 @@
   + :is(label)
   + :is(input) {
   margin-top: 0;
-}
-
-:is(a, a:visited) {
-  color: var(--fg-colour);
-}
-
-:is(button:hover) {
-  border-color: var(--fg-colour);
-  outline: none;
-}
-
-:is(a, abbr) {
-  border-bottom: 1px solid var(--fg-colour);
-  padding-bottom: calc(var(--d) * 0.25);
-  text-decoration: none;
-}
-
-:is(dd, th, td, dt) {
-  padding: var(--d);
-  text-align: left;
-}
-
-:is(figcaption, caption) {
-  margin: var(--d) 0;
 }
 
 /* element selectors */
@@ -109,4 +76,46 @@ nav {
 p,
 li {
   line-height: 1.7;
+  margin: calc(var(--d) * 2) 0;
+}
+
+a,
+a:visited {
+  color: var(--fg-colour);
+}
+
+button,
+input,
+aside,
+fieldset,
+figure {
+  margin: calc(var(--d) * 2) 0;
+  padding: var(--d);
+  border: 1px solid var(--border-colour);
+  border-radius: var(--radius);
+}
+
+button:hover {
+  border-color: var(--fg-colour);
+  outline: none;
+}
+
+a,
+abbr {
+  border-bottom: 1px solid var(--fg-colour);
+  padding-bottom: calc(var(--d) * 0.25);
+  text-decoration: none;
+}
+
+dd,
+th,
+td,
+dt {
+  padding: var(--d);
+  text-align: left;
+}
+
+figcaption,
+caption {
+  margin: var(--d) 0;
 }
