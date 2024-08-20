@@ -1,5 +1,5 @@
 import puppeteer from 'puppeteer'
-import { config } from './config.js'
+import { config } from '../config.js'
 ;(async () => {
   const browser = await puppeteer.launch({
     headless: false,
@@ -7,7 +7,7 @@ import { config } from './config.js'
 
   const page = await browser.newPage()
 
-  await page.goto('http://127.0.0.1:8080/')
+  await page.goto('http://127.0.0.1:1234/')
 
   await page.setViewport({
     width: config.viewport.desktop.width,
