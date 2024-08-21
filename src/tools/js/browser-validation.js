@@ -1,12 +1,5 @@
-import { sortBy } from '/src/tools/js/utils.js'
 import { treeElements } from '/src/tools/config.js'
-
-export const orderHeaders = (headers) => {
-  return sortBy({
-    arr: headers,
-    prop: 'element',
-  })
-}
+import { htmlStringToDomElement } from '/src/tools/js/utils.js'
 
 export const parseHtmlDocumentInBrowser = () => {
   // Initialize an empty array to store the parsed elements
@@ -59,4 +52,36 @@ const buildHtmlTree = (element) => {
   if (tree.tag !== 'script') {
     return tree
   }
+}
+
+const generateTrees = (tree) => {
+  const children = tree?.children || []
+  // Base case: if there are no children, return a div with just the tag name
+  if (children?.length === 0) {
+    return `<div>${tree.tag}</div>`
+  }
+
+  // Recursive case: create a details element with a summary and nested details
+  let childrenHtml = ''
+  for (const child of children) {
+    childrenHtml += generateTrees(child)
+  }
+
+  return `
+      <details>
+          <summary>${tree.tag}</summary>
+          ${childrenHtml}
+      </details>
+  `
+}
+
+export const generateSchema = (treeStructure) => {
+  let htmlOutput = ''
+
+  // Handle the case of multiple root elements
+  for (const tree of treeStructure) {
+    htmlOutput += generateTrees(tree)
+  }
+
+  return htmlStringToDomElement(htmlOutput)
 }

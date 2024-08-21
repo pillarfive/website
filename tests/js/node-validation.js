@@ -1,14 +1,6 @@
 import * as cheerio from 'cheerio'
 
-import { sortBy } from '../../src/tools/js/utils.js'
 import { treeElements } from '../../src/tools/config.js'
-
-export const orderHeaders = (headers) => {
-  return sortBy({
-    arr: headers,
-    prop: 'element',
-  })
-}
 
 const isValidElement = (node) => {
   return node.nodeType === 1
