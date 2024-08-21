@@ -1,5 +1,3 @@
-import * as cheerio from 'cheerio'
-
 import { sortBy } from '/src/tools/js/utils.js'
 import { treeElements } from '/src/tools/config.js'
 
