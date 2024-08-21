@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { orderHeaders } from './validation.js'
+import { orderHeaders } from './browser-validation.js'
 
 describe('validation', () => {
   let headers = []

@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer'
-import { config } from '../config.js'
-import { parseHtmlDocumentInNode } from '../js/validation.js'
+import { config } from '../../src/tools/config.js'
+import { parseHtmlDocumentInNode } from '../js/node-validation.js'
 ;(async () => {
   const browser = await puppeteer.launch({
     headless: false,
@@ -8,10 +8,11 @@ import { parseHtmlDocumentInNode } from '../js/validation.js'
 
   const page = await browser.newPage()
 
-  // await page.goto(
+  const URL = 'http://localhost:1234/outline/eu-accessibility-act.html'
+  // const URL =
   //   'https://www.smashingmagazine.com/2024/06/how-make-strong-case-accessibility/'
-  // )
-  await page.goto('http://localhost:1234/outline/eu-accessibility-act.html')
+
+  await page.goto(URL)
 
   await page.setViewport({
     width: config.viewport.desktop.width,
