@@ -132,7 +132,8 @@ caption {
 }
 
 /* details/summary */
-details {
+details,
+#schema > div div {
   margin-bottom: var(--d);
   padding: var(--d) var(--d) 0;
   border: 1px dotted var(--border-colour);

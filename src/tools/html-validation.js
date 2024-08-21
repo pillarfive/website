@@ -7,7 +7,7 @@ import { htmlStringToDomElement } from '/src/tools/js/utils.js'
     const children = tree?.children || []
     // Base case: if there are no children, return a summary with just the tag name
     if (children?.length === 0) {
-      return `<summary>${tree.tag}</summary>`
+      return `<div>${tree.tag}</div>`
     }
 
     // Recursive case: create a details element with a summary and nested details

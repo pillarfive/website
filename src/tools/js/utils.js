@@ -13,7 +13,7 @@ export const sortBy = ({ arr, prop, dir = 'asc' }) => {
 }
 
 export const htmlStringToDomElement = (htmlString) => {
-  const parser = new DOMParser()
-  const doc = parser.parseFromString(htmlString, 'text/html')
-  return doc.body
+  const container = document.createElement('div')
+  container.innerHTML = htmlString.trim()
+  return container
 }
