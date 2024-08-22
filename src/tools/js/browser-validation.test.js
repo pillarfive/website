@@ -1,3 +1,7 @@
 /* eslint-disable no-undef */
 
-describe('validation', () => {})
+describe('This a place holder for future unit test', () => {
+  test('will test a function', () => {
+    expect('test').toEqual('test')
+  })
+})
