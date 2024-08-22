@@ -1,0 +1,5 @@
+{
+  "displayName": "e2e",
+  "testMatch": ["**/tests/**/index.test.js"],
+  "preset": "jest-puppeteer"
+}
