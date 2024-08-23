@@ -6,12 +6,13 @@
     "prettier": "npx prettier . -w",
     "eslint": "npx eslint",
     "csslint": "npx stylelint src/**/*.css --fix",
-    "test": "node tests/index.test.js",
+    "puppeteer": "node tests/puppeteer/tree-validation.test.js",
     "static": "cp src/robots.txt dist",
     "start": "parcel && npm run static",
     "build": "parcel build --dist-dir dist --public-url /website && npm run static",
     "ibm": "npx achecker ./src",
-    "publish": "rm -rf dist && rm -rf .parcel-cache && npm run build && gh-pages -d dist"
+    "publish": "rm -rf dist && rm -rf .parcel-cache && npm run build && gh-pages -d dist",
+    "tests": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "source": [
     "./src/index.html",
@@ -30,14 +31,20 @@
   "devDependencies": {
     "@eslint/js": "^9.8.0",
     "accessibility-checker": "^3.1.74",
+    "cheerio": "^1.0.0",
     "eslint": "^9.8.0",
     "gh-pages": "^6.1.1",
     "globals": "^15.9.0",
+    "jest": "^29.7.0",
+    "jest-puppeteer": "^10.1.0",
     "parcel": "^2.12.0",
     "prettier": "^3.3.3",
     "puppeteer": "^22.15.0",
     "stylelint": "^16.8.1",
     "stylelint-config-standard": "^36.0.1"
+  },
+  "@parcel/resolver-default": {
+    "packageExports": true
   },
   "type": "module",
   "targets": {

@@ -10,8 +10,14 @@
 
 /* rules */
 
-* {
+html {
   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 *:empty:not(input, img, hr) {
@@ -123,4 +129,23 @@ dt {
 figcaption,
 caption {
   margin: var(--d) 0;
+}
+
+/* details/summary */
+details,
+#schema > div div {
+  margin-bottom: var(--d);
+  padding: var(--d) var(--d) 0;
+  border: 1px dotted var(--border-colour);
+  border-radius: calc(var(--d) * 0.5);
+}
+
+summary {
+  font-weight: bold;
+  margin: calc(var(--d) * -1) calc(var(--d) * -1) 0;
+  padding: var(--d);
+}
+
+details[open] {
+  padding: var(--d);
 }
