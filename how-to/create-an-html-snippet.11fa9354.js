@@ -3,5 +3,5 @@ const e=["a","address","article","aside","blockquote","button","caption","detail
           <summary>${e.tag}</summary>
           ${r}
       </details>
-  `},n=e=>{let r="";for(let t of e)r+=d(t);return t(r)};(async()=>{let e=r(),t=document.getElementsByTagName("body")[0];if(t){let r=n(e);t.appendChild(r)}})();
-//# sourceMappingURL=create-an-html-snippet.7a10d550.js.map
+  `},n=e=>{let r="";for(let t of e)r+=d(t);return t(r)};(async()=>{let e=r(),t=document.getElementById("schema"),l=n(e);t.appendChild(l)})();
+//# sourceMappingURL=create-an-html-snippet.11fa9354.js.map

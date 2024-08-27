@@ -1,0 +1,124 @@
+:root {
+  --fg-colour: #232323;
+  --border-colour: #aaa;
+  --bg-colour: #fff;
+  --radius: calc(.5 * var(--d));
+  --d: .5rem;
+  --w: 100vw / 100;
+  --h: 100vh / 100;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, :before, :after {
+  box-sizing: inherit;
+}
+
+:empty:not(button, input, img, hr) {
+  display: none;
+}
+
+:is(*):not(h1, h2, h3, h4, h5, h6) {
+  font-size: 1.1rem;
+}
+
+:is(button, input, aside, fieldset, figure, h2, h3, h4) + :is(button, input, aside, fieldset, figure, details, table), :is(button, input, aside, fieldset, figure, h2, h3, h4) + :is(label) + :is(input) {
+  margin-top: 0;
+}
+
+.body {
+  padding: 0 var(--d);
+  background-color: var(--bg-colour);
+  max-width: 75ch;
+  margin: auto;
+  font-family: PT Serif, Georgia, Times New Roman, Times, serif;
+}
+
+abbr {
+  border-bottom-style: dashed;
+}
+
+aside {
+  text-align: center;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  color: var(--fg-colour);
+}
+
+code {
+  white-space: pre;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+dl * {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+nav {
+  margin: calc(var(--d) * 8) 0;
+}
+
+p, li {
+  margin: calc(var(--d) * 2) 0;
+  line-height: 1.7;
+}
+
+a, a:visited {
+  color: var(--fg-colour);
+}
+
+button, input, aside, fieldset, figure {
+  margin: calc(var(--d) * 2) 0;
+  padding: var(--d);
+  border: 1px solid var(--border-colour);
+  border-radius: var(--radius);
+}
+
+button:hover {
+  border-color: var(--fg-colour);
+  outline: none;
+}
+
+a, abbr {
+  border-bottom: 1px solid var(--fg-colour);
+  padding-bottom: calc(var(--d) * .25);
+  text-decoration: none;
+}
+
+dd, th, td, dt {
+  padding: var(--d);
+  text-align: left;
+}
+
+figcaption, caption {
+  margin: var(--d) 0;
+}
+
+details, #schema > div div {
+  margin-bottom: var(--d);
+  padding: var(--d) var(--d) 0;
+  border: 1px dotted var(--border-colour);
+  border-radius: calc(var(--d) * .5);
+}
+
+summary {
+  margin: calc(var(--d) * -1) calc(var(--d) * -1) 0;
+  padding: var(--d);
+  font-weight: bold;
+}
+
+details[open] {
+  padding: var(--d);
+}
+/*# sourceMappingURL=index.a94e7003.css.map */
