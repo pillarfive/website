@@ -20,7 +20,7 @@ html {
   box-sizing: inherit;
 }
 
-*:empty:not(input, img, hr) {
+*:empty:not(button, input, img, hr) {
   display: none;
 }
 
