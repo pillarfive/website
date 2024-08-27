@@ -1,1 +1,0 @@
-{"mappings":"ACAE,CAAA,UACA,QAAQ,GAAG,CAAC,eACd,CAAA","sources":["<anon>","src/index.js"],"sourcesContent":["(async ()=>{\n    console.log(\"Hello Venus!\");\n})();\n\n//# sourceMappingURL=index.eebcf869.js.map\n",";(async () => {\n  console.log('Hello Venus!')\n})()\n"],"names":["console","log"],"version":3,"file":"index.eebcf869.js.map"}

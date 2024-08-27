@@ -1,0 +1,2 @@
+.flex-row{justify-content:space-evenly;align-items:center;gap:var(--d);flex-wrap:wrap;display:flex}.border{padding:var(--d);border:1px solid var(--border-colour);border-radius:var(--radius)}.box{flex:1 1 calc(20% - calc(var(--d)*2));text-align:center;padding:var(--d);justify-content:center;align-items:center;display:flex}.square{aspect-ratio:1}.card{aspect-ratio:1.618}
+/*# sourceMappingURL=test-card-submit.cc9f0399.css.map */
