@@ -36,6 +36,14 @@ const buildHtmlTree = (element) => {
     children: [],
   }
 
+  if (element.tagName.toLowerCase() === 'img') {
+    if (element.alt) {
+      tree.alt = element.alt
+    } else {
+      tree.alt = 'No alt text'
+    }
+  }
+
   // Recursively process each child element
   const children = element.children
   for (let child of children) {
@@ -58,7 +66,12 @@ const generateTrees = (tree) => {
   const children = tree?.children || []
   // Base case: if there are no children, return a div with just the tag name
   if (children?.length === 0) {
-    return `<div>${tree.tag}</div>`
+    // Handle the img alt tag
+    let summary = tree.tag
+    if (tree.alt) {
+      summary += ` (alt: ${tree.alt})`
+    }
+    return `<div>${summary}</div>`
   }
 
   // Recursive case: create a details element with a summary and nested details
