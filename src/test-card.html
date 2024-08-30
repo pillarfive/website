@@ -16,6 +16,12 @@
     <header>
       <h1>Test card</h1>
       <p>This is where we check our CSS against standard HTML elements.</p>
+      <p><a href="#footer" tabindex="0">Jump link to the footer</a></p>
+      <p>
+        <a href="#faultyJumpLink" tabindex="-1"
+          >Jump link with nowhere to go…</a
+        >
+      </p>
     </header>
     <main class="main">
       <h2>This is an h2 inside a main</h2>
@@ -91,8 +97,8 @@
       <figure>
         <img
           src="https://solar.lowtechmagazine.com/2023/11/plastic-waste-in-the-fuel-tank/images/dithers/intro-plastic-waste-in-fuel-tank-gijs-schalkx_dithered.png"
-          alt="An old Volvo estate car with several containers jerry-rigged on its roof rack in a light industrial setting."
           title="This car drives on plastic by Gijs Schalkx"
+          alt="An old Volvo estate car with several containers jerry-rigged on its roof rack in a light industrial setting."
           decoding="async"
           loading="lazy"
         />
