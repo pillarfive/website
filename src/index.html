@@ -11,54 +11,27 @@
     <header>
       <p><a href="#main" tabindex="0">Jump link to the main content</a></p>
       <h1>Welcome</h1>
+      <p>This is the website of Jean-Philippe Drécourt and Daniel Hartley.</p>
     </header>
     <main id="main" class="main">
       <h2>What we do</h2>
 
-      <details>
-        <summary>No dependencies and no surprises</summary>
-        <p>
-          This page contains information about the services we offer. It doubles
-          as a place to check our CSS.
-        </p>
-        <p>
-          It is simple because we didn't want to spend time designing it. It is
-          written in semantic, valid HTML, and styled using a small amount of
-          CSS. We don't use JavaScript to create pages but we do use it.
-        </p>
-        <p>
-          We find browser defaults to be mostly acceptable so we don't spend our
-          time and your resources on a CSS reset stylesheet.
-        </p>
-        <p>
-          We don't like to be indebted to a bunch of dependencies but we do like
-          to run tests, and to check our code using linters. If our developer
-          dependencies become a burden to maintain, we will remove or replace
-          them. CSS preprocessors and TypeScript can be useful on larger
-          projects but they are not merited here.
-        </p>
-        <p>
-          Because we don't use a framework or libraries, there are no client
-          side dependencies. Our pages are therefore light.
-        </p>
-      </details>
+      <h3>Few dependencies, no surprises</h3>
 
+      <p>This page contains information about the services we offer.</p>
       <p>
-        Visitors
-        <a href="https://www.nngroup.com/videos/jakobs-law-internet-ux/">
-          spend most of their time on other sites</a
-        >. We like to do the same.
+        It is simple because we didn't want to spend time designing it. It is
+        written in semantic, valid HTML, and styled using a small amount of CSS.
+        We don't use JavaScript to create pages but we do use it to enhance
+        them.
+      </p>
+      <p>We keep our developer dependencies to a minimum.</p>
+      <p>
+        There are no client side dependencies other than for specific use cases.
       </p>
 
-      <section aria-labelledby="the-way-we-work">
-        <h3 id="the-way-we-work">How we do this in the browser</h3>
-        <ul>
-          <li>Use extensions including our own</li>
-        </ul>
-      </section>
-
       <section aria-labelledby="us">
-        <h3 id="us">Founders</h3>
+        <h3 id="us">Who we are</h3>
         <figure class="border dashed">
           <img
             src="https://lh3.googleusercontent.com/d/1obos6lU8yPnBNX3Jr7-88amhCyxjiFC-=s220?authuser=0"
@@ -86,7 +59,7 @@
         </figure>
       </section>
 
-      <h3>What we work on</h3>
+      <h3>Areas we specialise in</h3>
       <dl>
         <dt>Performance</dt>
         <dd>
@@ -165,6 +138,56 @@
           between performance and sustainability.
         </dd>
       </dl>
+
+      <h3>Services we offer</h3>
+      <ul>
+        <li>
+          We work for one client at a time, tailoring our offering to your needs
+        </li>
+        <li>
+          During our contract we are available 12 hours a day, to anyone on your
+          team
+        </li>
+        <li>
+          We can advise you how to make your site compliant with the
+          <a href="/src/summary-of/eu-accessibility-act.html"
+            >EU Accessibility Act</a
+          >
+          (<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 or
+          2.2)
+        </li>
+        <li>
+          We can advise you on
+          <a
+            href="https://www.the-public-good.com/web-development/sustainable-reporting-and-tooling"
+            >sustainability best practices</a
+          >
+        </li>
+      </ul>
+
+      <section aria-labelledby="the-way-we-work">
+        <h3 id="the-way-we-work">How we work</h3>
+        <p>
+          Visitors
+          <a href="https://www.nngroup.com/videos/jakobs-law-internet-ux/">
+            spend most of their time on other sites</a
+          >. We like to do the same using browser extensions and npm packages.
+        </p>
+      </section>
+
+      <h3>Our tools</h3>
+      <p>
+        In addition to useful tools built by others, we have built some of our
+        own.
+      </p>
+      <ul>
+        <li>Chrome extension to generate HTML schema</li>
+        <li>Chrome extension to validate HTML and highlight errors</li>
+        <li>
+          An npm library for measuring CO<sub>2</sub>
+          <a href="https://github.com/danhartley/emissions">emissions</a>
+        </li>
+      </ul>
     </main>
     <footer id="footer">
       <nav aria-label="Primary">
