@@ -8,6 +8,12 @@
   --h: 100vh / 100;
 }
 
+/* only supported in newer browsers */
+
+:is(*):not(h1, h2, h3, h4, h5, h6) {
+  font-size: 1.1rem;
+}
+
 /* rules */
 
 html {
@@ -41,16 +47,27 @@ aside {
   text-align: center;
 }
 
-blockquote *,
-cite * {
-  font-size: 1rem;
-  max-width: 50ch;
+blockquote {
   margin: auto;
 }
 
 cite {
-  display: inline-flex;
-  margin: 0 2rem 2rem;
+  display: block;
+  margin: calc(var(--d) * 2) 0;
+}
+
+select {
+  padding: var(--d) 0;
+  border-radius: var(--radius);
+}
+
+blockquote *,
+cite *,
+code,
+dl *,
+option {
+  font-size: calc(var(--d) * 2);
+  line-height: 1.6;
 }
 
 body {
@@ -59,19 +76,13 @@ body {
 }
 
 code {
-  font-size: 1rem;
-  line-height: 1.6;
   white-space: pre;
-}
-
-dl * {
-  font-size: 1rem;
-  line-height: 1.6;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  border-radius: var(--radius);
 }
 
 nav {
@@ -92,7 +103,6 @@ a:visited {
 aside,
 button,
 fieldset,
-figure,
 input {
   margin: calc(var(--d) * 2) 0;
   padding: var(--d);
@@ -117,6 +127,15 @@ th,
 td {
   padding: var(--d);
   text-align: left;
+}
+
+dt {
+  font-weight: bold;
+}
+
+figure {
+  margin: auto;
+  text-align: center;
 }
 
 figcaption,
@@ -172,9 +191,13 @@ details[open] {
 }
 
 .border {
-  padding: var(--d);
+  padding: calc(var(--d) * 2);
   border: 1px solid var(--border-colour);
   border-radius: var(--radius);
+
+  &.dashed {
+    border-style: dashed;
+  }
 }
 
 .box {
@@ -195,10 +218,6 @@ details[open] {
 }
 
 /* only supported in newer browsers */
-
-:is(*):not(h1, h2, h3, h4, h5, h6) {
-  font-size: 1.1rem;
-}
 
 :is(button, input, aside, fieldset, figure, h2, h3, h4)
   + :is(button, input, aside, fieldset, figure, details, table),
