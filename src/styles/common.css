@@ -26,6 +26,10 @@ html {
   box-sizing: inherit;
 }
 
+*:empty:not(button, iframe, input, img, hr) {
+  display: none;
+}
+
 /* element selectors */
 
 .body {
@@ -36,15 +40,11 @@ html {
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
 }
 
-/* html elements */
+/* highlight elements */
 
 abbr {
   text-decoration: none;
   border-bottom-style: dashed;
-}
-
-aside {
-  text-align: center;
 }
 
 blockquote {
@@ -56,9 +56,8 @@ cite {
   margin: calc(var(--d) * 2) 0;
 }
 
-select {
-  padding: var(--d) 0;
-  border-radius: var(--radius);
+code {
+  white-space: pre;
 }
 
 blockquote *,
@@ -70,37 +69,23 @@ option {
   line-height: 1.6;
 }
 
-body {
-  -webkit-font-smoothing: antialiased;
-  color: var(--fg-colour);
-}
+/* grouping elements */
 
-code {
-  white-space: pre;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
+aside {
+  text-align: center;
+  margin: calc(var(--d) * 2) 0;
+  padding: var(--d);
+  border: 1px solid var(--border-colour);
   border-radius: var(--radius);
 }
 
-nav {
-  margin: calc(var(--d) * 8) 0;
+/* control elements */
+
+select {
+  padding: var(--d) 0;
+  border-radius: var(--radius);
 }
 
-p,
-li {
-  line-height: 1.7;
-  margin: calc(var(--d) * 2) 0;
-}
-
-a,
-a:visited {
-  color: var(--fg-colour);
-}
-
-aside,
 button,
 fieldset,
 input {
@@ -115,11 +100,47 @@ button:hover {
   outline: none;
 }
 
+/* landmark elements */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  color: var(--fg-colour);
+}
+
+nav {
+  margin: calc(var(--d) * 8) 0;
+}
+
+/* images */
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+/* presentation elements */
+
+p,
+li {
+  line-height: 1.7;
+  margin: calc(var(--d) * 2) 0;
+}
+
+/* links */
+
+a,
+a:visited {
+  color: var(--fg-colour);
+}
+
 a {
   border-bottom: 1px solid var(--fg-colour);
   padding-bottom: calc(var(--d) * 0.25);
   text-decoration: none;
 }
+
+/* data elements */
 
 dt,
 dd,
@@ -143,11 +164,6 @@ caption {
   margin: var(--d) 0;
 }
 
-*:empty:not(button, iframe, input, img, hr) {
-  display: none;
-}
-
-/* details/summary */
 details,
 #schema > div div {
   margin-bottom: var(--d);
@@ -169,7 +185,8 @@ details[open] {
 /* test-card page */
 
 .is-fg {
-  color: var(--fg-colour);
+  color: var(--bg-colour);
+  background-color: var(--fg-colour);
 }
 
 .is-bg {
@@ -180,7 +197,7 @@ details[open] {
   background-color: var(--border-colour);
 }
 
-/* components */
+/* layout */
 
 .flex-row {
   display: flex;
