@@ -20,20 +20,6 @@ html {
   box-sizing: inherit;
 }
 
-/* only supported in newer browsers */
-
-:is(*):not(h1, h2, h3, h4, h5, h6) {
-  font-size: 1.1rem;
-}
-
-:is(button, input, aside, fieldset, figure, h2, h3, h4)
-  + :is(button, input, aside, fieldset, figure, details, table),
-:is(button, input, aside, fieldset, figure, h2, h3, h4)
-  + :is(label)
-  + :is(input) {
-  margin-top: 0;
-}
-
 /* element selectors */
 
 .body {
@@ -206,4 +192,18 @@ details[open] {
 
 .card {
   aspect-ratio: 1.618;
+}
+
+/* only supported in newer browsers */
+
+:is(*):not(h1, h2, h3, h4, h5, h6) {
+  font-size: 1.1rem;
+}
+
+:is(button, input, aside, fieldset, figure, h2, h3, h4)
+  + :is(button, input, aside, fieldset, figure, details, table),
+:is(button, input, aside, fieldset, figure, h2, h3, h4)
+  + :is(label)
+  + :is(input) {
+  margin-top: 0;
 }
