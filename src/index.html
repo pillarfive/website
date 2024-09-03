@@ -3,60 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Test card - cheat sheet for how HTML elements look on the site"
-    />
+    <meta name="description" content="Home page" />
     <link rel="stylesheet" href="/src/styles/common.css" />
-    <link rel="stylesheet" href="/src/styles/design-system.css" />
-    <link rel="stylesheet" href="/src/styles/test-card.css" />
-    <title>Test Card</title>
+    <title>Welcome</title>
   </head>
   <body class="body">
     <header>
-      <h1>Test card</h1>
-      <p>This is where we check our CSS against standard HTML elements.</p>
-      <p><a href="#footer" tabindex="0">Jump link to the footer</a></p>
-      <p>
-        <a href="#faultyJumpLink" tabindex="-1"
-          >Jump link with nowhere to go…</a
-        >
-      </p>
+      <p><a href="#main" tabindex="0">Jump link to the main content</a></p>
+      <h1>Welcome</h1>
     </header>
-    <main class="main">
-      <h2>This is an h2 inside a main</h2>
-      <h3>This is an h3</h3>
-      <h4>This is an h4</h4>
-      <h5>This is an h5</h5>
-      <h6>This is an h6</h6>
-      <p>This is a paragraph.</p>
-      <div>This is a div</div>
-      <blockquote cite="https://www.nngroup.com/videos/jakobs-law-internet-ux/">
-        <p>This is a blockquote.</p>
-      </blockquote>
+    <main id="main" class="main">
+      <h2>What we do</h2>
+
+      <details>
+        <summary>No dependencies and no surprises</summary>
+        <p>
+          This page contains information about the services we offer. It doubles
+          as a place to check our CSS.
+        </p>
+        <p>
+          It is simple because we didn't want to spend time designing it. It is
+          written in semantic, valid HTML, and styled using a small amount of
+          CSS. We don't use JavaScript to create pages but we do use it.
+        </p>
+        <p>
+          We find browser defaults to be mostly acceptable so we don't spend our
+          time and your resources on a CSS reset stylesheet.
+        </p>
+        <p>
+          We don't like to be indebted to a bunch of dependencies but we do like
+          to run tests, and to check our code using linters. If our developer
+          dependencies become a burden to maintain, we will remove or replace
+          them. CSS preprocessors and TypeScript can be useful on larger
+          projects but they are not merited here.
+        </p>
+        <p>
+          Because we don't use a framework or libraries, there are no client
+          side dependencies. Our pages are therefore light.
+        </p>
+      </details>
+
       <p>
-        <cite
-          ><a
-            href="https://www.nngroup.com/videos/jakobs-law-internet-ux/"
-            rel="noopener"
-            target="_blank"
-            >This is a link in a cite opening in a new tab</a
-          ></cite
-        >
+        Visitors
+        <a href="https://www.nngroup.com/videos/jakobs-law-internet-ux/">
+          spend most of their time on other sites</a
+        >. We like to do the same.
       </p>
-      <div><span>This is a span in a div</span></div>
-      <a href="https://www.example.com">This is a standalone link</a>
-      <p>
-        <a href="https://www.the-public-good.com">This is a link in a p</a>
-      </p>
+
+      <h3>Test site performance</h3>
+      <ul>
+        <li>Accessibility</li>
+        <li>Security</li>
+        <li>Sustainability</li>
+      </ul>
+
+      <section aria-labelledby="the-way-we-work">
+        <h3 id="the-way-we-work">How we do this in the browser</h3>
+        <ul>
+          <li>Use extensions including our own</li>
+        </ul>
+      </section>
+
       <div><abbr title="Mozilla Developer Network">MDN</abbr> abbreviation</div>
       <article>
         <h2>h2 article header</h2>
         <p>p inside an article</p>
-        <aside aria-labelledby="aside-complementary-header">
-          <h3 id="aside-complementary-header">Aside h3 header</h3>
-          aside inside an article
-        </aside>
       </article>
       <section aria-labelledby="section-region-header">
         <h2 id="section-region-header">h2 section header</h2>
@@ -170,27 +181,35 @@
           </tr>
         </tfoot>
       </table>
-      <p>
-        Having the right amount of characters on each line is key to the
-        readability of your text.
-      </p>
-      <p>
-        Indeed, it shouldn't merely be your design that dictates the width of
-        your text — the ability of users to easily read through the text should
-        also be a critical factor.
-      </p>
-      <p>
-        Ruder concluded that the optimal line length for body text is 50–60
-        characters per line, including spaces (“Typographie”, E. Ruder).
-      </p>
-      <p>Other sources suggest that up to 75 characters is acceptable.</p>
-      <p>
-        It turns out that the subconscious mind is energized when jumping to the
-        next line (as long as it doesn't happen too frequently; see above bullet
-        point). At the beginning of every new line the reader is focused, but
-        this focus gradually wears off over the duration of the line
-        (“Typographie”, E. Ruder).
-      </p>
+      <h3>Line length</h3>
+      <blockquote cite="https://baymard.com/blog/line-length-readability">
+        <p>
+          Having the right amount of characters on each line is key to the
+          readability of your text.
+        </p>
+        <p>
+          Indeed, it shouldn't merely be your design that dictates the width of
+          your text — the ability of users to easily read through the text
+          should also be a critical factor.
+        </p>
+        <p>
+          Ruder concluded that the optimal line length for body text is 50–60
+          characters per line, including spaces (“Typographie”, E. Ruder).
+        </p>
+        <p>Other sources suggest that up to 75 characters is acceptable.</p>
+        <p>
+          It turns out that the subconscious mind is energized when jumping to
+          the next line (as long as it doesn't happen too frequently; see above
+          bullet point). At the beginning of every new line the reader is
+          focused, but this focus gradually wears off over the duration of the
+          line (“Typographie”, E. Ruder).
+        </p>
+      </blockquote>
+      <cite>
+        <a href="https://baymard.com/blog/line-length-readability"
+          >Readability: The Optimal Line Length</a
+        >
+      </cite>
       <p>
         The Test card page is pre-rendered using the
         <a

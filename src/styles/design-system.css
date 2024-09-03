@@ -16,9 +16,6 @@
 
 .box {
   flex: 1 1 calc(20% - calc(var(--d) * 2)); /* Adjusts the box width based on the container width */
-
-  /* min-width: calc(var(--d) * 12);
-  max-width: calc(var(--d) * 24); */
   display: flex;
   justify-content: center;
   align-items: center;

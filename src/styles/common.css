@@ -20,10 +20,6 @@ html {
   box-sizing: inherit;
 }
 
-*:empty:not(button, iframe, input, img, hr) {
-  display: none;
-}
-
 /* only supported in newer browsers */
 
 :is(*):not(h1, h2, h3, h4, h5, h6) {
@@ -51,11 +47,24 @@ html {
 /* html elements */
 
 abbr {
+  text-decoration: none;
   border-bottom-style: dashed;
 }
 
 aside {
   text-align: center;
+}
+
+blockquote *,
+cite * {
+  font-size: 1rem;
+  max-width: 50ch;
+  margin: auto;
+}
+
+cite {
+  display: inline-flex;
+  margin: 0 2rem 2rem;
 }
 
 body {
@@ -95,11 +104,11 @@ a:visited {
   color: var(--fg-colour);
 }
 
-button,
-input,
 aside,
+button,
 fieldset,
-figure {
+figure,
+input {
   margin: calc(var(--d) * 2) 0;
   padding: var(--d);
   border: 1px solid var(--border-colour);
@@ -111,17 +120,16 @@ button:hover {
   outline: none;
 }
 
-a,
-abbr {
+a {
   border-bottom: 1px solid var(--fg-colour);
   padding-bottom: calc(var(--d) * 0.25);
   text-decoration: none;
 }
 
+dt,
 dd,
 th,
-td,
-dt {
+td {
   padding: var(--d);
   text-align: left;
 }
@@ -129,6 +137,10 @@ dt {
 figcaption,
 caption {
   margin: var(--d) 0;
+}
+
+*:empty:not(button, iframe, input, img, hr) {
+  display: none;
 }
 
 /* details/summary */
@@ -148,4 +160,51 @@ summary {
 
 details[open] {
   padding: var(--d);
+}
+
+/* test-card page */
+
+:is(.is-fg) {
+  color: var(--fg-colour);
+}
+
+:is(.is-bg) {
+  background-color: var(--bg-colour);
+}
+
+:is(.is-border) {
+  background-color: var(--border-colour);
+}
+
+/* components */
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: var(--d);
+}
+
+.border {
+  padding: var(--d);
+  border: 1px solid var(--border-colour);
+  border-radius: var(--radius);
+}
+
+.box {
+  flex: 1 1 calc(20% - calc(var(--d) * 2)); /* Adjusts the box width based on the container width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--d);
+}
+
+.square {
+  aspect-ratio: 1;
+}
+
+.card {
+  aspect-ratio: 1.618;
 }
