@@ -18,16 +18,16 @@ document.addEventListener('DOMContentLoaded', function () {
   // Add errors messages to empty <button> elements
   addErrorMessage('button:empty', 'Error: Empty button element')
 
-  // Add error messages to <a> elements where a <button> would be a better choice
-  addErrorMessage(
-    'a[href=""], a[href="#"], a[href="javascript:void(0)"], a:not([href]):not([target])',
-    'Error: Consider using a button instead'
-  )
-
   // Add error messages to <button> elements where an <a> would be a better choice
   addErrorMessage(
     'button[href]',
     'Error: Use an anchor tag instead of a button'
+  )
+
+  // addErrorMessage('a[href=""]', 'This anchor is missing its mandatory href')
+  addErrorMessage(
+    'a:not([href]), a[href=""]',
+    'This anchor is missing its mandatory href'
   )
 
   // Add error messages to <input> elements that do not have a <label>
@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const complementaries = document.querySelectorAll(`[${aria}]`)
     complementaries.forEach((comp) => {
       const id = comp.getAttribute(`${aria}`)
-      console.log('id ', id)
       if (!document.getElementById(id)) {
         addError(comp, 'Broken ARIA reference')
         comp.classList.add('outline-error')
@@ -68,7 +67,21 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
-  // Add error messages where tabindexes are considered invalid
+  // Check link has valid target
+  function missingLinkTargets() {
+    const targets = Array.from(document.querySelectorAll('[id]')).map(
+      (target) => target.id
+    )
+    const links = Array.from(document.querySelectorAll('a[href^="#"]'))
+    links.forEach((link) => {
+      const target = link.href.split('#')[1]
+      if (!targets.includes(target)) {
+        addError(link, 'This link has no target')
+      }
+    })
+  }
+
+  // Add error messages where tabindexes are considered invalud
   function faultyTabIndexes() {
     const elementsWithTabIndex = Array.from(
       document.querySelectorAll('[tabindex]')
@@ -87,4 +100,5 @@ document.addEventListener('DOMContentLoaded', function () {
   brokenAriaReference('aria-labelledby')
   brokenAriaReference('aria-describedby')
   faultyTabIndexes()
+  missingLinkTargets()
 })
