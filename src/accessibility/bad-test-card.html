@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="page demonstrating bad html practices" />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    
+    <title>Bad test card</title>
+  </head>
+  <body class="body">
+    <header>
+      <h1>Bad test card</h1>
+    </header>
+    <main class="main">
+      <h2>Control elements</h2>
+      <p>This is where we demonstrate invalid HTML.</p>
+
+      <button type="button"></button>
+      <button type="button"><svg></svg></button>
+      <button tabindex="1">I have a tabindex of 1</button>
+
+      <h2>Images</h2>
+      <img
+      src="https://lh3.googleusercontent.com/d/1obos6lU8yPnBNX3Jr7-88amhCyxjiFC-=s220?authuser=0"
+      srcset="
+        https://lh3.googleusercontent.com/d/1obos6lU8yPnBNX3Jr7-88amhCyxjiFC-=s220?authuser=0
+      "
+      width="180px"
+      height="180px"
+      decoding="async"
+      loading="lazy"
+      />
+      <p>
+        <a href="https://example.com">Well-formed anchor with href</a>
+      </p>
+      <p><a href="">Anchor with nowhere to go</a></p>
+      <p><div id="target">I'm the target for the link 'I have a target to go to'</div></p>
+      <p><a href="#target" id="">I have a target to go to</a></p>
+      <p><a href="#notarget" id="">I have no target</a></p>
+    </main>
+    <footer>
+      <nav aria-label="Primary">
+        <a href="/src/sitemap.html">Link to human-readable sitemap in nav</a>
+      </nav>
+    </footer>
+  </body>
+</html>
