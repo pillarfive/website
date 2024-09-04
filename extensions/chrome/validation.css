@@ -3,8 +3,9 @@
   --error-color: red;
   --error-bg-color: white;
   --error-font-size: 16px;
+  --error-margin: 4px;
   --error-padding: 6px;
-  --error-border: 2px;
+  --error-border: 1px;
   --error-border-style: dashed;
 }
 
@@ -20,13 +21,15 @@ a:not([href], [target]),
 }
 
 * + .error-message,
-.no-label + .error-message {
+.no-label + .error-message,
+.orphaned-error {
   display: block !important;
   color: var(--error-color) !important;
   background-color: var(--error-bg-color) !important;
   border: var(--error-border) var(--error-border-style) var(--error-color);
   font-size: var(--error-font-size) !important;
   padding: var(--error-padding) !important;
+  margin-top: var(--error-margin) !important;
 }
 
 .outline-error {

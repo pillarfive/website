@@ -72,11 +72,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const targets = Array.from(document.querySelectorAll('[id]')).map(
       (target) => target.id
     )
+    console.log(targets)
     const links = Array.from(document.querySelectorAll('a[href^="#"]'))
     links.forEach((link) => {
       const target = link.href.split('#')[1]
+      console.log(target)
       if (!targets.includes(target)) {
-        addError(link, 'This link has no target')
+        addError(link, 'This link has no target. How about using a button?')
+        link.classList.add('outline-error')
       }
     })
   }
@@ -96,9 +99,39 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
+  // Where there is no element, add message to body
+  function addToBody(message) {
+    var errorMsg = document.createElement('span')
+    errorMsg.classList.add('error-message')
+    errorMsg.textContent = message
+    const body = document.body
+    body.insertBefore(errorMsg, body.firstChild)
+    errorMsg.classList.add('orphaned-error')
+  }
+
+  // Add error message where main, h1, header is missing
+  function missingMainTitle() {
+    const h1 = document.querySelector('h1')
+    if (!h1) {
+      addToBody('You are missing an h1 header')
+    } else if (h1.innerText.length === 0) {
+      addError(h1, 'You have an empty h1 header')
+    }
+  }
+
+  // Add error message where document title is missing
+  function missingDocumentTitle() {
+    const title = document.title
+    if (!title) {
+      addToBody('You are missing a document title')
+    }
+  }
+
   missingButtonText()
   brokenAriaReference('aria-labelledby')
   brokenAriaReference('aria-describedby')
   faultyTabIndexes()
   missingLinkTargets()
+  missingMainTitle()
+  missingDocumentTitle()
 })
