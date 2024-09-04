@@ -3,222 +3,188 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Test card - cheat sheet for how HTML elements look on the site"
-    />
+    <meta name="description" content="Home page" />
     <link rel="stylesheet" href="/src/styles/common.css" />
-    <link rel="stylesheet" href="/src/styles/design-system.css" />
-    <link rel="stylesheet" href="/src/styles/test-card.css" />
-    <title>Test Card</title>
+    <title>Welcome</title>
   </head>
   <body class="body">
     <header>
-      <h1>Test card</h1>
-      <p>This is where we check our CSS against standard HTML elements.</p>
-      <p><a href="#footer" tabindex="0">Jump link to the footer</a></p>
-      <p>
-        <a href="#faultyJumpLink" tabindex="-1"
-          >Jump link with nowhere to go…</a
-        >
-      </p>
+      <p><a href="#main" tabindex="0">Jump link to the main content</a></p>
+      <h1>Welcome</h1>
+      <p>This is the website of Jean-Philippe Drécourt and Daniel Hartley.</p>
     </header>
-    <main class="main">
-      <h2>This is an h2 inside a main</h2>
-      <h3>This is an h3</h3>
-      <h4>This is an h4</h4>
-      <h5>This is an h5</h5>
-      <h6>This is an h6</h6>
-      <p>This is a paragraph.</p>
-      <div>This is a div</div>
-      <blockquote cite="https://www.nngroup.com/videos/jakobs-law-internet-ux/">
-        <p>This is a blockquote.</p>
-      </blockquote>
-      <p>
-        <cite
-          ><a
-            href="https://www.nngroup.com/videos/jakobs-law-internet-ux/"
-            rel="noopener"
-            target="_blank"
-            >This is a link in a cite opening in a new tab</a
-          ></cite
-        >
-      </p>
-      <div><span>This is a span in a div</span></div>
-      <a href="https://www.example.com">This is a standalone link</a>
-      <p>
-        <a href="https://www.the-public-good.com">This is a link in a p</a>
-      </p>
-      <div><abbr title="Mozilla Developer Network">MDN</abbr> abbreviation</div>
-      <article>
-        <h2>h2 article header</h2>
-        <p>p inside an article</p>
-        <aside aria-labelledby="aside-complementary-header">
-          <h3 id="aside-complementary-header">Aside h3 header</h3>
-          aside inside an article
-        </aside>
-      </article>
-      <section aria-labelledby="section-region-header">
-        <h2 id="section-region-header">h2 section header</h2>
-        <p>p inside a section</p>
-      </section>
-      <code>This is code</code>
+    <main id="main" class="main">
+      <h2>What we do</h2>
+
+      <h3>Services we offer</h3>
       <ul>
-        <li>li 1 in ul</li>
-        <li>li 2 in ul</li>
-        <li></li>
+        <li>
+          We work for one client at a time, tailoring our offering to your needs
+        </li>
+        <li>During our contract we are available to everyone on your team</li>
+        <li>
+          We advise you how to make your site compliant with the
+          <a href="/src/summary-of/eu-accessibility-act.html"
+            >EU Accessibility Act</a
+          >
+          (<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 or
+          2.2)
+        </li>
+        <li>
+          We advise you on
+          <a
+            href="https://www.the-public-good.com/web-development/sustainable-reporting-and-tooling"
+            >sustainability best practices</a
+          >
+        </li>
       </ul>
-      <p>
-        This is a datalist (dl) with two terms. Each item has a data term (dt)
-        and a data definition (dd)
-      </p>
-      <dl>
-        <dt>dt 1 in dl</dt>
-        <dd>dd 1 in dl</dd>
-        <dt>dt 2 in dl</dt>
-        <dd>dd 2 in dl</dd>
-      </dl>
-      <form action="/src/test-card-submit.html" aria-label="A landmark form">
-        <fieldset>
-          <legend>legend</legend>
-          <label for="input-text">Label for the text input</label>
-          <input id="input-text" name="text-input" type="text" required />
-          <button type="submit">
-            This is a submit button inside a fieldset inside a form
-          </button>
-        </fieldset>
-      </form>
-      <div class="flex-row">
-        <div class="square border flex-row is-fg">fg colour</div>
-        <div class="square border flex-row is-bg">bg colour</div>
-        <div class="square border flex-row is-border">border colour</div>
-      </div>
-      <h3>Figure header</h3>
-      <figure>
+
+      <h3 id="us">Who we are</h3>
+      <figure aria-labelledby="founder-photos" class="border dashed">
         <img
-          src="https://solar.lowtechmagazine.com/2023/11/plastic-waste-in-the-fuel-tank/images/dithers/intro-plastic-waste-in-fuel-tank-gijs-schalkx_dithered.png"
-          title="This car drives on plastic by Gijs Schalkx"
-          alt="An old Volvo estate car with several containers jerry-rigged on its roof rack in a light industrial setting."
+          src="https://lh3.googleusercontent.com/d/1obos6lU8yPnBNX3Jr7-88amhCyxjiFC-=s220?authuser=0"
+          srcset="
+            https://lh3.googleusercontent.com/d/1obos6lU8yPnBNX3Jr7-88amhCyxjiFC-=s220?authuser=0
+          "
+          alt="Co-founder JP"
+          width="180px"
+          height="180px"
           decoding="async"
           loading="lazy"
         />
-        <figcaption>
-          figcaption:
-          <a
-            href="https://solar.lowtechmagazine.com/2023/11/plastic-waste-in-the-fuel-tank/"
-            >Plastic Waste in the Fuel Tank?</a
-          >
-        </figcaption>
+        <img
+          src="https://lh3.googleusercontent.com/d/1bo6LEU0O-LmkIooNKcLMzyxqqfSxJ4tz?authuser=0"
+          srcset="
+            https://lh3.googleusercontent.com/d/1bo6LEU0O-LmkIooNKcLMzyxqqfSxJ4tz?authuser=0
+          "
+          alt="Co-founder Dan"
+          width="180px"
+          height="180px"
+          decoding="async"
+          loading="lazy"
+        />
+        <figcaption id="founder-photos">JP & Dan</figcaption>
       </figure>
-      <h3>Details header</h3>
-      <details>
-        <summary>Details</summary>
-        <p>Something small enough to escape casual notice.</p>
-      </details>
-      <h3>Select list header</h3>
-      <label for="ice-cream-choice">Choose a flavor:</label>
-      <input
-        list="ice-cream-flavors"
-        id="ice-cream-choice"
-        name="ice-cream-choice"
-      />
-      <datalist id="ice-cream-flavors">
-        <option value="Chocolate"></option>
-        <option value="Coconut"></option>
-        <option value="Mint"></option>
-        <option value="Strawberry"></option>
-        <option value="Vanilla"></option>
-      </datalist>
-      <h3>Table header</h3>
-      <table>
-        <caption>
-          Front-end web developer course 2021
-        </caption>
-        <thead>
-          <tr>
-            <th scope="col">Person</th>
-            <th scope="col">Most interest in</th>
-            <th scope="col">Age</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Chris</th>
-            <td>HTML tables</td>
-            <td>22</td>
-          </tr>
-          <tr>
-            <th scope="row">Dennis</th>
-            <td>Web accessibility</td>
-            <td>45</td>
-          </tr>
-          <tr>
-            <th scope="row">Sarah</th>
-            <td>JavaScript frameworks</td>
-            <td>29</td>
-          </tr>
-          <tr>
-            <th scope="row">Karen</th>
-            <td>Web performance</td>
-            <td>36</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <th scope="row" colspan="2">Average age</th>
-            <td>33</td>
-          </tr>
-        </tfoot>
-      </table>
+
+      <h3>Areas we specialise in</h3>
+      <dl>
+        <dt>Performance</dt>
+        <dd>
+          <blockquote
+            cite="https://developer.mozilla.org/en-US/docs/Glossary/Web_performance"
+          >
+            Subjectively, it is the user's perception of whether the time it
+            takes between the time the user requests the content and the time
+            until the user feels the content requested is available and usable
+            feels slow or fast.
+          </blockquote>
+          <cite
+            >From
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Glossary/Web_performance"
+              >Web performance</a
+            >
+            by <abbr title="Mozilla Developer Network">MDN</abbr></cite
+          >
+        </dd>
+        <dt>Accessibility</dt>
+        <dd>
+          <blockquote
+            cite="https://www.w3.org/WAI/fundamentals/accessibility-intro/#what"
+          >
+            Websites, tools, and technologies are designed and developed so that
+            people with disabilities can use them.
+          </blockquote>
+          <cite
+            >From
+            <a
+              href="https://www.w3.org/WAI/fundamentals/accessibility-intro/#what"
+            >
+              Introduction to Web Accessibility
+            </a>
+            by <abbr title="Web Accessibility Initiative">WAI</abbr></cite
+          >
+        </dd>
+        <dt>Sustainability</dt>
+        <dd>
+          <blockquote
+            cite="https://en.wikipedia.org/wiki/Brundtland_Commission#Definition_of_sustainable_development"
+          >
+            Sustainable development is development that meets the needs of the
+            present without compromising the ability of future generations to
+            meet their own needs.
+          </blockquote>
+          <cite
+            ><a
+              href="https://en.wikipedia.org/wiki/Brundtland_Commission#Definition_of_sustainable_development"
+              >The Brundtland Report
+            </a></cite
+          >
+        </dd>
+        <dt>Security</dt>
+        <dd>
+          <blockquote
+            cite="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security"
+          >
+            The act/practice of protecting websites from unauthorized access,
+            use, modification, destruction, or disruption.
+          </blockquote>
+          <cite
+            >From
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security"
+              >Website security</a
+            >
+            by <abbr title="Mozilla Developer Network">MDN</abbr></cite
+          >
+        </dd>
+        <dt>Ethics</dt>
+        <dd>
+          The trade off between what a business wants and what is best for its
+          visitors and the environment. It may be revealed in the trade off
+          between performance and sustainability.
+        </dd>
+      </dl>
+
+      <h3 id="the-way-we-work">How we work</h3>
       <p>
-        Having the right amount of characters on each line is key to the
-        readability of your text.
+        Visitors
+        <a href="https://www.nngroup.com/videos/jakobs-law-internet-ux/">
+          spend most of their time on other sites</a
+        >. We like to do the same, using browser extensions and npm packages.
       </p>
+
+      <h3>Few dependencies, no surprises</h3>
+
       <p>
-        Indeed, it shouldn't merely be your design that dictates the width of
-        your text — the ability of users to easily read through the text should
-        also be a critical factor.
+        This site is simple because we didn't want to spend time designing it.
+        It is written in semantic, valid HTML, and styled using a small amount
+        of CSS. We don't use JavaScript to create pages but we do use it to
+        enhance them.
       </p>
+      <p>We keep our developer dependencies to a minimum.</p>
       <p>
-        Ruder concluded that the optimal line length for body text is 50–60
-        characters per line, including spaces (“Typographie”, E. Ruder).
+        There are no client side dependencies other than for specific use cases.
       </p>
-      <p>Other sources suggest that up to 75 characters is acceptable.</p>
+
+      <h3>Our tools</h3>
       <p>
-        It turns out that the subconscious mind is energized when jumping to the
-        next line (as long as it doesn't happen too frequently; see above bullet
-        point). At the beginning of every new line the reader is focused, but
-        this focus gradually wears off over the duration of the line
-        (“Typographie”, E. Ruder).
+        In addition to useful tools built by others, we have built some of our
+        own.
       </p>
-      <p>
-        The Test card page is pre-rendered using the
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API"
-          >Speculation Rules API</a
-        >.
-      </p>
-      <p>A flex row with a box, a card and a square.</p>
-      <div class="flex-row">
-        <div class="box border">A box with a border</div>
-        <div class="box card border">A card with a border</div>
-        <div class="box square border">A square with a border</div>
-      </div>
+      <ul>
+        <li>Chrome extension to generate HTML schema</li>
+        <li>Chrome extension to validate HTML and highlight errors</li>
+        <li>
+          An npm library for measuring CO<sub>2</sub>
+          <a href="https://github.com/danhartley/emissions">emissions</a>
+        </li>
+      </ul>
     </main>
     <footer id="footer">
       <nav aria-label="Primary">
         <a href="/src/sitemap.html">Link to human-readable sitemap in nav</a>
       </nav>
     </footer>
-
-    <script type="speculationrules">
-      {
-        "prerender": [
-          {
-            "urls": ["sitemap.html"]
-          }
-        ]
-      }
-    </script>
   </body>
 </html>
