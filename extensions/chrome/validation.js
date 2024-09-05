@@ -1,114 +1,97 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const errorClass = 'error-message'
+  const outlineErrorClass = 'outline-error'
+
   function addError(element, message) {
-    var errorMsg = document.createElement('span')
-    errorMsg.classList.add('error-message')
+    const errorMsg = document.createElement('span')
+    errorMsg.classList.add(errorClass)
     errorMsg.textContent = message
     element.parentNode.insertBefore(errorMsg, element.nextSibling)
+    element.classList.add(outlineErrorClass)
   }
 
   function addErrorMessage(selector, message) {
-    document.querySelectorAll(selector).forEach(function (element) {
-      addError(element, message)
-    })
+    document
+      .querySelectorAll(selector)
+      .forEach((element) => addError(element, message))
   }
 
-  // Check for <img> elements without alt tags
-  addErrorMessage('img:not([alt])', 'Error: Missing alt attribute')
-
-  // Check for empty <button> elements
-  addErrorMessage('button:empty', 'Error: Empty button element')
-
-  // Check for <button> elements where an <a> would be a better choice
-  addErrorMessage(
-    'button[href]',
-    'Error: Use an anchor tag instead of a button'
-  )
-
-  // Check for empty or missing href
-  addErrorMessage(
-    'a:not([href]), a[href=""]',
-    'This anchor is missing its mandatory href'
-  )
-
-  // Check for <input> elements that do not have a <label>
-  document
-    .querySelectorAll('input:not([type="hidden"])')
-    .forEach(function (input) {
-      var hasLabel = input.labels.length > 0 || input.getAttribute('aria-label')
-      if (!hasLabel) {
-        input.classList.add('no-label')
-        var errorMsg = document.createElement('span')
-        errorMsg.classList.add('error-message')
-        errorMsg.textContent = 'Error: Input without label'
-        input.parentNode.insertBefore(errorMsg, input.nextSibling)
-      }
-    })
-
-  // Check for <button> elements that contain only non-text nodes e.g. <svg>
-  function missingButtonText() {
-    const buttons = document.querySelectorAll('button')
-    buttons.forEach((button) => {
-      if (button.textContent.trim().length === 0) {
-        addError(button, 'This button has no text')
-        button.classList.add('outline-error')
+  function checkElements(selector, condition, message) {
+    document.querySelectorAll(selector).forEach((element) => {
+      if (condition(element)) {
+        addError(element, message)
       }
     })
   }
 
-  // Check for misused aria labels
-  function brokenAriaReference(aria) {
-    const complementaries = document.querySelectorAll(`[${aria}]`)
-    complementaries.forEach((comp) => {
-      const id = comp.getAttribute(`${aria}`)
-      if (!document.getElementById(id)) {
-        addError(comp, 'Broken ARIA reference')
-        comp.classList.add('outline-error')
-      }
-    })
-  }
+  // Accessibility checks
+  const checks = [
+    { selector: 'img:not([alt])', message: 'Error: Missing alt attribute' },
+    { selector: 'button:empty', message: 'Error: Empty button element' },
+    {
+      selector: 'button[href]',
+      message: 'Error: Use an anchor tag instead of a button',
+    },
+    {
+      selector: 'a:not([href]), a[href=""]',
+      message: 'This anchor is missing its mandatory href',
+    },
+    {
+      selector: 'input:not([type="hidden"])',
+      condition: (input) =>
+        input.labels.length === 0 && !input.getAttribute('aria-label'),
+      message: 'Error: Input without label',
+    },
+    {
+      selector: 'button',
+      condition: (button) => button.textContent.trim().length === 0,
+      message: 'This button has no text',
+    },
+  ]
 
-  // Check link has valid target
-  function missingLinkTargets() {
-    const targets = Array.from(document.querySelectorAll('[id]')).map(
-      (target) => target.id
+  checks.forEach((check) => {
+    if (check.condition) {
+      checkElements(check.selector, check.condition, check.message)
+    } else {
+      addErrorMessage(check.selector, check.message)
+    }
+  })
+
+  function checkAriaReference(attribute) {
+    checkElements(
+      `[${attribute}]`,
+      (element) => !document.getElementById(element.getAttribute(attribute)),
+      'Broken ARIA reference'
     )
-    const links = Array.from(document.querySelectorAll('a[href^="#"]'))
-    links.forEach((link) => {
-      const target = link.href.split('#')[1]
-      if (!targets.includes(target)) {
-        addError(link, 'This link has no target. How about using a button?')
-        link.classList.add('outline-error')
-      }
-    })
   }
 
-  // Check for invalid tabindexes
-  function faultyTabIndexes() {
-    const elementsWithTabIndex = Array.from(
-      document.querySelectorAll('[tabindex]')
+  function checkLinkTargets() {
+    const targets = new Set(
+      Array.from(document.querySelectorAll('[id]')).map((target) => target.id)
     )
-    const validTabIndexValues = [0, -1]
-
-    elementsWithTabIndex.forEach((el) => {
-      if (!validTabIndexValues.includes(Number(el.tabIndex))) {
-        addError(el, 'Use tabindex values of 0 or -1')
-        el.classList.add('outline-error')
-      }
-    })
+    checkElements(
+      'a[href^="#"]',
+      (link) => !targets.has(link.href.split('#')[1]),
+      'This link has no target. How about using a button?'
+    )
   }
 
-  // Where there is no element, add message to body
+  function checkTabIndexes() {
+    checkElements(
+      '[tabindex]',
+      (element) => ![0, -1].includes(Number(element.tabIndex)),
+      'Use tabindex values of 0 or -1'
+    )
+  }
+
   function addToBody(message) {
-    var errorMsg = document.createElement('span')
-    errorMsg.classList.add('error-message')
+    const errorMsg = document.createElement('span')
+    errorMsg.classList.add(errorClass, 'orphaned-error')
     errorMsg.textContent = message
-    const body = document.body
-    body.insertBefore(errorMsg, body.firstChild)
-    errorMsg.classList.add('orphaned-error')
+    document.body.insertBefore(errorMsg, document.body.firstChild)
   }
 
-  // Check for missing h1 header
-  function missingMainTitle() {
+  function checkMainTitle() {
     const h1 = document.querySelector('h1')
     if (!h1) {
       addToBody('You are missing an h1 header')
@@ -117,41 +100,88 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Check for missing document title
-  function missingDocumentTitle() {
-    const title = document.title
-    if (!title) {
-      addToBody('You are missing a document title')
+  function checkDocumentHeadProperty(prop) {
+    if (!document[prop]) {
+      addToBody(`You are missing a document ${prop}`)
     }
   }
 
-  // Add error where parent is invalid
-  function checkForParentType(element, type) {
-    const parentElement = element.parentElement
-    if (!(parentElement instanceof type)) {
-      addError(
-        element,
-        `${element.constructor.name} requires parent of type ${type.name}`
+  function getHtmlLang() {
+    const html = document.documentElement
+    const lang = html.getAttribute('lang')
+    return lang
+  }
+
+  function checkHtmlLang() {
+    const lang = getHtmlLang()
+    if (!lang) {
+      addToBody('You are missing an HTML language property')
+    }
+  }
+
+  function checkParentType(tagName, ParentType) {
+    checkElements(
+      tagName,
+      (element) => !(element.parentElement instanceof ParentType),
+      `${tagName.toUpperCase()} requires parent of type ${ParentType.name}`
+    )
+  }
+
+  function getMetaContent(name) {
+    const meta = document.querySelector(`meta[name="${name}"]`)
+    return meta ? meta.getAttribute('content') : null
+  }
+
+  function checkMetaContent(name) {
+    const meta = getMetaContent(name)
+    if (!meta) {
+      addToBody(`You are missing a meta ${name}`)
+    }
+  }
+
+  function checkCharset() {
+    const charset = document.querySelector('meta[charset]')
+    if (!charset?.getAttribute('charset')) {
+      addToBody('You are missing a charset')
+    }
+  }
+
+  function checkMetaContentLength(minLength, maxLength) {
+    // Recommended length is between 50 and 160 characters
+    const description = getMetaContent('description')
+    if (description.length < minLength || description.length > maxLength) {
+      addToBody(
+        `Your content description should be between ${minLength} and ${maxLength}`
       )
-      element.classList.add('outline-error')
     }
   }
 
-  // Check for invalid parent type
-  function checkForParent(tagName, parentType) {
-    const elements = Array.from(document.getElementsByTagName(tagName))
-    elements.forEach((el) => {
-      checkForParentType(el, parentType)
-    })
+  function checkLangValidity() {
+    // Note that this check uses a simple regular expression to validate the language code format.
+    // It allows for two-letter (ISO 639-1) or three-letter (ISO 639-2) language codes,
+    // optionally followed by a hyphen and a two-letter or three-letter country code.
+    // Supported codes: e.g., "en", "en-US", "fr", "de-DE", etc.
+    const lang = getHtmlLang()
+    if (lang) {
+      if (!/^[a-zA-Z]{2,3}(-[a-zA-Z]{2,3})?$/.test(lang)) {
+        addToBody(`Your value for lang, ${lang}, is invalid`)
+      }
+    }
   }
 
-  missingButtonText()
-  brokenAriaReference('aria-labelledby')
-  brokenAriaReference('aria-describedby')
-  faultyTabIndexes()
-  missingLinkTargets()
-  missingMainTitle()
-  missingDocumentTitle()
-  checkForParent('dt', HTMLDListElement)
-  checkForParent('dd', HTMLDListElement)
+  // Run all checks
+  checkAriaReference('aria-labelledby')
+  checkAriaReference('aria-describedby')
+  checkTabIndexes()
+  checkLinkTargets()
+  checkMainTitle()
+  checkParentType('dt', HTMLDListElement)
+  checkParentType('dd', HTMLDListElement)
+  checkMetaContent('description')
+  checkMetaContentLength(50, 160)
+  checkMetaContent('viewport')
+  checkDocumentHeadProperty('title')
+  checkCharset()
+  checkLangValidity()
+  checkHtmlLang()
 })
