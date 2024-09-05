@@ -1,0 +1,3 @@
+exclude:
+  - '**/src/accessibility/bad-test-card.html' # Skip files
+
