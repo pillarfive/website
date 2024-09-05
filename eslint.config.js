@@ -8,7 +8,7 @@ export default [
     },
   },
   {
-    ignores: ['dist/*'],
+    ignores: ['dist/*', 'src/accessibility/bad-test-card.html'],
   },
   pluginJs.configs.recommended,
 ]
