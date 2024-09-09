@@ -169,6 +169,41 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  function checkForControlLabels(selector) {
+    const inputs = Array.from(document.querySelectorAll(selector))
+
+    inputs.forEach((input) => {
+      const id = input.id || input.name
+      const labels = document.querySelectorAll(`label[for="${id}"]`)
+      // We target the parent because input dos not support pseudo elements.
+      if (labels.length === 0) {
+        addError(input, `You are missing a label for ${selector} ${id}`)
+      }
+    })
+  }
+
+  function checkNextElementByType(firstElement, nextElement, secondType) {
+    const elements = document.querySelectorAll(firstElement)
+    elements.forEach((element) => {
+      const next = element[nextElement]
+      if (next.constructor.name !== secondType) {
+        addError(element, `You are missing an ${secondType}`)
+      }
+    })
+  }
+
+  function checkNextElementByTagName(element, tagName) {
+    const elements = document.querySelectorAll(element)
+    elements.forEach((element) => {
+      if (element.tagName.toLowerCase() !== tagName) {
+        addError(
+          element,
+          'It is kind to provide a caption for users of assistive technology.'
+        )
+      }
+    })
+  }
+
   // Run all checks
   checkAriaReference('aria-labelledby')
   checkAriaReference('aria-describedby')
@@ -184,4 +219,11 @@ document.addEventListener('DOMContentLoaded', function () {
   checkCharset()
   checkLangValidity()
   checkHtmlLang()
+  checkForControlLabels('input')
+  checkForControlLabels('select')
+  checkNextElementByType('thead', 'firstElementChild', 'HTMLTableRowElement')
+  checkNextElementByType('tbody', 'firstElementChild', 'HTMLTableRowElement')
+  checkNextElementByType('table', 'firstElementChild', 'HTMLTableRowElement')
+  // checkNextElementByType('table', 'firstElementChild', 'HTMLTableCaptionElement')
+  checkNextElementByTagName('table', 'caption')
 })
