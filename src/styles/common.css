@@ -74,13 +74,19 @@ input {
   border-radius: var(--radius);
 }
 
+button {
+  box-sizing: border-box;
+}
+
 button:hover {
   border-color: var(--fg-colour);
   outline: none;
 }
 
 button:active {
-  border-color: var(--accent-colour);
+  /* Trying to keep everything monochrone
+   border-color: var(--accent-colour); */
+  box-shadow: 0 0 0 2px var(--fg-colour);
   outline: none;
 }
 
@@ -172,9 +178,29 @@ a {
   text-decoration: none;
 }
 
-a,
+a.local {
+  border-bottom: 1px dashed var(--fg-colour);
+  padding-bottom: calc(var(--d) * 0.25);
+  text-decoration: none;
+}
+
+a:hover {
+  border-width: 2px;
+}
+
+a:active {
+  border-width: 0;
+  outline: 2px solid;
+}
+
+a.local:active {
+  border-width: 0;
+  outline: 2px dashed;
+}
+
 a:visited {
-  color: var(--fg-colour);
+  color: var(--border-colour);
+  border-color: var(--border-colour);
 }
 
 /* data */
