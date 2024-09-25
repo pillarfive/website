@@ -172,6 +172,16 @@ li {
 
 /* links */
 
+:where(:visited) {
+  color: var(--border-colour);
+  border-color: var(--border-colour);
+}
+
+:where(:link) {
+  color: var(--fg-colour);
+  border-color: var(--fg-colour);
+}
+
 a {
   border-bottom: 1px solid var(--fg-colour);
   padding-bottom: calc(var(--d) * 0.25);
@@ -185,6 +195,7 @@ a.local {
 }
 
 a:hover {
+  color: var(--fg-colour);
   border-width: 2px;
 }
 
@@ -198,9 +209,9 @@ a.local:active {
   outline: 2px dashed;
 }
 
-a:visited {
-  color: var(--border-colour);
-  border-color: var(--border-colour);
+a > span.read-marker {
+  font-size: xx-small;
+  vertical-align: super;
 }
 
 /* data */
