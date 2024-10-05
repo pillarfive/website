@@ -1,12 +1,23 @@
 :root {
   --fg-colour: #232323;
   --border-colour: #aaa;
+  --visited-colour: #888;
   --bg-colour: #fff;
   --accent-colour: #ffa502;
-  --radius: calc(0.5 * var(--d));
-  --d: 0.5rem;
+  --d: 0.25rem; /* 4px */
   --w: 100vw / 100;
   --h: 100vh / 100;
+  --radius: calc(var(--d));
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
 }
 
 /* :is() only supported in newer browsers */
@@ -32,7 +43,7 @@ html {
 .body {
   max-width: 75ch;
   margin: auto;
-  padding: 0 var(--d);
+  padding: 0 calc(var(--d) * 2);
   background-color: var(--bg-colour);
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
 }
@@ -40,17 +51,17 @@ html {
 /* text decoration */
 
 abbr {
-  text-decoration: none;
-  border-bottom-style: dotted;
+  text-decoration: underline dotted 1px;
+  text-underline-offset: calc(var(--d) * 1.8);
 }
 
 blockquote {
-  margin: auto calc(var(--d) * 2);
+  margin: auto calc(var(--d) * 4);
 }
 
 cite {
   display: block;
-  margin: calc(var(--d) * 2) 0;
+  margin: calc(var(--d) * 4) 0;
 }
 
 code {
@@ -60,7 +71,7 @@ code {
 blockquote *,
 cite *,
 code {
-  font-size: calc(var(--d) * 2);
+  font-size: calc(var(--d) * 4);
   line-height: 1.6;
 }
 
@@ -68,10 +79,14 @@ code {
 
 button,
 input {
-  margin: calc(var(--d) * 2) 0;
+  margin: calc(var(--d) * 4) 0;
   padding: var(--d);
   border: 1px solid var(--border-colour);
   border-radius: var(--radius);
+}
+
+button {
+  box-sizing: border-box;
 }
 
 button:hover {
@@ -80,17 +95,19 @@ button:hover {
 }
 
 button:active {
-  border-color: var(--accent-colour);
+  /* Trying to keep everything monochrone
+   border-color: var(--accent-colour); */
+  box-shadow: 0 0 0 2px var(--fg-colour);
   outline: none;
 }
 
 select {
-  padding: var(--d) 0;
+  padding: calc(var(--d) * 2) 0;
   border-radius: var(--radius);
 }
 
 option {
-  font-size: calc(var(--d) * 2);
+  font-size: calc(var(--d) * 4);
   line-height: 1.6;
 }
 
@@ -102,7 +119,7 @@ body {
 }
 
 nav {
-  margin: calc(var(--d) * 8) 0;
+  margin: calc(var(--d) * 16) 0;
 }
 
 /* images */
@@ -114,7 +131,7 @@ figure {
 
 figcaption,
 caption {
-  margin: var(--d) 0;
+  margin: calc(var(--d) * 2) 0;
 }
 
 img {
@@ -127,26 +144,26 @@ img {
 
 aside {
   text-align: center;
-  margin: calc(var(--d) * 2) 0;
-  padding: var(--d);
+  margin: calc(var(--d) * 4) 0;
+  padding: calc(var(--d) * 2);
   border: 1px solid var(--border-colour);
   border-radius: var(--radius);
 }
 
 details,
 #schema > div div {
-  margin-bottom: var(--d);
-  padding: var(--d) var(--d) 0;
+  margin-bottom: calc(var(--d) * 2);
+  padding: calc(var(--d) * 2) calc(var(--d) * 2) 0;
   border: 1px dotted var(--border-colour);
-  border-radius: calc(var(--d) * 0.5);
+  border-radius: var(--d);
 }
 
 details[open] {
-  padding: var(--d);
+  padding: calc(var(--d) * 2);
 }
 
 fieldset {
-  margin: calc(var(--d) * 2) 0;
+  margin: calc(var(--d) * 4) 0;
   padding: var(--d);
   border: 1px solid var(--border-colour);
   border-radius: var(--radius);
@@ -154,33 +171,40 @@ fieldset {
 
 summary {
   font-weight: bold;
-  margin: calc(var(--d) * -1) calc(var(--d) * -1) 0;
-  padding: var(--d);
+  margin: calc(var(--d) * -2) calc(var(--d) * -2) 0;
+  padding: calc(var(--d) * 2);
 }
 
 p,
 li {
   line-height: 1.7;
-  margin: calc(var(--d) * 2) 0;
+  margin: calc(var(--d) * 4) 0;
 }
 
 /* links */
 
 a {
-  border-bottom: 1px solid var(--fg-colour);
-  padding-bottom: calc(var(--d) * 0.25);
-  text-decoration: none;
+  color: var(--fg-colour);
+  text-decoration: underline;
+  text-underline-offset: calc(var(--d) * 1.8);
 }
 
-a,
+a.local {
+  text-decoration: underline dashed 1px;
+}
+
 a:visited {
-  color: var(--fg-colour);
+  color: var(--visited-colour);
+}
+
+a:hover {
+  text-decoration-line: underline overline;
 }
 
 /* data */
 
 dl * {
-  font-size: calc(var(--d) * 2);
+  font-size: calc(var(--d) * 4);
   line-height: 1.6;
 }
 
