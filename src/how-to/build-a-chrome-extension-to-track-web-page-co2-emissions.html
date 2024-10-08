@@ -17,85 +17,177 @@
       <h1>Build a Chrome Extension to Track Web Page CO2 Emissions</h1>
     </header>
     <main class="main">
+      <p>
+        Pages have weight, some more than others, and
+        <a href="https://httparchive.org/reports/page-weight#bytesTotal"
+          >the median size is growing</a
+        >.
+      </p>
+      <p>
+        Measuring emissions associated with page weight is a relatively new
+        practice and given the number of factors to be controlled for, any
+        values should be regarded as decent guesses.
+      </p>
+      <p>
+        But these guesses are sufficient to compare pages across sites and for
+        development teams to use them to compare versions of their pages over
+        time.
+      </p>
+      <p>
+        Keeping an eye on emissions also means being aware of the individual
+        requests that make up a page. This number is in the hundreds for sites
+        that pull in data from many sources and use a lot of third party
+        tracking and advertising.
+      </p>
+      <p>
+        The emissions tracker lets visitors view requests and emissions in real
+        time, as they are made.
+      </p>
       <h2>Architecture</h2>
-
-      <h2>Service worker</h2>
+      <p>
+        The <strong>extension service worker</strong> has access to the browser
+        indexedDB database but not the DOM.
+      </p>
+      <p>
+        This chrome extension uses a
+        <a
+          href="https://developer.chrome.com/docs/extensions/reference/api/sidePanel"
+          ><strong>side panel</strong></a
+        >
+        which has access to the Window object and Chrome's APIs.
+      </p>
       <ul>
-        <li><code>fetch(url)</code>: Intercept the request.</li>
         <li>
-          <code>response.clone()</code>: Clone the response because a Response
-          object can only be consumed once. Cloning lets you to keep the
-          original response intact while processing a copy.
+          <strong>Scenarios</strong>: The extension keeps tracking emissions as
+          new requests come in but when the page is reloaded or the visitor
+          navigates to a new site, we:
+          <ul>
+            <li>Clear the indexedDB store</li>
+            <li>Reset the display in the side panel</li>
+          </ul>
+          When the visitor clicks on a different, already open, tab, we:
+          <ul>
+            <li>Clear the indexedDB store</li>
+            <li>Close the side panel</li>
+            <li>Disable request listeners</li>
+          </ul>
+          We disable the listeners because service workers
+          <a
+            href="https://developer.chrome.com/docs/extensions/develop/concepts/service-workers"
+            >generally run</a
+          >
+          until the browser is closed or the extension is removed.
         </li>
         <li>
-          Save request information to indexedDB so that the data can be read
-          back and processed e.g. grouped.
-        </li>
-        <li>
-          The service worker messages the side panel on every request
-          <em>with all requests</em>.
+          <strong>Initial state</strong>: Every time the visitor opens the side
+          panel by clicking on the extension icon, we show the message "Please
+          reload the page to capture website emissions". This is necessary
+          because we don't have access to 'historical' requests i.e. requests
+          made before the extension service worker was initialised.
         </li>
       </ul>
-
+      <h2>Service worker</h2>
+      <p>
+        The extension service worker is responsible for intercepting requests,
+        storing them, processing them (sorting, etc.) and messaging the side
+        panel.
+      </p>
+      <ul>
+        <li>
+          <code><strong>fetch(url)</strong></code
+          >: Intercept the request.
+        </li>
+        <li>
+          <code><strong>response.clone()</strong></code
+          >: Clone the response because a Response object can only be consumed
+          once. Cloning lets you keep the original response intact while
+          processing a copy.
+        </li>
+        <li>
+          <code><strong>indexedDB</strong></code
+          >: Save request information to indexedDB so that the data can be read
+          back and processed e.g. sorted and grouped.
+        </li>
+        <li>
+          <code><strong>chrome.runtime.sendMessage</strong></code
+          >: The service worker messages the side panel after every request with
+          a fresh set of data.
+        </li>
+      </ul>
       <h2>Side panel</h2>
       <ul>
         <li>
-          <code>chrome.runtime.onMessage.addListener</code> listens for messages
-          from the service worker. It is responsible for displaying a summary
-          (bytes, request count, associated emissions and whether the site is
-          green hosted), request details grouped by <code>type</code>, and
-          listing failed requests.
+          <code><strong>chrome.runtime.onMessage.addListener</strong></code
+          >: The side panel listens for messages from the service worker. It is
+          responsible for displaying a summary (bytes, request count, associated
+          emissions and whether the site is green hosted), request details
+          grouped by <code>type</code>, and listing failed requests.
         </li>
       </ul>
-
-      <h2>Request size</h2>
-      <ul>
-        <li>
-          We cannot use the Performance API because it only returns requests for
-          the current domain and because it makes a second request to the page
-          document (can you confirm this, and why?)
-        </li>
-        <li>
-          We use content-length where it is available otherwise the byte length
-        </li>
-        <li>
-          We use a compression matrix, given the bytes of the original,
-          resource, file and the encoding type - brotli etc. in order to mimic
-          what happens on the server. This is an imperfect approach but it
-          allows us to approximate the number of transferred bytes.
-        </li>
-      </ul>
-      <h3>Performance API</h3>
+      <h2>Request size (bytes transferred)</h2>
       <p>
-        The Performance API only tracks resource timings for the current domain
-        (same-origin policy). This is due to cross-origin restrictions designed
-        to protect privacy and security, preventing an extension from easily
-        gathering detailed request data for third-party resources. Therefore,
-        <code>performance.getEntriesByType("resource")</code> will only return a
-        subset of requests.
+        Unless the server responsible for serving a cross-origin request has set
+        <a href="Access-Control-Expose-Headers"
+          ><code>Access-Control-Expose-Headers</code></a
+        >
+        the content length is 0. In order to find bytes transferred, we need to
+        look at the content length and then, if compression has been used, apply
+        it.
       </p>
-
-      <h2>Real time</h2>
       <ul>
         <li>
-          the extension keeps tracking emissions as new requests come in but
-          will reset on page reload, when a page is refreshed or a page is
-          loaded in a new tab.
+          <strong>Performance API</strong>: We cannot use the Performance API
+          because
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming"
+            >transferSize is 0</a
+          >
+          for cross-origin requests where the appropriate
+          <abbr title="Cross-Origin Resource Sharing">CORS</abbr> headers have
+          not been set e.g.
+          <code>Timing-Allow-Origin: https://developer.mozilla.org</code>
         </li>
         <li>
-          the first time the extension is opened after closing it is necessary
-          to reload the page - there is a message to this effect because we
-          don't have access to 'historical' requests (can you confirm this).
+          <code><strong>fetch(url)</strong></code
+          >: Where available, we use content-length, and, if not, byte length.
+          Since this value is the original size of the resource, we have to
+          compress it.
+        </li>
+        <li>
+          <strong>Compression strategy</strong>: Given the size in bytes of the
+          original resource, resource type (CSS, JavaScript, etc.) and the
+          encoding type (brotli, gzip, etc.) we estimate the size of the
+          compressed, transferred, size of the resource. Compression rates for
+          resources vary between sites, so we select compression levels, and
+          rates, that are representative. For some sites, the resulting byte
+          value may be high or low.
+
+          <code>
+            const compressionRate = getCompressionStrategy( requestType,
+            encoding, uncompressedBytes ).rate
+          </code>
+        </li>
+        <li>
+          <strong>Practice</strong>: Due to uncertainty around compression rates
+          and emissions calculations, the tracker is most useful for comparing
+          values between different versions of the same site.
         </li>
       </ul>
-
       <h2>How emissions are calculated</h2>
       <h3>The Green Web Foundation (TGWF)</h3>
+      <p>
+        Once we have a byte count, we can calculate their associated emissions.
+        TGWF provides a useful set of methods and a clear
+        <a href="https://sustainablewebdesign.org/estimating-digital-emissions/"
+          >methodology</a
+        >. We recommend using <a href="https://ecograder.com/">Ecograder</a> for
+        a comparative analysis.
+      </p>
       <ul>
         <li>
           In order to use the
           <a href="https://developers.thegreenwebfoundation.org/co2js/methods/"
-            >functions</a
+            >methods</a
           >
           provided by the <abbr title="The Green Web Foundation">TGWF</abbr>, I
           forked the
@@ -113,19 +205,39 @@
           value for emissions in g of CO2.
         </li>
       </ul>
-      <h2>Use cases</h2>
-      There are a number of uses case we need to consider:
+      <h2>Features</h2>
       <ul>
-        <li>The visitor navigates to a new url in the current tab</li>
-        <li>The visitor refreshes, or reloads, the current tab</li>
-        <li>The visitor goes to a different, already open tab</li>
+        <li>
+          <strong>Comparison with previous</strong>: If the visitor has saved
+          emissions previously, the current emissions are compared against them.
+        </li>
+        <li>
+          <strong>Exporting data</strong>: Clicking on the "Export data" button
+          results in the option to save the summary and requests grouped by type
+          to a local file.
+        </li>
+        <li>
+          <strong>Overriding compression rates</strong>: There is a pending
+          feature request to override the default rates with custom rates better
+          tailored to the visitor's needs (the compression rates used on a
+          site). Since compression strategy is an object literal, the overrides
+          could be exported in JSON.
+        </li>
       </ul>
-      In each of these scenarios we reset the db and the display:
-      <ul>
-        <li>Clear the indexedDB store</li>
-        <li>Reset the display in the side panel</li>
-        <li>Start listening for requests and update the display</li>
-      </ul>
+      <h2>Purpose</h2>
+      <p>
+        The cost of our actions is of general interest and the emissions tracker
+        provides a simple way to see the impact of a web page.
+      </p>
+      <p>
+        The emissions tracker is also an inducement to development teams to
+        spend more time looking at how their web sites and apps behave in the
+        browser, where they are used and seen by others.
+      </p>
+      <p>
+        At People and Code we spend a lot of time in the browser and build tools
+        like this to help us.
+      </p>
     </main>
     <footer>
       <nav aria-label="Primary">

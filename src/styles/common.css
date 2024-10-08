@@ -65,7 +65,7 @@ cite {
 }
 
 code {
-  white-space: pre;
+  white-space: pre-line;
 }
 
 blockquote *,
