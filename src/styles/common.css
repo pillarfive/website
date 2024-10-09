@@ -65,7 +65,7 @@ cite {
 }
 
 code {
-  white-space: pre;
+  white-space: pre-line;
 }
 
 blockquote *,
@@ -95,7 +95,7 @@ button:hover {
 }
 
 button:active {
-  /* Trying to keep everything monochrone
+  /* Trying to keep everything monochrome
    border-color: var(--accent-colour); */
   box-shadow: 0 0 0 2px var(--fg-colour);
   outline: none;
