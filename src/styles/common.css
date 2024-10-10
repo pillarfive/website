@@ -3,6 +3,7 @@
   --border-colour: #aaa;
   --visited-colour: #888;
   --bg-colour: #fff;
+  --box-colour: #f5f5f5;
   --accent-colour: #ffa502;
   --d: 0.25rem; /* 4px */
   --w: 100vw / 100;
@@ -62,6 +63,15 @@ blockquote {
 cite {
   display: block;
   margin: calc(var(--d) * 4) 0;
+}
+
+pre {
+  white-space: normal;
+  background-color: var(--box-colour);
+  padding: 0.5rem;
+  padding: 1em;
+  overflow-x: hidden;
+  word-wrap: break-word;
 }
 
 code {
