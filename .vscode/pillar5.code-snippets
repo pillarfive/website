@@ -1,6 +1,6 @@
 {
   "People & Code HTML Page": {
-    "prefix": ["page-five", "page-5"],
+    "prefix": ["page-p-c", "p-c"],
     "body": [
       "<!doctype html>",
       "<html lang=\"en\">",
@@ -25,6 +25,6 @@
       "</html>",
       "",
     ],
-    "description": "The P5 HTML page template",
+    "description": "The People & Code HTML page template",
   },
 }
