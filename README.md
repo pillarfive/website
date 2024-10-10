@@ -1,8 +1,8 @@
-# Website for Pillar5
+# Website for People & Code
 
 ## Directory structure
 
-- `summary-of`: Non-opinionated pieces on a subjet - Summary of knowledge
+- `summary-of`: Non-opinionated pieces on a subject - Summary of knowledge
 - `how-to`: Practical guides
 - `thoughts-on`: Essays and opinions - Opinionated
 - Root level:

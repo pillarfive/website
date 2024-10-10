@@ -1,6 +1,6 @@
 {
-  "Pillar 5 HTML Page": {
-    "prefix": ["page-five", "page-5"],
+  "People & Code HTML Page": {
+    "prefix": ["page-p&c", "p&c"],
     "body": [
       "<!doctype html>",
       "<html lang=\"en\">",
@@ -18,13 +18,13 @@
       "    <main class=\"main\">${4:Add new content here…}</main>",
       "    <footer>",
       "      <nav aria-label=\"Primary\">",
-      "        <a href=\"/src/sitemap.html\">Link to human-readable sitemap in nav</a>",
+      "        <a href=\"/src/sitemap.html\">Human-readable sitemap</a>",
       "      </nav>",
       "    </footer>",
       "  </body>",
       "</html>",
       "",
     ],
-    "description": "The P5 HTML page template",
+    "description": "The People & Code HTML page template",
   },
 }
