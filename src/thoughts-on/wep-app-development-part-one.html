@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What makes a suitable site: web pages that are just the right size with just the right functionality for the right visitors."
+    />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>What makes a suitable site</title>
+  </head>
+  <body class="body">
+    <header>
+      <h1>Web app development</h1>
+    </header>
+    <main class="main">
+      <article>
+        <p>
+          This article makes the case for tackling complexity in web app
+          development by creating multiple apps. It is one of two related
+          articles.
+        </p>
+        <h2>Part one</h2>
+        <p>
+          Online newspapers broadcast to a readership whose content varies
+          little. An app, which is receiving as well as disseminating data, may
+          have multiple states, and many ways of engaging with it.
+        </p>
+        <p>
+          Let's imagine how employees at an intergovernmental site monitoring
+          carbon emissions might interact with their data.
+        </p>
+        <ul>
+          <li>
+            <strong>Big picture</strong>: charts, executive summaries, key
+            stats, takeaways
+          </li>
+          <li>
+            <strong>Analysis</strong>: interactive charts, models, scenarios,
+            generating reports and new requirements, summarising data, picking
+            out key data points and writing takeaways
+          </li>
+          <li>
+            <strong>Data entry</strong>: inputting data, overseeing ingestion of
+            data from disparate sources, editing data, validating data, fact
+            checking reports
+          </li>
+          <li>
+            <strong>Regulation</strong>: auditing data, verifying data,
+            source-checking
+          </li>
+          <li>
+            <strong>Political</strong>: ensuring commitments are made and
+            standards adhered to, raising concerns, identifying problems,
+            issuing warnings
+          </li>
+          <li>
+            <strong>Public</strong>: oversight, providing criticism and feedback
+          </li>
+        </ul>
+        <p>
+          The data may change little but the people using them, and the access
+          they need, will.
+        </p>
+        <p>
+          The problem for the development team (and we use this term broadly to
+          include everyone contributing to building, marketing and promoting the
+          site), is to determine who sees what, when, and why. Nor is this a one
+          way street; depending on their requirements, our analysts,
+          statisticians, politicians and public may need to give up information
+          about themselves.
+        </p>
+        <p>
+          Is it better to create multiple apps (data entry, analytics,
+          dashboard, etc.) or variations on a single app? Whatever the decision
+          (we will be putting the case for multiple apps), understanding the
+          needs of users is necessary for writing less code and designing
+          simpler interfaces.
+        </p>
+        <p>
+          If teams ignore difference at the outset, contradictions accumulate
+          and complexity increases.
+        </p>
+        <h3>Analysis</h3>
+        <p>
+          How do we prevent this from happening? The first step is to consider
+          all possible user flows and place them in groups. The number of groups
+          is critical; the fewer the better so long as no one group becomes a
+          bucket for miscellany.
+        </p>
+        <p>
+          Here's another way to breakdown our
+          <a
+            href="https://www.smashingmagazine.com/2024/05/building-user-segmentation-matrix-foster-cross-org-alignment/"
+            >user segments</a
+          >:
+        </p>
+        <ul>
+          <li>
+            <strong>Who needs what data?</strong> Some users require high-level
+            summaries (executives, public), while others need in-depth
+            interaction with the data (analysts, auditors).
+          </li>
+          <li>
+            <strong>How frequently do they interact with the app?</strong>
+            For example, data entry might happen daily, while audits might occur
+            quarterly.
+          </li>
+          <li>
+            <strong>What level of technical expertise do they have?</strong>
+            Data entry operators might need a simplified interface, while
+            analysts may require complex data manipulation tools.
+          </li>
+        </ul>
+        <p>
+          This work is not trivial. It benefits from expertise in UI and UX but
+          ideally it should involve disparate team members, including people who
+          understand human behaviour, data manipulation, HTML, screen readers,
+          accessibility, performance, security, SEO, marketing, etc. It's a long
+          list.
+        </p>
+        <h3>The matrix of needs</h3>
+        <p>
+          Writing down the needs of different users is a pretty clear
+          requirement. How else would we know what to build? Once we have that
+          information, we can use it in multiple ways because we are programmers
+          and designers and studiers of human behaviour. We can show where there
+          is overlap, what items are unique, what is universal, and we can rank
+          requirements in multiple ways such as necessity, risk, development
+          time, etc.
+        </p>
+        <h3>Discussion</h3>
+        <p>
+          Not everyone likes meetings but without informed, critical discussion,
+          problems will emerge that could have been prevented. Here are some of
+          the benefits of (long) meetings:
+        </p>
+        <ul>
+          <li>Job titles become less important</li>
+          <li>
+            Everyone gets a chance to speak (if the meeting is sufficiently
+            long)
+          </li>
+          <li>Solutions bubble up as workable ideas replace opinions</li>
+          <li>Consensus is derived not imposed</li>
+          <li>New thinking emerges</li>
+          <li>Collaboration improves</li>
+        </ul>
+        <h3>Implementation</h3>
+        <p>
+          It's a principle, not only held by developers, that it's a bad idea to
+          repeat yourself. This is a good argument in favour of components.
+          Components are used multiple times. A button component might be used
+          hundreds, or thousands of times, and it will allow for a certain
+          amount of variety.
+        </p>
+        <p>
+          It's tempting to have one app because it feels like a lot of effort to
+          have more. But it needn't be, especially if a team knows why they have
+          multiple apps, and are comfortable building and maintaining them
+          (working from, perhaps, a template generator). Apps aren't that hard
+          to build; the problem is what to show and what not to show, and to
+          whom.
+        </p>
+        <p>
+          The best way to stop a visitor going where you don't want them to go,
+          or from doing what you don't want them to, is to remove that
+          particular option. This is also a good rule for development teams.
+        </p>
+        <p>Here is how we might tackle two of our apps.</p>
+        <h4>The dashboard app</h4>
+        <p>
+          In our hypothetical app, we make everyone's life easier, by building a
+          separate app for the dashboard. It consumes data (it's read only), it
+          might not need a menu, and it can expand to fill the screen. It won't
+          be hard to display data by region, and to work out how much the
+          authenticated visitor is authorised to see. From the development
+          perspective, that is what the dashboard boils down to: a filtered,
+          read-only summation of data.
+        </p>
+        <h4>The data input app</h4>
+        <p>
+          Data input can be a tricky business and for this reason alone, it's
+          best kept apart from everything else.
+        </p>
+        <p>
+          Inputting a tonne of data once a year is a different problem than
+          frequent, small additions. Together with security, that's enough for
+          one app.
+        </p>
+        <h4>Single purpose</h4>
+        <p>
+          It's much easier to maintain small apps that have a clear purpose. It
+          is easier to manage new features, release dates, customer updates,
+          etc. when there are fewer risks and people involved. Security
+          assessments can be made according to risk, sustainability based on use
+          and exposure, and accessibility tested more easily and more often.
+        </p>
+        <h4>Common approach</h4>
+        <p>
+          Our apps will have much in common: the same framework or strategy,
+          common best practices and development processes, shared resources such
+          as a design system and component library, authentication and
+          authorisation control, and a single team. Beyond that, apps can and
+          should be different; they (should) serve disparate needs and be
+          tailored accordingly.
+        </p>
+        <p>
+          Reducing unnecessary interactions is essential for the improved
+          performance, accessibility, security and sustainability (<abbr
+            title="Performance, accessibility, security and sustainability"
+            >PASS</abbr
+          >) of complex web apps.
+        </p>
+      </article>
+      <!-- <p>
+          And this is where we may differ from others - we believe that as much
+          work explaining, documenting and testing solutions as possible should
+          take place
+          <em>in the browser</em>.
+        </p> -->
+      <!-- <h2>The browser</h2>
+        <ul>
+          <li>Code, data, design and thinking meet once, in the browser</li>
+          <li>
+            Design tools such as Figma include tools to simulate the behaviour
+            of individual components but they do not replicate the behaviour of
+            components in situ
+          </li>
+          <li>
+            The effect, and impact, of third party requests (advertising,
+            images, analytics, etc.) is not apparent in the IDE
+          </li>
+          <li>
+            Web pages consist almost entirely of HTML, CSS and JavaScript. The
+            first is essential, the second and third useful.
+          </li>
+          <li>
+            Tools such as frameworks may be useful for creating pages (or apps
+            made from pages), but they are one step removed, at best, from the
+            end product
+          </li>
+        </ul>
+      
+      <aside class="left">
+        The recent introduction of
+        <a href="https://openai.com/index/introducing-canvas/"
+          >ChatGPT's canvas</a
+        >
+        coming on top of voice and Internet access may reveal OpenAI's true
+        intentions: to become the gateway to the Internet - in the process
+        making a great deal of Internet business redundant.
+        <p>
+          The fuss created by Jakob Nielsen's article,
+          <a href="https://www.uxtigers.com/post/accessibility-generative-ui"
+            >Accessibility Has Failed: Try Generative UI = Individualized UX</a
+          >, may be inconsequential.
+        </p>
+      </aside> -->
+    </main>
+    <footer>
+      <nav aria-label="Primary">
+        <a href="/src/sitemap.html">Human-readable sitemap</a>
+      </nav>
+    </footer>
+  </body>
+</html>

@@ -154,6 +154,11 @@ aside {
   padding: calc(var(--d) * 2);
   border: 1px solid var(--border-colour);
   border-radius: var(--radius);
+  line-height: 1.7;
+
+  &.left {
+    text-align: left;
+  }
 }
 
 details,
