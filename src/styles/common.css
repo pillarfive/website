@@ -56,10 +56,6 @@ abbr {
   text-underline-offset: calc(var(--d) * 1.8);
 }
 
-blockquote {
-  margin: auto calc(var(--d) * 4);
-}
-
 cite {
   display: block;
   margin: calc(var(--d) * 4) 0;
@@ -74,7 +70,6 @@ pre {
   word-wrap: break-word;
 }
 
-blockquote *,
 cite *,
 code {
   font-size: calc(var(--d) * 4);
@@ -149,11 +144,35 @@ img {
 /* presentation */
 
 aside {
-  text-align: center;
   margin: calc(var(--d) * 4) 0;
-  padding: calc(var(--d) * 2);
+  padding: calc(var(--d) * 2) calc(var(--d) * 4);
   border: 1px solid var(--border-colour);
   border-radius: var(--radius);
+
+  * {
+    font-size: calc(var(--d) * 4);
+  }
+
+  & h3 {
+    margin-top: var(--d);
+    margin-bottom: 0;
+  }
+}
+
+blockquote {
+  * {
+    font-size: calc(var(--d) * 4);
+    line-height: 1.6;
+  }
+
+  ul {
+    margin-left: 0;
+    padding: 0;
+
+    ul {
+      padding: revert;
+    }
+  }
 }
 
 details,
@@ -175,6 +194,11 @@ fieldset {
   border-radius: var(--radius);
 }
 
+hr {
+  border-top: 1px dashed var(--border-colour);
+  margin: calc(var(--d) * 6) 0;
+}
+
 summary {
   font-weight: bold;
   margin: calc(var(--d) * -2) calc(var(--d) * -2) 0;
@@ -182,7 +206,8 @@ summary {
 }
 
 p,
-li {
+li,
+aside {
   line-height: 1.7;
   margin: calc(var(--d) * 4) 0;
 }
@@ -276,6 +301,10 @@ dt {
 
 .is-border {
   background-color: var(--border-colour);
+}
+
+.centre {
+  text-align: center;
 }
 
 /* only supported in newer browsers */
