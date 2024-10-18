@@ -39,17 +39,6 @@ html {
   box-sizing: inherit;
 }
 
-/* element selectors */
-
-.body {
-  max-width: 75ch;
-  margin: auto;
-  padding: 0 calc(var(--d) * 2);
-  background-color: var(--bg-colour);
-  font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
-  position: relative;
-}
-
 /* text decoration */
 
 abbr {
@@ -130,6 +119,19 @@ option {
 body {
   -webkit-font-smoothing: antialiased;
   color: var(--fg-colour);
+}
+
+.body {
+  max-width: 75ch;
+  margin: auto;
+  padding: 0 calc(var(--d) * 2);
+  background-color: var(--bg-colour);
+  font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
+  position: relative;
+}
+
+.main {
+  margin-bottom: calc(var(--d) * 24);
 }
 
 nav {
