@@ -47,6 +47,7 @@ html {
   padding: 0 calc(var(--d) * 2);
   background-color: var(--bg-colour);
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
+  position: relative;
 }
 
 /* text decoration */
@@ -74,6 +75,18 @@ cite *,
 code {
   font-size: calc(var(--d) * 4);
   line-height: 1.6;
+}
+
+footer {
+  position: fixed;
+  width: 75ch;
+  height: calc(var(--d) * 20);
+  bottom: 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.8;
+  background-color: var(--bg-colour);
 }
 
 /* controls */
@@ -120,7 +133,10 @@ body {
 }
 
 nav {
-  margin: calc(var(--d) * 16) 0;
+  width: calc((var(--w) * 100) - (var(--d) * 4));
+  max-width: 75ch;
+  padding: calc(var(--d) * 2) 0;
+  border-top: 2px solid var(--border-colour);
 }
 
 /* images */
