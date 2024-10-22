@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Test card, design system" />
     <link rel="stylesheet" href="/src/styles/common.css" />
+    <script src="./test-card.js"></script>
     <title>Test card</title>
   </head>
   <body class="body">
@@ -23,17 +24,19 @@
         <h4>Select</h4>
         <label for="how-to-options">Open a link from a select element</label>
         <select name="how-tos" id="how-to-options">
-          <option value="/src/how-to/create-an-html-snippet.html">
+          <option value="/how-to/create-an-html-snippet.html">
             Create an HTML page from a template
           </option>
-          <option value="/src/how-to/publish-to-github-pages.html">
+          <option value="/how-to/publish-to-github-pages.html">
             Publish using GitHub Pages
           </option>
-          <option value="/src/how-to/be-more-productive-in-vscode.html">
+          <option value="/how-to/be-more-productive-in-vscode.html">
             Be more productive in VSCode
           </option>
         </select>
-        <button type="button">Go to selected page</button>
+        <button id="go-to-selected-page-btn" type="button">
+          Go to selected page
+        </button>
         <button type="reset">Reset form</button>
       </form>
       <form
