@@ -6,8 +6,8 @@
   --box-colour: #f5f5f5;
   --accent-colour: #ffa502;
   --d: 0.25rem; /* 4px */
-  --w: 100vw / 100;
-  --h: 100vh / 100;
+  --w: 1vw;
+  --h: 1vh;
   --radius: calc(var(--d));
 }
 
