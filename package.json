@@ -30,6 +30,8 @@
   "license": "MIT",
   "devDependencies": {
     "@eslint/js": "^9.8.0",
+    "@parcel/packager-raw-url": "^2.12.0",
+    "@parcel/transformer-jsonld": "^2.12.0",
     "accessibility-checker": "^3.1.74",
     "cheerio": "^1.0.0",
     "eslint": "^9.8.0",
