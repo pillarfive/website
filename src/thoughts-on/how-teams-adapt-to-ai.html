@@ -10,35 +10,79 @@
   <body class="body">
     <header>
       <h1>How web development teams adapt to AI</h1>
+      <p>An overview of what LLMs are and how we might work with them.</p>
     </header>
     <main class="main">
       <article>
-        <h2>Towards a new paradigm</h2>
+        <h2>A means not an end</h2>
         <p>
-          LLM roles: practical as a planning tool and destination as
-          interface</p>
+          Because of the resources LLMs consume, we have an ethical duty to
+          consider how we use them.
         </p>
-        <p>The Universal Interface</p>
+        <p>
+          Conversations with LLMs are costly but may be valuable, the means to
+          cover ground previously inaccessible, and to explore ideas otherwise
+          beyond an individual or team's reach.
+        </p>
+        <p>An LLM can be:</p>
+        <ul>
+          <li>A tool for creating other tools</li>
+          <li>A means of iterating over a problem or idea</li>
+          <li>A way to explore (and not a crutch)</li>
+        </ul>
+        <p>
+          Since the interface is natural language, the conversation is, however,
+          two way; LLMs listen as well as speak. Therefore, as we ponder their
+          performance, we must consider our own.
+        </p>
         <section aria-labelledby="state-of-development">
-          <h3 id="state-of-development">The state of development today</h3>
+          <h3 id="state-of-development">Adapting not adopting</h3>
+          <p>
+            This piece is specifically about how web development teams might
+            adapt to LLMs. It would be rash to incorporate them into development
+            processes. Given their unsuitability for many tasks, and the cost of
+            running them, we advise against wrapping them around existing
+            practices or embedding them too deeply. Use them instead as we might
+            conversations, as a way to explore, discover new approaches, and
+            move on. They are useful but disposable though the artefacts we
+            create as a result may persist.
+          </p>
+          <h4>Web development today</h4>
           <ul>
             <li>The cost of web app and page development is high</li>
             <li>Interfaces must adapt to a variety of devices and visitors</li>
+            <li>LLMs are widely used by web development teams</li>
             <li>
-              Visitors, supported by LLMs that are capable of interacting with
-              APIs, will be able to create interfaces relevant to user or
-              visitor needs and wants thereby bypassing or reducing the role of
-              development teams.
+              LLMs are perceived of as assisting people, but may replace them
             </li>
+            <li>LLMs are used to increase productivity and to educate</li>
           </ul>
-          <p>Contract as a multi-purpose generative artifact.</p>
+
+          <p>
+            Jakob Nielsen has suggested that generative AI could lead to
+            <a href="https://www.uxtigers.com/post/accessibility-generative-ui"
+              >Individualized UI</a
+            >.
+          </p>
+          <p>
+            Development teams could use LLMs (generative AI) to create multiple
+            custom UIs.
+          </p>
+          <p>
+            Alternatively, an LLM running externally could help a user create an
+            interface specific to their needs.
+          </p>
+          <p>
+            Should development teams carry on as though LLMs are a fad, or plan
+            for fundamental change?
+          </p>
         </section>
         <section aria-labelledby="the-value-of-apis">
           <h3 id="the-value-of-apis">The value of APIs</h3>
         </section>
+        <p>LLMs need data to act upon, and data must be secured.</p>
         <p>
-          In the interim, and possibly long term, it will not be possible - or
-          desirable - for LLMs to interact directly with databases or have
+          LLMs cannot be be given unfettered access to databases or have
           knowledge of their internal schema.
         </p>
         <p>
@@ -46,22 +90,47 @@
           preserving company privacy and honouring data protection issues.
         </p>
         <p>
-          Traditional APIs may be augmented to include pricing, design and
-          ethics.
+          But APIs might form the bridge between what teams do now and what
+          might be expected of them.
         </p>
+        <p>
+          And the role of the API can be extended. A company contract or
+          constitution that expands on an API schema would become the single
+          source of truth:
+        </p>
+        <ul>
+          <li>From which the API is derived</li>
+          <li>From which the database scheme is derived</li>
+          <li>
+            Which front and backend developers use as the contract in
+            contract-first development whilst iterating on the API
+          </li>
+          <li>As the reference point for front and backend tests</li>
+          <li>Be the repository for tariffs and pricing details</li>
+          <li>
+            Be the repository for business rules and statements pertaining to
+            ethics, sustainability and accessibility
+          </li>
+        </ul>
+        <p>
+          Writing and maintaining a schema is hard. It may be possible for
+          internal and external LLMs to rely only on API endpoints and examples.
+        </p>
+        <p>How should teams proceed?</p>
         <section aria-labelledby="existing-teams">
           <h3 id="existing-teams">Existing teams</h3>
           <ul>
-            <li>create an API if there isn't one</li>
+            <li>Create an API if there isn't one</li>
             <li>
-              internal benefits
+              Internal benefits
               <ul>
-                <li>source of truth for frontend/backend contracts</li>
-                <li>source of truth for (front and backend) tests</li>
+                <li>Single source of truth in contract-first development</li>
+                <li>Single source of truth for front and backend tests</li>
               </ul>
             </li>
             <li>
-              ready for 'competing' interfaces including those created by LLMs
+              A starting point for 'competing' interfaces including those
+              created by LLMs
             </li>
           </ul>
         </section>
@@ -69,57 +138,40 @@
           <h3 id="new-teams">New teams</h3>
           <p>New teams can adopt new structures and roles.</p>
           <ul>
-            <li>new structures and roles</li>
-            <li>
-              start with the Company Programming Interface CPI which contain a
-            </li>
-            <li>
-              traditional API plus add-ons - may not require an API schema;
-              internal and external APIs may only require endpoints and examples
-              - can be used to create db, act as source of truth in contract
-              first scenarios and testing
-            </li>
-            <li>
-              can be used as source of truth for generating sales pitches,
-              business plan - need not all be public
-            </li>
+            <li>Write company contract which is the single source of truth</li>
+            <li>Create new structures and roles based on new requirements</li>
           </ul>
         </section>
+        <p>Creating highly expressive company contracts will not be trivial.</p>
         <section aria-labelledby="downsides">
           <h3 id="downsides">Downsides</h3>
           <ul>
-            <li>maintenance</li>
-            <li>loss of detail</li>
-            <li>black box/es</li>
-            <li>loss of jobs</li>
-            <li>loss of knowledge and broader understanding</li>
-            <li>generic approaches</li>
-            <li>loss of 'new' ideas and approaches; evolutionary stagnation</li>
+            <li>
+              APIs 'hijacked' by LLMs interacting directly with APIs on behalf
+              of end users (other companies, individuals)
+            </li>
+            <li>Maintenance of the contract</li>
+            <li>Loss of detail</li>
+            <li>Black box/es</li>
+            <li>Loss of jobs</li>
+            <li>Loss of knowledge and broader understanding</li>
+            <li>Generic approaches</li>
+            <li>Loss of 'new' ideas and approaches; evolutionary stagnation</li>
           </ul>
         </section>
         <section aria-labelledby="upsides">
-          <h3 id="upsides">Upsides (if prepared)</h3>
+          <h3 id="upsides">Upsides</h3>
           <ul>
             <li>
-              preparing for inevitable change (even though nature of change
+              Teams prepare for inevitable change (even though nature of change
               uncertain)
             </li>
             <li>
-              retain knowledge by adaptation creating teams that are better e.g.
-              more
-            </li>
-            <li>
-              fit for modern websites and apps better communication between (the
-              former roles of) design, development, UX, etc. more interesting
-              roles better than superannuated approaches wrapped in AI
-              opportunity to change
+              They retain knowledge by adaptation creating teams that are better
+              suited to ecosystems in which LLMs are prevalent.
             </li>
           </ul>
         </section>
-        <p>
-          Who decides what is important? What is the relationship between LLMs
-          and people? Who mediates?
-        </p>
       </article>
       <aside>
         <h3>Similar architectural and design approaches</h3>
@@ -139,6 +191,17 @@
           <li>Domain-Driven Design</li>
         </ul>
       </aside>
+
+      <hr />
+      <p>
+        <em
+          >This article was written with the help, but not necessarily the
+          agreement, of <a href="https://claude.ai">Claude</a>, and was
+          published on 20th December 2024.</em
+        >
+      </p>
+      <hr />
+
       <section aria-labelledby="references">
         <h2 id="references">References</h2>
         <ul>
