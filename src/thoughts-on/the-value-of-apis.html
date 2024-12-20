@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Thoughts on the value of APIs to web development teams"
+    />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>The value of APIs</title>
+  </head>
+  <body class="body">
+    <header>
+      <h1>The value of APIs</h1>
+    </header>
+    <main class="main">
+      <article>
+        <section aria-labelledby="the-value-of-apis">
+          <h2 id="the-value-of-apis">The value of APIs</h2>
+          <p>LLMs need data to act upon, and data must be secured.</p>
+          <p>
+            LLMs cannot be be given unfettered access to databases or have
+            knowledge of their internal schema.
+          </p>
+          <p>
+            APIs provide a controlled and safe way access to data whilst
+            preserving company privacy and honouring data protection issues.
+          </p>
+          <p>
+            APIs can be the mechanism by which teams adapt to change on (some
+            of) their terms.
+          </p>
+          <p>
+            And the role of the API can be extended. A company contract or
+            constitution that expands on an API schema would become the single
+            source of truth:
+          </p>
+          <ul>
+            <li>From which the API is derived</li>
+            <li>From which the database scheme is derived</li>
+            <li>
+              Which front and backend developers use as the contract in
+              contract-first development whilst iterating on the API
+            </li>
+            <li>As the reference point for front and backend tests</li>
+            <li>Be the repository for tariffs and pricing details</li>
+            <li>
+              Be the repository for business rules and statements pertaining to
+              ethics, sustainability and accessibility
+            </li>
+          </ul>
+          <p>
+            Writing and maintaining a schema is hard. It may be possible for
+            internal and external LLMs to rely only on API endpoints and
+            examples.
+          </p>
+          <p>How should teams proceed?</p>
+          <section aria-labelledby="existing-teams">
+            <h3 id="existing-teams">Existing teams</h3>
+            <ul>
+              <li>Create an API if there isn't one</li>
+              <li>
+                Internal benefits
+                <ul>
+                  <li>Single source of truth in contract-first development</li>
+                  <li>Single source of truth for front and backend tests</li>
+                </ul>
+              </li>
+              <li>
+                A starting point for 'competing' interfaces including those
+                created by LLMs
+              </li>
+            </ul>
+          </section>
+          <section aria-labelledby="new-teams">
+            <h3 id="new-teams">New teams</h3>
+            <p>New teams can adopt new structures and roles.</p>
+            <ul>
+              <li>
+                Write company contract which is the single source of truth
+              </li>
+              <li>Create new structures and roles based on new requirements</li>
+            </ul>
+          </section>
+          <p>
+            Creating highly expressive company contracts will not be trivial.
+          </p>
+          <section aria-labelledby="downsides">
+            <h3 id="downsides">Downsides</h3>
+            <ul>
+              <li>
+                APIs 'hijacked' by LLMs interacting directly with APIs on behalf
+                of end users (other companies, individuals)
+              </li>
+              <li>Maintenance of the contract</li>
+              <li>Loss of detail</li>
+              <li>Black box/es</li>
+              <li>Loss of jobs</li>
+              <li>Loss of knowledge and broader understanding</li>
+              <li>Generic approaches</li>
+              <li>
+                Loss of 'new' ideas and approaches; evolutionary stagnation
+              </li>
+            </ul>
+          </section>
+          <section aria-labelledby="upsides">
+            <h3 id="upsides">Upsides</h3>
+            <ul>
+              <li>
+                Teams prepare for inevitable change (even though nature of
+                change uncertain)
+              </li>
+              <li>
+                They retain knowledge by adaptation creating teams that are
+                better suited to ecosystems in which LLMs are prevalent.
+              </li>
+            </ul>
+          </section>
+        </section>
+      </article>
+      <aside>
+        <h3>Similar architectural and design approaches</h3>
+        <ul>
+          <li>
+            <a
+              href="https://medium.com/@harutyunabgaryann/the-api-contract-bridging-the-gap-between-backend-and-frontend-development-3074effc642b"
+              >Contract-First Development</a
+            >
+          </li>
+          <li><a href="https://mswjs.io/">API mocking for JavaScript</a></li>
+          <li>
+            <a href="https://swagger.io/specification/"
+              >OpenAPI Specification</a
+            >
+          </li>
+          <li>Domain-Driven Design</li>
+        </ul>
+      </aside>
+      <hr />
+      <section aria-labelledby="references">
+        <h2 id="references">References</h2>
+        <ul>
+          <li>
+            <a
+              href="https://apidesignmatters.substack.com/p/your-guide-to-the-language-of-api-design"
+              >API Design Matters: Your Guide to The Language of API Design |
+              David Biesack</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <nav aria-label="Primary">
+        <a class="local" href="/src/sitemap.html">Human-readable sitemap</a>
+      </nav>
+    </footer>
+  </body>
+</html>
