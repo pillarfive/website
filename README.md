@@ -1,15 +1,13 @@
 # Website for People & Code
 
-## Directory structure
+The website of [People and Code](https://people-and-code.com/).
 
-- `summary-of`: Non-opinionated pieces on a subject - Summary of knowledge
+## Directory structure aka Contents
+
+- `root`: Home page, People, and Code
+- `workshops`: Workshops for web development teams
 - `how-to`: Practical guides
-- `thoughts-on`: Essays and opinions - Opinionated
-- Root level:
-
-### people-and-code.html
-
-Contains:
-
-- Pledges
-- Change logs
+- `summary-of`: Non-opinionated pieces on a subject
+- `thoughts-on`: Essays and opinions
+- `pledges`: Commitments to act or think differently
+- `examples`: A repository of examples used on the site and in workshops
