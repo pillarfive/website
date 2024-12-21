@@ -139,16 +139,6 @@ nav {
   max-width: 75ch;
   padding: calc(var(--d) * 2) 0;
   border-top: 2px solid var(--border-colour);
-
-  a {
-    &.local {
-      text-decoration: underline solid 1px;
-    }
-
-    &:visited {
-      color: var(--fg-colour);
-    }
-  }
 }
 
 /* images */
