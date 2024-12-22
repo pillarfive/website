@@ -15,8 +15,7 @@
     "tests": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "source": [
-    "./src/index.html",
-    "./src/accessibility/test-card-submit.html"
+    "./src/index.html"
   ],
   "keywords": [
     "performance",
