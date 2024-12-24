@@ -14,8 +14,45 @@
     <main class="main">
       <section aria-labelledby="simple-tasks">
         <h3 id="simple-tasks">Simple tasks</h3>
-        <section aria-labelledby="default-reviewers">
-          <h4 id="default-reviewers">Default reviewers</h4>
+        <section aria-labelledby="auto-assign">
+          <h4 id="auto-assign">Auto assign</h4>
+          <p>
+            This action uses
+            <a href="https://github.com/marketplace/actions/auto-assign-action"
+              >Auto Assign Action</a
+            >
+          </p>
+          <blockquote>
+            <p>
+              An action which adds reviewers to the pull request when the pull
+              request is opened.
+            </p>
+          </blockquote>
+          <p>
+            To create a list of accepted reviewers and auto-assign PRs to their
+            author:
+          </p>
+          <ol>
+            <li>Go to <code>~/actions</code></li>
+            <li>Click on <code>New workflow</code></li>
+            <li>Click on <code>set up a workflow for yourself</code></li>
+            <li>
+              Create 2 yml workflows. See
+              <a
+                href="https://github.com/marketplace/actions/auto-assign-action"
+                >Auto Assign Action</a
+              >
+              for yml specifics.
+              <ol>
+                <li><code>actions.yml</code></li>
+                <li><code>auto_assign.yml</code></li>
+              </ol>
+            </li>
+          </ol>
+          <p>
+            When a PR is made, the author is assigned and a list of reviewers
+            generated.
+          </p>
         </section>
       </section>
     </main>
