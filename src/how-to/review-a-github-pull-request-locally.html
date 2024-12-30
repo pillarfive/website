@@ -27,22 +27,16 @@
             <li>
               Make sure you have direct repository access before doing the
               following
-              <pre><code>
-git fetch origin                    # Download information about all remote branches 
-git checkout origin/branch-name     # Checkout the specific PR branch (Detached HEAD state)
-                </code></pre>
+              <pre><code>git fetch origin                    # Download information about all remote branches 
+git checkout origin/branch-name     # Checkout the specific PR branch (Detached HEAD state)</code></pre>
             </li>
             <li>
               If you want to make changes while reviewing, create a local branch
-              <pre><code>
-git checkout -b my-review-branch origin/branch-name
-                </code></pre>
+              <pre><code>git checkout -b my-review-branch origin/branch-name</code></pre>
             </li>
             <li>
               To go back to your previous work
-              <pre><code>
-git checkout main                   # Or whatever branch you were on before
-                </code></pre>
+              <pre><code>git checkout main                   # Or whatever branch you were on before</code></pre>
             </li>
           </ul>
         </section>
@@ -52,17 +46,14 @@ git checkout main                   # Or whatever branch you were on before
           <ul>
             <li>
               Update your local main branch with the merged changes
-              <pre><code>
-git checkout main                   # Switch to main branch
+              <pre><code>git checkout main                   # Switch to main branch
 git fetch origin                    # Get latest remote information
 git pull origin main                # Update local main with remote changes
                 </code></pre>
             </li>
             <li>
               Clean up by removing your review branch if you created one
-              <pre><code>
-git branch -d my-review-branch      # Delete the local review branch safely
-                </code></pre>
+              <pre><code>git branch -d my-review-branch      # Delete the local review branch safely</code></pre>
             </li>
           </ul>
         </section>
@@ -72,43 +63,44 @@ git branch -d my-review-branch      # Delete the local review branch safely
           <ul>
             <li>
               View all your branches
-              <pre><code>
-git branch                          # List local branches
+              <pre><code>git branch                          # List local branches
 git branch -r                       # List remote branches
 git branch -a                       # List both local and remote branches
-git branch -av                      # Show detailed information for all branches
-        </code></pre>
+git branch -av                      # Show detailed information for all branches</code></pre>
             </li>
             <li>
               Find out which branches have been merged
-              <pre><code>
-
-git branch --merged                 # Show branches merged into current branch
-git branch --no-merged              # Show unmerged branches
-    </code></pre>
+              <pre><code>git branch --merged                 # Show branches merged into current branch
+git branch --no-merged              # Show unmerged branches</code></pre>
             </li>
 
             <li>
               Clean up remote branch references
-              <pre><code>
-git fetch --prune                   # Remove references to deleted remote branches</code></pre>
+              <pre><code>git fetch --prune                   # Remove references to deleted remote branches</code></pre>
             </li>
           </ul>
         </section>
 
         <section aria-labelledby="sync-working-branch">
           <h2 id="sync-working-branch">Keeping Your Working Branch Updated</h2>
-          <pre><code># Method 1: Merge (best for shared branches in PRs)
-git checkout main
+          <ul>
+            <li>
+              For shared branches in PRs, use <code>merge</code>. It preserves
+              history but adds complexity.
+              <pre><code>git checkout main
 git pull origin main
 git checkout your-branch-name
-git merge main
-
-# Method 2: Rebase (best for personal branches)
-git checkout main
+git merge main</code></pre>
+            </li>
+            <li>
+              For personal branches, used <code>rebase</code>. It creates a
+              cleaner history by rewriting it.
+              <pre><code>git checkout main
 git pull origin main
 git checkout your-branch-name
 git rebase main</code></pre>
+            </li>
+          </ul>
         </section>
 
         <section aria-labelledby="key-points">
