@@ -250,6 +250,10 @@ a:visited {
   color: var(--visited-colour);
 }
 
+a.local:visited {
+  color: var(--fg-colour);
+}
+
 a:hover {
   text-decoration-line: underline overline;
 }
