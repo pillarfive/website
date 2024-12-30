@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A comprehensive guide for reviewing GitHub pull requests locally"
+    />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>Review a Github pull request locally | People and Code</title>
+  </head>
+  <body class="body">
+    <header>
+      <h1>Review a Github pull request locally</h1>
+    </header>
+    <main class="main">
+      <article>
+        <p>
+          <em>Objective</em>: Learn how to effectively review and manage pull
+          requests on your local machine
+        </p>
+
+        <section aria-labelledby="initial-setup">
+          <h2 id="initial-setup">Initial Setup and Review</h2>
+          <ul>
+            <li>
+              Make sure you have direct repository access before doing the
+              following
+              <pre><code>
+git fetch origin                    # Download information about all remote branches 
+git checkout origin/branch-name     # Checkout the specific PR branch (Detached HEAD state)
+                </code></pre>
+            </li>
+            <li>
+              If you want to make changes while reviewing, create a local branch
+              <pre><code>
+git checkout -b my-review-branch origin/branch-name
+                </code></pre>
+            </li>
+            <li>
+              To go back to your previous work
+              <pre><code>
+git checkout main                   # Or whatever branch you were on before
+                </code></pre>
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="after-merge">
+          <h2 id="after-merge">After the PR is Merged</h2>
+          <ul>
+            <li>
+              Update your local main branch with the merged changes
+              <pre><code>
+git checkout main                   # Switch to main branch
+git fetch origin                    # Get latest remote information
+git pull origin main                # Update local main with remote changes
+                </code></pre>
+            </li>
+            <li>
+              Clean up by removing your review branch if you created one
+              <pre><code>
+git branch -d my-review-branch      # Delete the local review branch safely
+                </code></pre>
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="branch-management">
+          <h2 id="branch-management">Managing Local and Remote Branches</h2>
+          <ul>
+            <li>
+              View all your branches
+              <pre><code>
+git branch                          # List local branches
+git branch -r                       # List remote branches
+git branch -a                       # List both local and remote branches
+git branch -av                      # Show detailed information for all branches
+        </code></pre>
+            </li>
+            <li>
+              Find out which branches have been merged
+              <pre><code>
+
+git branch --merged                 # Show branches merged into current branch
+git branch --no-merged              # Show unmerged branches
+    </code></pre>
+            </li>
+
+            <li>
+              Clean up remote branch references
+              <pre><code>
+git fetch --prune                   # Remove references to deleted remote branches</code></pre>
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="sync-working-branch">
+          <h2 id="sync-working-branch">Keeping Your Working Branch Updated</h2>
+          <pre><code># Method 1: Merge (best for shared branches in PRs)
+git checkout main
+git pull origin main
+git checkout your-branch-name
+git merge main
+
+# Method 2: Rebase (best for personal branches)
+git checkout main
+git pull origin main
+git checkout your-branch-name
+git rebase main</code></pre>
+        </section>
+
+        <section aria-labelledby="key-points">
+          <h2 id="key-points">Key Points to Remember</h2>
+          <p>
+            When reviewing pull requests locally, remember these important
+            practices:
+          </p>
+          <ul>
+            <li>
+              Always start with a fetch to ensure you have the latest remote
+              information
+            </li>
+            <li>
+              Don't worry about being in a detached HEAD state - it's normal
+              when checking out remote branches directly
+            </li>
+            <li>
+              Create a local branch if you need to make changes during review
+            </li>
+            <li>
+              Clean up your local branches after PRs are merged to keep your
+              repository tidy
+            </li>
+            <li>Use merge for shared branches and rebase for personal work</li>
+            <li>
+              Run git fetch --prune periodically to clean up references to
+              deleted remote branches
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <nav aria-label="Primary">
+        <a href="/src/sitemap.html">Contents</a>
+      </nav>
+    </footer>
+  </body>
+</html>
