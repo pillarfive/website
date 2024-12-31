@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Thoughts on an All-Purpose API" />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>An All-Purpose API</title>
+  </head>
+  <body class="body">
+    <header>
+      <h1>An All-Purpose API</h1>
+      <p>
+        An All-Purpose API (AP-API) embraces all that an entity is and does. It
+        extends the traditional
+        <abbr title="Application Programming Interface">API</abbr> which handles
+        domain data (books, native wildflowers, films) to include things about
+        an entity itself, and how that entity would like others to interact with
+        it.
+      </p>
+      <p>
+        In this article, we consider how we might protect an API from being
+        cannibalised by multiple external interests (LLM agents). By adding
+        context to our API we influence how our data are used.
+      </p>
+      <p>
+        <em
+          >An AP-API may be seen as a practical interpretation of
+          <a
+            class="local"
+            href="http://localhost:1234/thoughts-on/contract-based-web-design.html"
+            >Contract-based Web Design</a
+          >.</em
+        >
+      </p>
+    </header>
+    <main class="main">
+      <article>
+        <section aria-labelledby="the-value-of-ap-apis">
+          <h2 id="the-value-of-ap-apis">The value of All-Purpose APIs</h2>
+          <p>
+            LLMs need data to act on, and data must be secure. LLMs cannot be
+            given unfettered access to databases or have knowledge of their
+            internal schema.
+          </p>
+          <p>
+            APIs provide a controlled and safe way to access data whilst
+            preserving an entity's privacy and honouring data protection issues.
+          </p>
+          <p>An AP-API works on the same principles as an API.</p>
+          <section aria-labelledby="internal-value-of-ap-apis">
+            <h3 id="internal-value-of-ap-apis">Internal value of AP-APIs</h3>
+
+            <p>An AP-API is the single source of truth:</p>
+            <ul>
+              <li>From which the API is derived</li>
+              <li>From which the database scheme is derived</li>
+              <li>
+                Which front and backend developers use as the contract in
+                contract-first development whilst iterating on the API
+              </li>
+              <li>Is the reference for front and backend tests</li>
+            </ul>
+            <p>Additionally it is:</p>
+            <ul>
+              <li>The source of tariffs and pricing details</li>
+              <li>
+                The home for business rules and statements pertaining to ethics,
+                sustainability and accessibility
+              </li>
+              <li>
+                A conduit for information from other systems e.g. bug tracking
+                and source control
+              </li>
+            </ul>
+          </section>
+          <section aria-labelledby="external-value-of-ap-apis">
+            <h3 id="external-value-of-ap-apis">External value of AP-APIs</h3>
+            <p>
+              Because an AP-API adds to an API, it is attractive to LLMs which
+              are gluttons for data.
+            </p>
+            <ul>
+              <li>Watermarks, trademarks and copyright</li>
+              <li>Design solutions (widgets, components, best practices)</li>
+              <li>Information pertaining to the quality of the data</li>
+              <li>
+                Information pertaining to how the data were derived and by whom
+              </li>
+              <li>Teasers, promotions, links and inducements</li>
+            </ul>
+            <p>
+              The AP-API is an opportunity for web development teams to
+              articulate different modes of presentation and to take the lead on
+              how their data should be used, explored, exploited and processed.
+            </p>
+            <p>
+              <em>
+                APIs are typically defined by a schema but endpoints and
+                examples are probably enough for LLMs to work out what to do.
+                Which is good news for web development teams because schemas are
+                not trivial.
+              </em>
+            </p>
+          </section>
+          <section aria-labelledby="ap-api-setup">
+            <h3 id="ap-api-setup">Setting up an AP-API</h3>
+            <ul>
+              <li>Create an API if there isn't one</li>
+              <li>
+                Internal uses
+                <ul>
+                  <li>Single source of truth in contract-first development</li>
+                  <li>Single source of truth for front and backend tests</li>
+                </ul>
+              </li>
+              <li>
+                External communication
+                <ul>
+                  <li>
+                    The interface for data exchange. Consumers may be other
+                    programmes, apps, sites or LLMs
+                  </li>
+                  <li>
+                    First step towards an entity opening itself up to unknown
+                    interested parties
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <section aria-labelledby="converting-an-api-into-a-ap-api">
+              <h3 id="converting-an-api-into-a-ap-api">
+                Converting an API into an AP-API
+              </h3>
+              <p>
+                An API is-an AP-API. You don't have to change anything. But you
+                might want to so that the world knows more about you.
+              </p>
+              <p>
+                It's a good way to document (in a serious, maintainable way) how
+                the different parts of your entity work. This will help them
+                better communicate with one another.
+              </p>
+              <p>
+                It can also be used to support non-technical parts of an entity
+                such as sales and marketing.
+              </p>
+              <p>
+                An AP-API encourages a rethinking of how we want our data to
+                appear in the world. It's unlikely that it will be via
+                'monolithic' apps or sites. This has a huge knock-on effect on
+                job titles, team dynamics, tooling, etc.
+              </p>
+              <p>
+                <em
+                  >In conjunction or in parallel with setting up an AP-API,
+                  consider
+                  <a
+                    class="local"
+                    href="/src/how-to/break-down-monolithic-apps.html"
+                    >How to break down monolithic apps</a
+                  >.</em
+                >
+              </p>
+              <section aria-labelledby="sales-deck">
+                <h4 id="sales-deck">AP-API example: The sales deck</h4>
+                <p>A sales pitch or deck is created from an AP-API.</p>
+                <p>
+                  Given a clear brief, a combination of people and code possibly
+                  involving an LLM, creates a sales deck which the sales team
+                  can be confident represents the services they are selling.
+                </p>
+                <ul>
+                  <li>
+                    The data part of the AP-API has endpoints which explicitly
+                    state what can be done (which services can be offered).
+                  </li>
+                  <li>
+                    Employee biographies, repositories and bug tracking tools
+                    can be parsed to work out what is achievable (which promises
+                    can be met).
+                  </li>
+                  <li>
+                    Other departments can be confident they are working in-step
+                    with sales because of the single source of truth AP-API.
+                  </li>
+                </ul>
+              </section>
+            </section>
+          </section>
+          <section aria-labelledby="pros-and-cons-of-ap-apis">
+            <h3 id="pros-and-cons-of-ap-apis">Pros and cons of AP-APIs</h3>
+            <section aria-labelledby="pros">
+              <h4 id="pros">Pros</h4>
+              <ul>
+                <li>
+                  Teams prepare for inevitable change (even though the nature of
+                  the change is uncertain)
+                </li>
+                <li>
+                  They retain knowledge by adaptation, creating teams that are
+                  better suited to ecosystems in which LLMs are prevalent, and
+                  access to data and ideas is distributed and unpredictable.
+                </li>
+              </ul>
+            </section>
+            <section aria-labelledby="cons">
+              <h4 id="cons">Cons</h4>
+              <ul>
+                <li>Maintenance of the AP-API may be costly</li>
+                <li>
+                  A single source of truth paradigm excludes other approaches
+                </li>
+                <li>
+                  It may be an overly mechanistic solution that blocks creative
+                  thinking and novel ideas
+                </li>
+                <li>
+                  A one-size-fits-all solution may lead to loss of detail,
+                  nuance and turn everything grey
+                </li>
+              </ul>
+            </section>
+            <p>
+              We've added more cons than pros. That's sensible. This is a
+              sketchy, unproven idea and we are assuming LLMs will be prominent,
+              ubiquitous and capable, unsupervised, of constructing complex
+              solutions from disparate parts.
+            </p>
+          </section>
+        </section>
+        <section aria-labelledby="conclusion">
+          <h2 id="conclusion">Conclusion</h2>
+          <p>
+            The reason for an AP-API is to prepare us for a digital future in
+            which traditional sites and apps are replaced by LLMs that consume
+            data from multiple sources and create custom interfaces for their
+            clients.
+          </p>
+          <p>
+            Because an AP-API is-an API it is the sine qua non of contract-first
+            development, and the interface for mediating requests from and
+            responses to known consumers.
+          </p>
+          <p>
+            An AP-API is also how we shape future discourse with LLMs. In order
+            to have some say in how our data are presented, we (entities)
+            provide context to our data through the AP-API. This might take the
+            form of lots of
+            <a href="https://en.wikipedia.org/wiki/Web_widget">widgets</a>, or
+            public components that can be assembled in multiple ways.
+            Programming Lego.
+          </p>
+          <p>
+            A word of caution. The value of LLMs is unclear in most cases. Do
+            not become overly reliant on them. Treat LLMs as disposable.
+          </p>
+        </section>
+      </article>
+      <hr />
+      <p>
+        <em
+          >This article was finished on 21st December 2024 and published shortly
+          after.</em
+        >
+      </p>
+      <hr />
+      <aside>
+        <h3>Development approaches that shared characteristics with AP-APIs</h3>
+        <ul>
+          <li>
+            <a
+              href="https://medium.com/@harutyunabgaryann/the-api-contract-bridging-the-gap-between-backend-and-frontend-development-3074effc642b"
+              >Contract-First Development</a
+            >
+          </li>
+          <li><a href="https://mswjs.io/">API mocking for JavaScript</a></li>
+          <li>
+            <a href="https://swagger.io/specification/"
+              >OpenAPI Specification</a
+            >
+          </li>
+          <li>Domain-Driven Design</li>
+        </ul>
+      </aside>
+      <hr />
+      <section aria-labelledby="references">
+        <h2 id="references">References</h2>
+        <ul>
+          <li>
+            <a
+              href="https://apidesignmatters.substack.com/p/your-guide-to-the-language-of-api-design"
+              >API Design Matters: Your Guide to The Language of API Design |
+              David Biesack</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <nav aria-label="Primary">
+        <a href="/src/sitemap.html">Contents</a>
+      </nav>
+    </footer>
+  </body>
+</html>
