@@ -52,13 +52,24 @@ cite {
 }
 
 pre {
+  white-space: pre-line;
+  background-color: var(--box-colour);
+  padding: 0.5rem;
+  padding: 1em;
+
+  & code {
+    display: block;
+  }
+}
+
+/* pre {
   white-space: normal;
   background-color: var(--box-colour);
   padding: 0.5rem;
   padding: 1em;
   overflow-x: hidden;
   word-wrap: break-word;
-}
+} */
 
 cite *,
 code {
@@ -252,6 +263,11 @@ a:visited {
 
 a:hover {
   text-decoration-line: underline overline;
+}
+
+a.local:visited,
+footer > nav > a:visited {
+  color: var(--fg-colour);
 }
 
 /* data */

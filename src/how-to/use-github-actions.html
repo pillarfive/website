@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="How to use GitHub actions" />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>How to use GitHub actions</title>
+  </head>
+  <body class="body">
+    <header>
+      <h1>GitHub actions</h1>
+    </header>
+    <main class="main">
+      <section aria-labelledby="pull-requests">
+        <h3 id="pull-requests">Pull requests</h3>
+        <section aria-labelledby="auto-assign">
+          <h4 id="auto-assign">Auto assign</h4>
+          <p>
+            This action uses
+            <a href="https://github.com/marketplace/actions/auto-assign-action"
+              >Auto Assign Action</a
+            >
+          </p>
+          <blockquote>
+            <p>
+              An action which adds reviewers to the pull request when the pull
+              request is opened.
+            </p>
+          </blockquote>
+          <p>
+            To create a list of accepted reviewers and auto-assign PRs to their
+            author:
+          </p>
+          <ol>
+            <li>Go to <code>~/actions</code></li>
+            <li>Click on <code>New workflow</code></li>
+            <li>Click on <code>set up a workflow for yourself</code></li>
+            <li>
+              Create 2 yml workflows. See
+              <a
+                href="https://github.com/marketplace/actions/auto-assign-action"
+                >Auto Assign Action</a
+              >
+              for yml specifics.
+              <ol>
+                <li><code>actions.yml</code></li>
+                <li><code>auto_assign.yml</code></li>
+              </ol>
+            </li>
+          </ol>
+          <p>
+            When a PR is made, the author is assigned and a list of reviewers is
+            generated.
+          </p>
+          <p>Personal Access Token (PAT)</p>
+          <blockquote>
+            <p>repo-token: ${{ secrets.ASSIGN_REVIEWERS }}</p>
+          </blockquote>
+          <p>
+            <em
+              >Tip: Make sure the auto_assign.yml file is directly under
+              .github, not .github/workflows</em
+            >
+          </p>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <nav aria-label="Primary">
+        <a href="/src/sitemap.html">Contents</a>
+      </nav>
+    </footer>
+  </body>
+</html>
