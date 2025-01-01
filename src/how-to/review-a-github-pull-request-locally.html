@@ -28,15 +28,15 @@
               Make sure you have direct repository access before doing the
               following
               <pre><code>git fetch origin                    # Download information about all remote branches 
-git checkout origin/branch-name     # Checkout the specific PR branch (Detached HEAD state)</code></pre>
+git switch origin/branch-name     # Switch to the specific PR branch (Detached HEAD state)</code></pre>
             </li>
             <li>
               If you want to make changes while reviewing, create a local branch
-              <pre><code>git checkout -b my-review-branch origin/branch-name</code></pre>
+              <pre><code>git switch -c my-review-branch origin/branch-name</code></pre>
             </li>
             <li>
               To go back to your previous work
-              <pre><code>git checkout main                   # Or whatever branch you were on before</code></pre>
+              <pre><code>git switch main                   # Or whatever branch you were on before</code></pre>
             </li>
           </ul>
         </section>
@@ -46,7 +46,7 @@ git checkout origin/branch-name     # Checkout the specific PR branch (Detached 
           <ul>
             <li>
               Update your local main branch with the merged changes
-              <pre><code>git checkout main                   # Switch to main branch
+              <pre><code>git switch main                   # Switch to main branch
 git fetch origin                    # Get latest remote information
 git pull origin main                # Update local main with remote changes
                 </code></pre>
@@ -87,17 +87,17 @@ git branch --no-merged              # Show unmerged branches</code></pre>
             <li>
               For shared branches in PRs, use <code>merge</code>. It preserves
               history but adds complexity.
-              <pre><code>git checkout main
+              <pre><code>git switch main
 git pull origin main
-git checkout your-branch-name
+git switch your-branch-name
 git merge main</code></pre>
             </li>
             <li>
               For personal branches, used <code>rebase</code>. It creates a
               cleaner history by rewriting it.
-              <pre><code>git checkout main
+              <pre><code>git switch main
 git pull origin main
-git checkout your-branch-name
+git switch your-branch-name
 git rebase main</code></pre>
             </li>
           </ul>
