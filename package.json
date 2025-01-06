@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "performance, accessibility, sustainability, security, and ethics",
   "scripts": {
     "prettier": "npx prettier . -w",
