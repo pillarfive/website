@@ -9,7 +9,8 @@
       "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />",
       "    <meta name=\"description\" content=\"${1:meta description}\" />",
       "    <link rel=\"stylesheet\" href=\"/src/styles/common.css\" />",
-      "    <title>${2:Page title}</title>",
+      "    <title>${2:Page title}</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />",
       "  </head>",
       "  <body class=\"body\">",
       "    <header>",
