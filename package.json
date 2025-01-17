@@ -11,7 +11,7 @@
     "start": "parcel && npm run static",
     "build": "parcel build --dist-dir dist --public-url /website && npm run static",
     "ibm": "npx achecker ./src",
-    "publish": "rm -rf dist && rm -rf .parcel-cache && npm run build && gh-pages -d dist",
+    "gh-pages:publish": "rm -rf dist && rm -rf .parcel-cache && npm run build && gh-pages -d dist",
     "tests": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "source": [
