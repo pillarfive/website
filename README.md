@@ -26,9 +26,9 @@ The `gh-pages` branch is a testable version of the site. There are no promises a
 
 To update `gh-pages`, make sure you are in the branch you want to publish, typically `main`.
 
-- In the terminal run `npm run publish`.
+- In the terminal run `npm run gh-pages:publish`.
   This will update the `gh-pages` branch with a deployable build (using the `build` script) and push it to `origin`.
-  The `publish` script depends on the **gh-pages** dependency.
+  The `gh-pages:publish` script depends on the **gh-pages** dependency.
 - GitHub will detect the updated branch, and publish to the [test site](https://p-n-c.github.io/website/).
 - See GitHub [pages](https://github.com/p-n-c/website/settings/pages) for more details.
 
