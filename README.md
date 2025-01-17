@@ -29,8 +29,8 @@ To update `gh-pages`, make sure you are in the branch you want to publish, typic
 - In the terminal run `npm run publish`.
   This will update the `gh-pages` branch with a deployable build (using the `build` script) and push it to `origin`.
   The `publish` script depends on the **gh-pages** dependency.
-- GitHub will detect the updated branch, and publish to the [test site](https://people-and-code-repos.github.io/website/).
-- See GitHub [pages](https://github.com/people-and-code-repos/website/settings/pages) for more details.
+- GitHub will detect the updated branch, and publish to the [test site](https://p-n-c.github.io/website/).
+- See GitHub [pages](https://github.com/p-n-c/website/settings/pages) for more details.
 
 ### netlify-deploy
 
@@ -53,4 +53,4 @@ This workflow contains the following steps:
 - Commits these changes to `netlify-deploy`
 - Pushes these changes to `main` so that the trunk and deploy branch are in sync
 
-To see the full yml script, go to [release_management.yml](https://github.com/people-and-code-repos/website/blob/main/.github/workflows/release_management.yml)
+To see the full yml script, go to [release_management.yml](https://github.com/p-n-c/website/blob/main/.github/workflows/release_management.yml)
