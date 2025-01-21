@@ -7,13 +7,23 @@
     <link rel="stylesheet" href="/src/styles/common.css" />
     <title>People</title>
     <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+    <script src="/src/js/people.js"></script>
   </head>
   <body class="body">
     <header>
       <h1>People</h1>
     </header>
     <main class="main">
-      <h2>Jean-Philippe Drécourt</h2>
+      <div class="name-container">
+        <h2>Jean-Philippe Drécourt</h2>
+        <button
+          id="jps-email"
+          class="copy-button"
+          aria-label="Copy email address"
+        >
+          Copy email
+        </button>
+      </div>
       <p>To be found on <a href="https://github.com/jpdrecourt">GitHub</a>.</p>
       <p>
         I explore technical possibilities and create experimental tools, most
@@ -31,8 +41,16 @@
         My
         <a href="https://www.linkedin.com/in/jpdrecourt/">LinkedIn profile</a>.
       </p>
-
-      <h2>Daniel Hartley</h2>
+      <div class="name-container">
+        <h2>Daniel Hartley</h2>
+        <button
+          id="dans-email"
+          class="copy-button"
+          aria-label="Copy email address"
+        >
+          Copy email
+        </button>
+      </div>
       <p>Also found on <a href="https://github.com/danhartley">GitHub</a>.</p>
       <p>
         I write about responsible web development, and the climate and
