@@ -9,6 +9,8 @@
   --w: 1vw;
   --h: 1vh;
   --radius: calc(var(--d));
+  --header-height: calc(var(--d) * 30);
+  --footer-height: calc(var(--d) * 24);
 }
 
 /* Balance text wrapping on headings */
@@ -25,6 +27,15 @@ h6 {
 
 :is(*):not(h1, h2, h3, h4, h5, h6) {
   font-size: 1.1rem;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: var(--h);
+}
+
+.motto {
+  font-size: 1.3rem;
 }
 
 /* general rules */
@@ -67,10 +78,35 @@ code {
   line-height: 1.6;
 }
 
+header {
+  position: fixed;
+  width: 100%;
+  max-width: 75ch;
+  height: var(--header-height);
+  top: 0;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--bg-colour);
+}
+
+.header-logo {
+  margin-left: auto;
+  max-height: calc(var(--header-height) * 0.8);
+  width: auto;
+  min-width: 0; /* Allows SVG to shrink below intrinsic size */
+  order: 2;
+}
+
+.header-text {
+  order: 1;
+}
+
 footer {
   position: fixed;
   width: 75ch;
-  height: calc(var(--d) * 20);
+  height: var(--footer-height);
   bottom: 0;
   justify-content: center;
   display: flex;
@@ -132,7 +168,8 @@ body {
 }
 
 .main {
-  margin-bottom: calc(var(--d) * 24);
+  margin-top: var(--header-height);
+  margin-bottom: var(--footer-height);
 }
 
 nav {
