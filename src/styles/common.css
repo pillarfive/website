@@ -105,6 +105,20 @@ button:active {
   outline: none;
 }
 
+.name-container {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--d) * 4);
+}
+
+.copy-button {
+  font-size: small;
+  padding: var(--d) calc(var(--d) * 2);
+  height: fit-content; /* Ensures button doesn't stretch */
+  margin: auto 0;
+  background-color: var(--bg-colour);
+}
+
 select {
   padding: calc(var(--d) * 2) 0;
   border-radius: var(--radius);
