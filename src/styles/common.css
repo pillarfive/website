@@ -9,6 +9,8 @@
   --w: 1vw;
   --h: 1vh;
   --radius: calc(var(--d));
+  --header-height: calc(var(--d) * 30);
+  --footer-height: calc(var(--d) * 35);
 }
 
 /* Balance text wrapping on headings */
@@ -25,6 +27,15 @@ h6 {
 
 :is(*):not(h1, h2, h3, h4, h5, h6) {
   font-size: 1.1rem;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: var(--h);
+}
+
+.motto {
+  font-size: 1.3rem;
 }
 
 /* general rules */
@@ -67,13 +78,39 @@ code {
   line-height: 1.6;
 }
 
+header {
+  position: fixed;
+  width: 100%;
+  max-width: 75ch;
+  height: var(--header-height);
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--bg-colour);
+}
+
+.header-logo {
+  margin-left: auto;
+  max-height: calc(var(--header-height) * 0.8);
+  width: auto;
+  min-width: 0; /* Allows SVG to shrink below intrinsic size */
+  order: 2;
+}
+
+.header-text {
+  order: 1;
+}
+
 footer {
   position: fixed;
-  width: 75ch;
-  height: calc(var(--d) * 20);
+  width: 100%;
+  max-width: 75ch;
+  height: var(--footer-height);
   bottom: 0;
-  justify-content: center;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
   line-height: 1.8;
   background-color: var(--bg-colour);
@@ -146,13 +183,17 @@ body {
 }
 
 .main {
-  margin-bottom: calc(var(--d) * 24);
+  margin-top: var(--header-height);
+  margin-bottom: var(--footer-height);
 }
 
 nav {
+  display: flex;
+  justify-content: space-between;
   width: calc((var(--w) * 100) - (var(--d) * 4));
   max-width: 75ch;
   padding: calc(var(--d) * 2) 0;
+  margin-top: calc(var(--d) * 4);
   border-top: 2px solid var(--border-colour);
 }
 
@@ -322,6 +363,21 @@ dt {
   aspect-ratio: 1;
 }
 
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
 .flex-row {
   display: flex;
   align-items: center;
@@ -349,6 +405,15 @@ dt {
   text-align: center;
 }
 
+.impressum * {
+  font-size: small;
+}
+
+.impressum p {
+  margin-top: 0;
+  margin-bottom: var(--d);
+}
+
 /* only supported in newer browsers */
 
 *:empty:not(button, iframe, input, img, hr) {
@@ -361,4 +426,8 @@ dt {
   + :is(label)
   + :is(input) {
   margin-top: 0;
+}
+
+#writings {
+  scroll-margin-top: var(--header-height);
 }
