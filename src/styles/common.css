@@ -10,7 +10,7 @@
   --h: 1vh;
   --radius: calc(var(--d));
   --header-height: calc(var(--d) * 30);
-  --footer-height: calc(var(--d) * 24);
+  --footer-height: calc(var(--d) * 35);
 }
 
 /* Balance text wrapping on headings */
@@ -84,8 +84,8 @@ header {
   max-width: 75ch;
   height: var(--header-height);
   top: 0;
-  justify-content: space-between;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   align-items: center;
   background-color: var(--bg-colour);
@@ -105,11 +105,12 @@ header {
 
 footer {
   position: fixed;
-  width: 75ch;
+  width: 100%;
+  max-width: 75ch;
   height: var(--footer-height);
   bottom: 0;
-  justify-content: center;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
   line-height: 1.8;
   background-color: var(--bg-colour);
@@ -187,9 +188,12 @@ body {
 }
 
 nav {
+  display: flex;
+  justify-content: space-between;
   width: calc((var(--w) * 100) - (var(--d) * 4));
   max-width: 75ch;
   padding: calc(var(--d) * 2) 0;
+  margin-top: calc(var(--d) * 4);
   border-top: 2px solid var(--border-colour);
 }
 
@@ -401,6 +405,15 @@ dt {
   text-align: center;
 }
 
+.impressum * {
+  font-size: small;
+}
+
+.impressum p {
+  margin-top: 0;
+  margin-bottom: var(--d);
+}
+
 /* only supported in newer browsers */
 
 *:empty:not(button, iframe, input, img, hr) {
@@ -413,4 +426,8 @@ dt {
   + :is(label)
   + :is(input) {
   margin-top: 0;
+}
+
+#writings {
+  scroll-margin-top: var(--header-height);
 }
