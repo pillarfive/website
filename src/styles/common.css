@@ -10,6 +10,7 @@
   --w: 1vw;
   --h: 1vh;
   --max-width: 80ch;
+  --max-width: 80ch;
   --radius: calc(var(--d));
   --min-font-size: 0.875rem;
   --max-font-size: 1.1rem;
