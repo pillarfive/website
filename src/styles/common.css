@@ -35,18 +35,27 @@ body {
   display: flex;
   justify-content: center;
   direction: column;
+  margin: 0;
 }
 
 /* Elements */
+
+@media (width <= 90rch) {
+  header,
+  main,
+  footer {
+    padding: 0 0.5rem !important;
+  }
+}
 
 header,
 main,
 footer {
   -webkit-font-smoothing: antialiased;
   color: var(--fg-colour);
+  padding: 0;
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
-  padding: 0 calc(var(--d) * 4);
-  max-width: 75rch; /* Need to work with root values as local values change */
+  max-width: 80rch; /* Need to work with root values as local values change */
   width: 100%;
   background-color: var(--bg-colour);
 }
