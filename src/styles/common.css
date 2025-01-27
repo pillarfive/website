@@ -39,14 +39,14 @@ body {
 
 /* Elements */
 
-main,
 header,
+main,
 footer {
   -webkit-font-smoothing: antialiased;
   color: var(--fg-colour);
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
   padding: 0 calc(var(--d) * 4);
-  max-width: 50rem;
+  max-width: 75rch; /* Need to work with root values as local values change */
   width: 100%;
   background-color: var(--bg-colour);
 }
@@ -58,6 +58,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+main {
+  margin-top: var(--header-height);
+  margin-bottom: var(--footer-height);
 }
 
 footer {
@@ -174,10 +179,6 @@ pre {
 }
 
 /* Classes */
-.main {
-  margin-top: var(--header-height);
-  margin-bottom: var(--footer-height);
-}
 
 .box {
   flex: 1 1 calc(20% - calc(var(--d) * 2));
@@ -230,6 +231,10 @@ pre {
 .copyright {
   font-size: 0.66em !important;
   text-align: right;
+}
+
+.header-logo {
+  height: 100%;
 }
 
 .is-fg {
