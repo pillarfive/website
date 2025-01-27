@@ -9,15 +9,23 @@
   --d: 0.25rem;
   --w: 1vw;
   --h: 1vh;
+  --max-width: 80ch;
   --radius: calc(var(--d));
-  --header-height: calc(var(--d) * 30);
   --min-font-size: 0.875rem;
   --max-font-size: 1.1rem;
+  --header-height: clamp(
+    calc(var(--min-font-size) * 10),
+    12vw,
+    calc(var(--max-font-size) * 8)
+  );
   --footer-height: clamp(
     calc(var(--min-font-size) * 6),
     12vw,
     calc(var(--max-font-size) * 6)
   );
+  --padding-width: calc(
+    max(100vw, calc(var(--max-width) * 1.015)) - max(100vw, var(--max-width))
+  ); /* Left/Right padding only for screens that are smaller than roughly the max-width */
 }
 
 /* Base */
@@ -33,29 +41,21 @@ html {
 
 body {
   display: flex;
-  justify-content: center;
-  direction: column;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
 }
 
 /* Elements */
-
-@media (width <= 90rch) {
-  header,
-  main,
-  footer {
-    padding: 0 0.5rem !important;
-  }
-}
 
 header,
 main,
 footer {
   -webkit-font-smoothing: antialiased;
   color: var(--fg-colour);
-  padding: 0;
+  padding: 0 var(--padding-width);
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
-  max-width: 80rch; /* Need to work with root values as local values change */
+  max-width: var(--max-width);
   width: 100%;
   background-color: var(--bg-colour);
 }
@@ -67,6 +67,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: calc(var(--footer-height) / 6);
 }
 
 main {
@@ -81,7 +82,7 @@ footer {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  font-size: calc(var(--footer-height) / 6) !important;
+  font-size: calc(var(--footer-height) / 6);
   background-color: var(--bg-colour);
 }
 
@@ -242,6 +243,10 @@ pre {
   text-align: right;
 }
 
+.header-text {
+  font-size: 1em;
+}
+
 .header-logo {
   height: 100%;
 }
@@ -265,7 +270,7 @@ pre {
 }
 
 /* Overrides */
-:is(*):not(h1, h2, h3, h4, h5, h6) {
+:is(*):not(h1, h2, h3, h4, h5, h6, footer, nav, header) {
   font-size: var(--max-font-size);
 }
 
@@ -276,7 +281,7 @@ code {
 }
 
 nav * {
-  font-size: 1em !important;
+  font-size: 1em;
   color: var(--fg-colour) !important;
 }
 
