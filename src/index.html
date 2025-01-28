@@ -30,13 +30,19 @@
   </head>
   <body class="body">
     <header>
-      <p>
-        <a href="#main" tabindex="0" class="local"
+      <div class="header-text">
+        <a href="#main" tabindex="0" class="local skip"
           >Jump link to the main content</a
         >
-      </p>
-      <h1>Welcome</h1>
-      <p>This is the website of Jean-Philippe Drécourt and Daniel Hartley.</p>
+        <h1>People And Code</h1>
+        <div class="motto">Web Stacks Worth Sharing</div>
+      </div>
+
+      <img
+        class="header-logo"
+        src="/src/media/pac-logo.svg"
+        alt="People and code logo."
+      />
     </header>
     <main id="main" class="main">
       <h2>What we do</h2>
@@ -220,8 +226,15 @@
     </main>
     <footer id="footer">
       <nav aria-label="Primary">
-        <a href="/src/sitemap.html">Contents</a>
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writings">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
       </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
     </footer>
   </body>
 </html>
