@@ -249,14 +249,15 @@ pre {
   font-size: 1em;
 }
 
-@media (width <= 400px) {
-  .header-logo {
-    display: none;
-  }
-}
-
 .header-logo {
   height: var(--logo-height);
+  display: none;
+}
+
+@media (width >= 480px) {
+  .header-logo {
+    display: block;
+  }
 }
 
 .is-fg {
