@@ -9,16 +9,16 @@
   --d: 0.25rem; /* 4px */
   --w: 1vw;
   --h: 1vh;
-  --max-width: 75ch;
+  --max-width: 70ch; /* Actual Width roughly 10% more than value. */
   --radius: calc(var(--d));
   --min-font-size: 0.875rem;
   --max-font-size: 1.1rem;
   --logo-height: clamp(3em, 10vw, 4em);
   --header-font-size: clamp(var(--min-font-size), 3vw, var(--max-font-size));
   --footer-height: clamp(
-    calc(var(--min-font-size) * 5),
+    calc(var(--min-font-size) * 4),
     11vw,
-    calc(var(--max-font-size) * 5)
+    calc(var(--max-font-size) * 4)
   );
   --padding-width: calc(
     max(100vw, calc(var(--max-width) * 1.015)) - max(100vw, var(--max-width))
@@ -87,7 +87,7 @@ footer {
 }
 
 nav {
-  font-size: calc(var(--footer-height) / 5);
+  font-size: calc(var(--footer-height) / 4.5);
   width: 100%;
   color: var(--fg-colour);
   display: flex;
@@ -240,9 +240,9 @@ pre {
 }
 
 .copyright {
-  font-size: calc(var(--footer-height) / 8);
+  font-size: calc(var(--footer-height) / 6);
   text-align: right;
-  padding-top: calc(var(--footer-height) / 16);
+  padding-top: calc(var(--footer-height) / 10);
   letter-spacing: 0.01em;
   font-family: sans-serif;
 }
