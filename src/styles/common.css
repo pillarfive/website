@@ -119,6 +119,10 @@ a {
   color: var(--fg-colour);
   text-decoration: underline;
   text-underline-offset: calc(var(--d) * 1.8);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 a:visited {
@@ -261,17 +265,15 @@ pre {
   display: none;
 }
 
-.tagline-logo {
-  height: 2em;
-  padding-right: 0.2em;
-  display: none;
-}
-
 @media (width >= 480px) {
   .header-logo,
   .tagline-logo {
     display: block;
   }
+}
+
+.subtitle {
+  font-style: italic;
 }
 
 .is-fg {
