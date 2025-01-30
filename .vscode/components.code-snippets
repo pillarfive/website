@@ -39,4 +39,16 @@
     ],
     "description": "Standard footer",
   },
+  "Header": {
+    "prefix": "pac-header",
+    "body": [
+      "    <header>",
+      "      <div class=\"header-text\">",
+      "        <h1>${1:Page header}</h1>",
+      "        <div class=\"tagline\">People and Code</div>",
+      "      </div>",
+      "    </header>",
+    ],
+    "description": "Standard header",
+  },
 }
