@@ -234,9 +234,11 @@ pre {
 }
 
 .tagline {
+  display: flex;
   margin-top: -0.5em;
   padding: 0.1em 0;
   font-size: 1em;
+  align-items: center;
 }
 
 .copyright {
@@ -259,8 +261,15 @@ pre {
   display: none;
 }
 
+.tagline-logo {
+  height: 2em;
+  padding-right: 0.2em;
+  display: none;
+}
+
 @media (width >= 480px) {
-  .header-logo {
+  .header-logo,
+  .tagline-logo {
     display: block;
   }
 }
