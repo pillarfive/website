@@ -1,0 +1,4188 @@
+# 2025-01-31T06:07:40    conversation: 01jjxfhsyctj515zbm91gnemwc
+
+Model: **claude-3-5-sonnet-20240620**
+
+## Prompt:
+
+bash append command output to text file
+
+## System:
+
+Answer in as few words as possible. Use a brief style with short replies.
+
+## Response:
+
+To append command output to a text file in Bash, use:
+
+command >> file.txt
+
+The '>>' operator appends the output to the end of the file.
+
+# 2025-01-31T05:51:32    conversation: 01jjxemwfxh9pc7w7qmgy0bgy7
+
+Model: **claude-3-5-sonnet-20240620**
+
+## Prompt:
+
+<documents>
+<document index="1">
+<source>../src\code.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The code behind People and Code" />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>Code</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>Code</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <h2>Tools</h2>
+      <section aria-labelledby="chrome-extensions">
+        <h3 id="chrome-extensions">Chrome extensions</h3>
+        <p>
+          We have built two Chrome extensions, one to
+          <a
+            href="https://chromewebstore.google.com/detail/emissions-tracker-by-peop/oohfmmceifiepdohjhfhdpioipiagmpg"
+            >track emissions</a
+          >
+          associated with a page, the other for analysing web
+          <a
+            href="https://chromewebstore.google.com/detail/accessibility-schema-vali/injdhabbnkaocehlomocfejkofnboamk"
+            >page schema</a
+          >.
+        </p>
+      </section>
+      <section aria-labelledby="project-templates">
+        <h3 id="project-templates">Project templates</h3>
+        <p>
+          When we are experimenting, we often find it helpful to create a new
+          project.
+        </p>
+        <p>
+          The
+          <a href="https://github.com/p-n-c/web-project-generator"
+            >web project generator</a
+          >
+          does just that.
+        </p>
+      </section>
+      <section aria-labelledby="repositories">
+        <h3 id="repositories">Repositories</h3>
+        <p>Core repositories</p>
+        <ul>
+          <li>
+            <a href="https://github.com/p-n-c/website">Website</a>
+          </li>
+          <li>
+            <a href="https://github.com/p-n-c/workshops">Workshops</a>
+          </li>
+          <li>
+            <a href="https://github.com/p-n-c/examples">Examples</a>
+          </li>
+        </ul>
+        <p>Tools</p>
+        <ul>
+          <li>
+            <a href="https://github.com/p-n-c/web-project-generator"
+              >Web project generator</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/p-n-c/chrome-extension-generator"
+              >Chrome extension generator</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/p-n-c/http-server-demo"
+              >Simple HTTP server</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/p-n-c/http-client-demo"
+              >Simple HTTP client</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/p-n-c/chrome-accessibility-schema"
+              >Chrome accessibility schema extension</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/p-n-c/chrome-web-emissions"
+              >Chrome web emissions extension</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="2">
+<source>../src\index.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Specialists in responsible web development - best practice and tools to monitor performance, accessibility, sustainability and security."
+    />
+    <meta name="version" content="0.0.5" />
+    <meta name="timestamp" content="1736353719780" />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>P&C - Specialists in responsible web development.</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Corporation",
+        "name": "People and Code",
+        "url": "http://www.people-and-code.com",
+        "description": "Specialists in responsible web development.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lisbon",
+          "addressRegion": "Lisbon",
+          "addressCountry": "Portugal"
+        }
+      }
+    </script>
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <a href="#main" tabindex="0" class="local skip"
+          >Jump link to the main content</a
+        >
+        <h1>People And Code</h1>
+        <div class="tagline">Web Stacks Worth Sharing</div>
+      </div>
+
+      <img
+        class="header-logo"
+        src="/src/media/pac-logo.svg"
+        alt="People and code logo."
+      />
+    </header>
+    <main id="main" class="main">
+      <h2>What we do</h2>
+
+      <h3>Services we offer</h3>
+      <ul>
+        <li>
+          We work for one client at a time, tailoring our offering to your needs
+        </li>
+        <li>During our contract we are available to everyone on your team</li>
+        <li>
+          We advise you how to make your site compliant with the
+          <a href="/src/summary-of/eu-accessibility-act.html" class="local"
+            >EU Accessibility Act</a
+          >
+          (<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 or
+          2.2)
+        </li>
+        <li>
+          We advise you on
+          <a
+            href="https://www.the-public-good.com/web-development/sustainable-reporting-and-tooling"
+            >sustainability best practices</a
+          >
+        </li>
+      </ul>
+
+      <h3 id="us">Who we are</h3>
+      <figure aria-labelledby="founder-photos" class="border dashed">
+        <img
+          src="https://lh3.googleusercontent.com/d/1obos6lU8yPnBNX3Jr7-88amhCyxjiFC-=s220?authuser=0"
+          srcset="
+            https://lh3.googleusercontent.com/d/1obos6lU8yPnBNX3Jr7-88amhCyxjiFC-=s220?authuser=0
+          "
+          alt="Co-founder JP"
+          width="180px"
+          height="180px"
+          decoding="async"
+          loading="lazy"
+        />
+        <img
+          src="https://lh3.googleusercontent.com/d/1bo6LEU0O-LmkIooNKcLMzyxqqfSxJ4tz?authuser=0"
+          srcset="
+            https://lh3.googleusercontent.com/d/1bo6LEU0O-LmkIooNKcLMzyxqqfSxJ4tz?authuser=0
+          "
+          alt="Co-founder Dan"
+          width="180px"
+          height="180px"
+          decoding="async"
+          loading="lazy"
+        />
+        <figcaption id="founder-photos">JP & Dan</figcaption>
+      </figure>
+
+      <h3>Areas we specialise in</h3>
+      <dl>
+        <dt>Performance</dt>
+        <dd>
+          <blockquote
+            cite="https://developer.mozilla.org/en-US/docs/Glossary/Web_performance"
+          >
+            Subjectively, it is the user's perception of whether the time it
+            takes between the time the user requests the content and the time
+            until the user feels the content requested is available and usable
+            feels slow or fast.
+          </blockquote>
+          <cite
+            >From
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Glossary/Web_performance"
+              >Web performance</a
+            >
+            by <abbr title="Mozilla Developer Network">MDN</abbr></cite
+          >
+        </dd>
+        <dt>Accessibility</dt>
+        <dd>
+          <blockquote
+            cite="https://www.w3.org/WAI/fundamentals/accessibility-intro/#what"
+          >
+            Websites, tools, and technologies are designed and developed so that
+            people with disabilities can use them.
+          </blockquote>
+          <cite
+            >From
+            <a
+              href="https://www.w3.org/WAI/fundamentals/accessibility-intro/#what"
+            >
+              Introduction to Web Accessibility
+            </a>
+            by <abbr title="Web Accessibility Initiative">WAI</abbr></cite
+          >
+        </dd>
+        <dt>Sustainability</dt>
+        <dd>
+          <blockquote
+            cite="https://en.wikipedia.org/wiki/Brundtland_Commission#Definition_of_sustainable_development"
+          >
+            Sustainable development is development that meets the needs of the
+            present without compromising the ability of future generations to
+            meet their own needs.
+          </blockquote>
+          <cite
+            ><a
+              href="https://en.wikipedia.org/wiki/Brundtland_Commission#Definition_of_sustainable_development"
+              >The Brundtland Report
+            </a></cite
+          >
+        </dd>
+        <dt>Security</dt>
+        <dd>
+          <blockquote
+            cite="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security"
+          >
+            The act/practice of protecting websites from unauthorized access,
+            use, modification, destruction, or disruption.
+          </blockquote>
+          <cite
+            >From
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security"
+              >Website security</a
+            >
+            by <abbr title="Mozilla Developer Network">MDN</abbr></cite
+          >
+        </dd>
+        <dt>Ethics</dt>
+        <dd>
+          The trade off between what a business wants and what is best for its
+          visitors and the environment. It may be revealed in the trade off
+          between performance and sustainability.
+        </dd>
+      </dl>
+
+      <h3 id="the-way-we-work">How we work</h3>
+      <p>
+        Visitors
+        <a href="https://www.nngroup.com/videos/jakobs-law-internet-ux/">
+          spend most of their time on other sites</a
+        >. We like to do the same. When we are working on our own sites, we
+        favour time spent in the browser over time spent in the IDE. We're keen
+        on extensions (and write them), dev tools, and e2e tests.
+      </p>
+
+      <h3>Few dependencies, no surprises</h3>
+
+      <p>
+        This site is simple because we didn't want to spend time designing it.
+        It is written in semantic, valid HTML, and styled using a small amount
+        of CSS. We don't use JavaScript to create pages but we do use it to
+        enhance them.
+      </p>
+      <p>We keep our developer dependencies to a minimum.</p>
+      <h3>Our tools</h3>
+      <p>
+        In addition to useful tools built by others, we have built some of our
+        own.
+      </p>
+      <ul>
+        <li>
+          A
+          <a
+            href="https://chromewebstore.google.com/detail/emissions-tracker-by-peop/oohfmmceifiepdohjhfhdpioipiagmpg"
+            >Chrome extension</a
+          >
+          to track CO<sub>2</sub> emissions
+        </li>
+        <li>
+          A
+          <a
+            href="https://chromewebstore.google.com/detail/accessibility-schema-vali/injdhabbnkaocehlomocfejkofnboamk"
+            >Chrome extension</a
+          >
+          to validate HTML
+        </li>
+        <li>
+          An npm library for measuring CO<sub>2</sub>
+          <a href="https://github.com/danhartley/emissions">emissions</a>
+        </li>
+      </ul>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="3">
+<source>../src\people.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The people behind People and Code" />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>People</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>People</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <h2>Jean-Philippe Drécourt</h2>
+      <p>
+        Email me at:
+        <a href="mailto:jp@people-and-code.com">jp@people-and-code.com</a>
+      </p>
+      <p>
+        I explore technical possibilities and create experimental tools, most
+        recently bridging AI, blockchain, and music composition.
+      </p>
+      <p>
+        My engineering, scientific and arts background helps me quickly
+        understand the client’s needs and explore what's technically feasible
+      </p>
+      <p>
+        I specialise in prototyping and finding elegant solutions to complex
+        problems.
+      </p>
+
+      <p>
+        <a href="https://github.com/jpdrecourt">GitHub</a> and
+        <a href="https://www.linkedin.com/in/jpdrecourt/">LinkedIn</a> profiles.
+      </p>
+
+      <h2>Daniel Hartley</h2>
+      <p>
+        Email me at:
+        <a href="mailto:dan@people-and-code.com">dan@people-and-code.com</a>
+      </p>
+      <p>
+        I write about responsible web development, and the climate and
+        biodiversity crises at
+        <a href="https://www.the-public-good.com/">The Public Good</a>.
+      </p>
+      <p>
+        I am a contributor at
+        <a href="https://responsibletech.work/">ResponsibleTech.work</a> and
+        co-creator of
+        <a href="https://responsibletech.work/tools/development/pledge-works/"
+          >Pledge Works</a
+        >.
+      </p>
+      <p>
+        I am the creator of <a href="https://ifieldnotes.org/">iFieldnotes</a>.
+      </p>
+      <p>
+        <a href="https://github.com/danhartley">GitHub</a> and
+        <a href="https://www.linkedin.com/in/danhartley/">LinkedIn</a> profiles.
+      </p>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="4">
+<source>../src\sitemap.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Site contents for People and Code" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <title>Contents</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>Contents</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <ul>
+        <li><a class="local" href="/src/index.html">Home</a></li>
+        <li>
+          <a class="local" href="/src/people.html">People</a>
+        </li>
+        <li>
+          <a class="local" href="/src/code.html">Code</a>
+        </li>
+      </ul>
+      <h2>Workshops</h2>
+      <p>
+        <a class="local" href="https://workshops.people-and-code.com/"
+          >Workshops home</a
+        >
+      </p>
+      <h2 id="writing">Writing</h2>
+      <h3>How to…</h3>
+      <ul>
+        <li>
+          <a class="local" href="/src/how-to/create-a-snippet.html"
+            >Create a VS Code snippet</a
+          >
+        </li>
+        <li>
+          <a class="local" href="/src/how-to/publish-to-github-pages.html"
+            >Publish using GitHub Pages</a
+          >
+        </li>
+        <li>
+          <a class="local" href="/src/how-to/be-more-productive-in-vscode.html"
+            >Be more productive in VSCode</a
+          >
+        </li>
+        <li>
+          <a
+            class="local"
+            href="/src/how-to//build-and-distribute-a-chrome-extension.html"
+            >Build and distribute a Chrome extension</a
+          >
+        </li>
+        <li>
+          <a
+            class="local"
+            href="/src/how-to/build-a-chrome-extension-to-track-web-page-co2-emissions.html"
+            >Build a Chrome extension to track CO<sub>2</sub> emissions</a
+          >
+        </li>
+        <li>
+          <a class="local" href="/src/how-to/create-a-github-action.html"
+            >Create a GitHub action</a
+          >
+        </li>
+        <li>
+          <a
+            class="local"
+            href="/src/how-to/create-a-github-repository-secret.html"
+            >Create a repository secret in GitHub</a
+          >
+        </li>
+        <li>
+          <a
+            class="local"
+            href="/src/how-to/create-a-github-pull-request-template.html"
+            >Create a GitHub pull request template</a
+          >
+        </li>
+        <li>
+          <a class="local" href="/src/how-to/break-down-monolithic-apps.html"
+            >Breakdown monolithic apps</a
+          >
+        </li>
+        <li>
+          <a
+            class="local"
+            href="/src/how-to/review-a-github-pull-request-locally.html"
+            >Review a Github pull request locally</a
+          >
+        </li>
+      </ul>
+      <h3>Summary of…</h3>
+      <ul>
+        <li>
+          <a class="local" href="/src/summary-of/eu-accessibility-act.html"
+            >The European Accessibility Act</a
+          >
+        </li>
+        <li>
+          <a class="local" href="/src/summary-of/eu-ai-act.html"
+            >The European AI Act</a
+          >
+        </li>
+      </ul>
+      <h3>Thoughts on…</h3>
+      <ul>
+        <li>
+          <a
+            class="local"
+            href="/src/thoughts-on/contract-based-web-design.html"
+            >Contract-based Web Design</a
+          >
+        </li>
+        <li>
+          <a
+            class="local"
+            href="/src/thoughts-on/the-colleague-with-the-mona-lisa-smile.html"
+            >The colleague with the Mona Lisa smile</a
+          >
+        </li>
+        <li>
+          <a
+            class="local"
+            href="/src/thoughts-on/the-colleague-in-an-adjoining-room.html"
+            >The colleague in an adjoining room</a
+          >
+        </li>
+        <li>
+          <a class="local" href="/src/thoughts-on/an-all-purpose-api.html"
+            >An All-Purpose API</a
+          >
+        </li>
+      </ul>
+      <section aria-labelledby="pledge-to">
+        <h2 id="pledge-to">Pledge to…</h2>
+        <ul>
+          <li>
+            <a class="local" href="/src/pledge-to/think-before-using-ai.html"
+              >Think before using AI</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section aria-labelledby="examples">
+        <h2 id="examples">Examples</h2>
+        <p>
+          We maintain a repo of useful
+          <a local href="https://examples.people-and-code.com/">examples</a>.
+        </p>
+      </section>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="5">
+<source>../src\how-to\be-more-productive-in-vscode.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="VSCode Tips" />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>Be more productive in VSCode</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>Be more productive in VSCode</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <h2>Shortcuts</h2>
+      <ul>
+        <li>
+          <dl>
+            <dt>Change both opening and closing HTML tags</dt>
+            <dd>
+              <ol>
+                <li><code>F2</code></li>
+                <li>and then write the new tag</li>
+              </ol>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>Choose the language of a new file</dt>
+            <dd>
+              <ol>
+                <li><code>Ctrl/⌘ + N</code>: Create new file</li>
+                <li><code>Ctrl/⌘ + K, M</code>: Open the language mode menu</li>
+              </ol>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>Open the default terminal</dt>
+            <dd><code>Ctrl/⌘ + '</code>: Open the default terminal</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>Surround a selected piece of text with a new tag</dt>
+            <dd>
+              <ol>
+                <li>
+                  <code>Ctrl/⌘ + Shift + P</code>: Open the command palette
+                </li>
+                <li>
+                  Start typing to find:
+                  <code>Emmet: Wrap with Abbreviation</code>
+                </li>
+                <li><code>Enter</code></li>
+                <li>
+                  Type the tag without the angle brackets, e.g. <code>div</code>
+                </li>
+                <li><code>Enter</code></li>
+              </ol>
+              <aside class="centre">
+                The last command you called from the palette will be directly
+                accessible with <code>Ctrl/⌘ + Shift + P, Enter</code>
+              </aside>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>Zen Mode - Full screen, no sidebars</dt>
+            <dd><code>Ctrl + K, Z</code></dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>Navigation between panes</dt>
+            <dd>
+              <ul>
+                <li><code>Ctrl/⌘ + 0</code>: Left sidebar</li>
+                <li><code>Ctrl/⌘ + 1</code>: Main editor window</li>
+                <li><code>Ctrl/⌘ + '</code>: Terminal</li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+      <h2>Snippets</h2>
+      <a class="local" href="create-a-snippet.html"
+        >Full article on how to create and use an HTML snippet.</a
+      >
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="6">
+<source>../src\how-to\break-down-monolithic-apps.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Break down monolithic apps into parts that serve a single purpose"
+    />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>How to break down monolithic apps</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>Break down monolithic apps</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <article>
+        <p>
+          This article makes the case for tackling complexity in web app
+          development by creating multiple apps.
+        </p>
+        <h2>Example</h2>
+        <p>
+          Let's imagine how employees at an intergovernmental site monitoring
+          carbon emissions might interact with their data.
+        </p>
+        <ul>
+          <li>
+            <strong>Big picture</strong>: charts, executive summaries, key
+            stats, takeaways
+          </li>
+          <li>
+            <strong>Analysis</strong>: interactive charts, models, scenarios,
+            generating reports and new requirements, summarising data, picking
+            out key data points and writing takeaways
+          </li>
+          <li>
+            <strong>Data entry</strong>: inputting data, overseeing ingestion of
+            data from disparate sources, editing data, validating data, fact
+            checking reports
+          </li>
+          <li>
+            <strong>Regulation</strong>: auditing data, verifying data,
+            source-checking
+          </li>
+          <li>
+            <strong>Political</strong>: ensuring commitments are made and
+            standards adhered to, raising concerns, identifying problems,
+            issuing warnings
+          </li>
+          <li>
+            <strong>Public</strong>: oversight, providing criticism and feedback
+          </li>
+        </ul>
+        <p>
+          The data may change little but the people using them, and the access
+          they need, will.
+        </p>
+        <p>
+          The problem for the development team (and we use this term broadly to
+          include everyone contributing to building, marketing and promoting the
+          site), is to determine who sees what, when, and why. Nor is this a one
+          way street; depending on their requirements, our analysts,
+          statisticians, politicians and public may need to give up information
+          about themselves.
+        </p>
+        <p>
+          Is it better to create multiple apps (data entry, analytics,
+          dashboard, etc.) or variations on a single app? Whatever the decision
+          (we will be putting the case for multiple apps), understanding the
+          needs of users is necessary for writing less code and designing
+          simpler interfaces.
+        </p>
+        <p>
+          If teams ignore differences at the outset, contradictions accumulate
+          and complexity increases.
+        </p>
+        <h3>Analysis</h3>
+        <p>
+          How do we prevent this from happening? The first step is to consider
+          all possible user flows and place them in groups. The number of groups
+          is critical; the fewer the better so long as no one group becomes a
+          bucket for miscellany.
+        </p>
+        <p>
+          Here's another way to break down our
+          <a
+            href="https://www.smashingmagazine.com/2024/05/building-user-segmentation-matrix-foster-cross-org-alignment/"
+            >user segments</a
+          >:
+        </p>
+        <ul>
+          <li>
+            <strong>Who needs what data?</strong> Some users require high-level
+            summaries (executives, public), while others need in-depth
+            interaction with the data (analysts, auditors).
+          </li>
+          <li>
+            <strong>How frequently do they interact with the app?</strong>
+            For example, data entry might happen daily, while audits might occur
+            quarterly.
+          </li>
+          <li>
+            <strong>What level of technical expertise do they have?</strong>
+            Data entry operators might need a simplified interface, while
+            analysts may require complex data manipulation tools.
+          </li>
+        </ul>
+        <p>
+          This work is not trivial. It benefits from expertise in UI and UX but
+          ideally it should involve disparate team members, including people who
+          understand human behaviour, data manipulation, HTML, screen readers,
+          accessibility, performance, security, SEO, marketing, etc. It's a long
+          list.
+        </p>
+        <h3>The matrix of needs</h3>
+        <p>
+          Writing down the needs of different users is a pretty clear
+          requirement. How else would we know what to build? Once we have that
+          information, we can use it in multiple ways because we are programmers
+          and designers and studiers of human behaviour. We can show where there
+          is overlap, which items are unique, what is universal, and we can rank
+          requirements in multiple ways such as necessity, risk, development
+          time, etc.
+        </p>
+        <h3>Discussion</h3>
+        <p>
+          Not everyone likes meetings but without informed, critical discussion,
+          problems will emerge that could have been prevented. Here are some of
+          the benefits of (long) meetings:
+        </p>
+        <ul>
+          <li>Job titles become less important</li>
+          <li>
+            Everyone gets a chance to speak (if the meeting is sufficiently
+            long)
+          </li>
+          <li>Solutions bubble up as workable ideas replace opinions</li>
+          <li>Consensus is derived not imposed</li>
+          <li>New thinking emerges</li>
+          <li>Collaboration improves</li>
+        </ul>
+        <h3>Implementation</h3>
+        <p>
+          It's a principle, not only held by developers, that it's a bad idea to
+          repeat yourself. This is a good argument in favour of components.
+          Components are used multiple times. A button component might be used
+          hundreds, or thousands of times, and it will allow for a certain
+          amount of variety.
+        </p>
+        <p>
+          It's tempting to have one app because it feels like a lot of effort to
+          have more. But it needn't be, especially if a team knows why they have
+          multiple apps, and are comfortable building and maintaining them
+          (working from, perhaps, a template generator). Apps aren't that hard
+          to build; the problem is what to show and what not to show, and to
+          whom.
+        </p>
+        <p>
+          The best way to stop a visitor going where you don't want them to go,
+          or from doing what you don't want them to, is to remove that
+          particular option. This is also a good rule for development teams.
+        </p>
+        <p>Here is how we might tackle two of our apps.</p>
+        <h4>The dashboard app</h4>
+        <p>
+          In our hypothetical app, we make everyone's life easier, by building a
+          separate app for the dashboard. It consumes data (it's read only), it
+          might not need a menu, and it can expand to fill the screen. It won't
+          be hard to display data by region, and to work out how much the
+          authenticated visitor is authorised to see. From the development
+          perspective, that is what the dashboard boils down to: a filtered,
+          read-only summation of data.
+        </p>
+        <h4>The data input app</h4>
+        <p>
+          Data input can be a tricky business and for this reason alone, it's
+          best kept apart from everything else.
+        </p>
+        <p>
+          Inputting a tonne of data once a year is a different problem than
+          frequent, small additions. Together with security, that's enough for
+          one app.
+        </p>
+        <h4>Single purpose</h4>
+        <p>
+          It's much easier to maintain small apps that have a clear purpose. It
+          is easier to manage new features, release dates, customer updates,
+          etc. when there are fewer risks and people involved. Security
+          assessments can be made according to risk, sustainability based on use
+          and exposure, and accessibility tested more easily and more often.
+        </p>
+        <h4>Common approach</h4>
+        <p>
+          Our apps will have much in common: the same framework or strategy,
+          common best practices and development processes, shared resources such
+          as a design system and component library, authentication and
+          authorisation control, and a single team. Beyond that, apps can and
+          should be different; they (should) serve disparate needs and be
+          tailored accordingly.
+        </p>
+        <p>
+          Reducing unnecessary interactions is essential for the improved
+          performance, accessibility, security and sustainability (<abbr
+            title="Performance, accessibility, security and sustainability"
+            >PASS</abbr
+          >) of complex web apps.
+        </p>
+      </article>
+      <hr />
+      <p>
+        <em
+          >This article was finished on 21st December 2024 and published shortly
+          after.</em
+        >
+      </p>
+      <hr />
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="7">
+<source>../src\how-to\build-a-chrome-extension-to-track-web-page-co2-emissions.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="How-to guide to building a Chrome extension that tracks CO2 emissions from web pages."
+    />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>
+      How to Build a Chrome Extension to Track Web Page CO2 Emissions
+    </title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>Build a Chrome Extension to Track Web Page CO2 Emissions</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <p>
+        Pages have weight, some more than others, and
+        <a href="https://httparchive.org/reports/page-weight#bytesTotal"
+          >the median size is growing</a
+        >.
+      </p>
+      <p>
+        Measuring emissions associated with page weight is a relatively new
+        practice and given the number of factors to be controlled for, any
+        values should be regarded as estimates.
+      </p>
+      <p>
+        But estimates are sufficient to compare pages across sites and for
+        development teams to use them to compare versions of their pages over
+        time.
+      </p>
+      <p>
+        Keeping an eye on emissions also means being aware of the individual
+        requests that make up a page. This number is in the hundreds for sites
+        that pull in data from many sources and employ third party tracking and
+        advertising.
+      </p>
+      <p>
+        The emissions tracker lets visitors view requests and emissions in real
+        time, as the page loads.
+      </p>
+      <h2>Architecture</h2>
+      <p>
+        The extension relies on the service worker to monitor and process
+        requests and the side panel to display them.
+      </p>
+      <p>
+        The
+        <a
+          href="https://developer.chrome.com/docs/extensions/develop/concepts/service-workers"
+          ><strong>service worker</strong></a
+        >
+        has access to indexedDB (the browser’s built-in database) but not the
+        DOM.
+      </p>
+      <p>
+        This
+        <a
+          href="https://developer.chrome.com/docs/extensions/reference/api/sidePanel"
+          ><strong>side panel</strong></a
+        >
+        has access to the Window object and Chrome's APIs.
+      </p>
+      <p>
+        When a visitor first opens the extension by clicking on the icon, they
+        are asked to refresh the page to begin tracking emissions. Thereafter
+        one of three scenarios takes place.
+      </p>
+      <ul>
+        <li>
+          <strong>Scenarios</strong>: The extension keeps tracking emissions as
+          new requests come in but when the page is reloaded or the visitor
+          navigates to a new site, we:
+          <ul>
+            <li>Clear the indexedDB store</li>
+            <li>Reset the display in the side panel</li>
+          </ul>
+          When the visitor clicks on a different, already open, tab, we:
+          <ul>
+            <li>Clear the indexedDB store</li>
+            <li>Close the side panel</li>
+            <li>Disable request listeners</li>
+          </ul>
+          We disable the listeners because service workers
+          <a
+            href="https://developer.chrome.com/docs/extensions/develop/concepts/service-workers"
+            >generally run</a
+          >
+          until the browser is closed or the extension is removed.
+        </li>
+        <li>
+          <strong>Initial state</strong>: Every time the visitor opens the side
+          panel by clicking on the extension icon, we show the message "Please
+          reload the page to capture website emissions". This is necessary
+          because we don't have access to 'historical' requests i.e. requests
+          made before the extension service worker was initialised.
+        </li>
+      </ul>
+      <h2>Service worker</h2>
+      <p>
+        The extension service worker is responsible for intercepting requests,
+        storing them, processing them (sorting, etc.) and messaging the side
+        panel.
+      </p>
+      <ul>
+        <li>
+          <code><strong>fetch(url)</strong></code
+          >: The service worker intercepts requests using the fetch API.
+        </li>
+        <li>
+          <code><strong>response.clone()</strong></code
+          >: Clone the response because a Response object can only be consumed
+          once. Cloning lets you keep the original response intact while
+          processing a copy.
+        </li>
+        <li>
+          <code><strong>indexedDB</strong></code
+          >: Save request information to indexedDB so that the data can be read
+          back and processed e.g. sorted and grouped.
+        </li>
+        <li>
+          <code><strong>chrome.runtime.sendMessage</strong></code
+          >: The service worker messages the side panel after every request with
+          a fresh data.
+        </li>
+      </ul>
+      <h2>Side panel</h2>
+      <ul>
+        <li>
+          <code><strong>chrome.runtime.onMessage.addListener</strong></code
+          >: The side panel listens for messages from the service worker. It is
+          responsible for displaying a summary (bytes, request count, associated
+          emissions and whether the site is green hosted), request details
+          grouped by <code>type</code>, and listing failed requests.
+        </li>
+      </ul>
+      <h2>Request size (bytes transferred)</h2>
+      <p>
+        Unless the server responsible for serving a cross-origin request has set
+        <a href="Access-Control-Expose-Headers"
+          ><code>Access-Control-Expose-Headers</code></a
+        >
+        the content length is 0. In order to find bytes transferred, we need to
+        look at the content length and then, if compression has been used, apply
+        it.
+      </p>
+      <ul>
+        <li>
+          <strong>Performance API</strong>: We cannot use the Performance API
+          because
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming"
+            >transferSize is 0</a
+          >
+          for cross-origin requests where the appropriate
+          <abbr title="Cross-Origin Resource Sharing">CORS</abbr> headers have
+          not been set e.g.
+          <code>Timing-Allow-Origin: https://developer.mozilla.org</code>
+        </li>
+        <li>
+          <code><strong>fetch(url)</strong></code
+          >: Where available, we use content-length, and, if not, byte length.
+          Since this value is the original size of the resource, we have to
+          compress it.
+        </li>
+        <li>
+          <strong>Compression strategy</strong>: Given the size in bytes of the
+          original resource, resource type (CSS, JavaScript, etc.) and the
+          encoding type (brotli, gzip, etc.) we estimate the size of the
+          compressed, transferred, size of the resource. Compression rates for
+          resources vary between sites due to server behaviour, so we select
+          compression levels, and rates, that are representative. For some
+          sites, the resulting byte value may be high or low.
+          <pre>
+            <code>
+              const compressionRate = getCompressionStrategy( requestType,
+              encoding, uncompressedBytes ).rate
+            </code>
+          </pre>
+        </li>
+        <li>
+          <strong>Practice</strong>: Due to uncertainty around compression rates
+          and emissions calculations, the tracker is most useful for comparing
+          values between different versions of the same site.
+        </li>
+      </ul>
+      <h2>How emissions are calculated</h2>
+      <h3>The Green Web Foundation (TGWF)</h3>
+      <p>
+        Once we have a byte count, we can calculate its associated emissions.
+        <abbr title="The Green Web Foundation">TGWF</abbr> provides a useful set
+        of methods and a clear
+        <a href="https://sustainablewebdesign.org/estimating-digital-emissions/"
+          >methodology</a
+        >. We recommend using <a href="https://ecograder.com/">Ecograder</a> for
+        a comparative analysis.
+      </p>
+      <ul>
+        <li>
+          In order to use the
+          <a href="https://developers.thegreenwebfoundation.org/co2js/methods/"
+            >methods</a
+          >
+          provided by the <abbr title="The Green Web Foundation">TGWF</abbr>, I
+          forked the
+          <a href="https://github.com/thegreenwebfoundation/co2.js/">repo</a>,
+          and copied the build files generated by running
+          <code>npm run build</code>. We imported <code>hosting</code> and
+          <code>co2</code> into the project.
+        </li>
+        <li>
+          A call to <code>hosting.check(domain)</code> returns a boolean value
+          for <code>greenHosting</code>, displayed as "green hosted".
+        </li>
+        <li>
+          A call to <code>CO2.perByte(bytes, greenHosting)</code> returns a
+          value for emissions in g (grams) of CO2.
+        </li>
+      </ul>
+      <h2>Features</h2>
+      <ul>
+        <li>
+          <strong>Comparison with previous</strong>: If the visitor previously
+          saved data (in the side panel's Local storage), current data are
+          compared against them. An arrow up (red) indicates a rise (in
+          emissions, requests or bytes), and an arrow down (green) a fall.
+        </li>
+        <li>
+          <strong>Exporting data</strong>: Clicking on the "Export data" button
+          results in the option to save the summary and requests grouped by type
+          to a local file.
+        </li>
+        <li>
+          <strong>Overriding compression rates</strong>: There is a pending
+          feature request to override the default rates with custom rates better
+          tailored to the visitor's needs (the compression rates used on a
+          site). Since compression strategy is an object literal, overrides
+          could be exported in JSON format.
+        </li>
+      </ul>
+      <h2>Purpose</h2>
+      <p>
+        The cost of our actions is of general interest and the emissions tracker
+        provides a simple way to see the impact of a web page.
+      </p>
+      <p>
+        The emissions tracker is also an inducement to development teams to
+        spend more time looking at how their web sites and apps behave in the
+        browser where they are used and seen by others.
+      </p>
+      <p>
+        At People and Code we spend a lot of time in the browser and build tools
+        to help us there.
+      </p>
+      <aside class="centre" aria-labelledby="authors-heading">
+        <h3 id="authors-heading">Authors</h3>
+        <p>This document was created with the help of ChatGPT and Claude.</p>
+      </aside>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="8">
+<source>../src\how-to\build-and-distribute-a-chrome-extension.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="How to build and distribute a Chrome extension"
+    />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>Build and distribute a Chrome extension</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>Build and distribute a Chrome extension</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <p>
+        We want to build browser extensions that interact with code at runtime.
+      </p>
+      <h2>How to write the manifest and add files</h2>
+      <p>
+        See, for example,
+        <a href="https://developer.Chrome.com/docs/extensions/get-started/"
+          >Get started</a
+        >
+        from Chrome for Developers
+      </p>
+      <h2>How to test a Chrome extension locally</h2>
+      <ul>
+        <li>Open a new tab with the URL <code>chrome://extensions/</code></li>
+        <li>Verify <code>Developer mode</code> is on (top right)</li>
+        <li>Click on the <code>Load unpacked</code> button (top left)</li>
+        <li>Select the folder where you are developing your extension</li>
+        <li>
+          Click on the <code>Extensions</code> icon in Chrome (the jigsaw piece)
+        </li>
+        <li>Select (and optionally pin) your extension</li>
+      </ul>
+      <h2>How to validate a draft extension</h2>
+      <p>
+        NB In order to publish an extension, you must have a developer account.
+      </p>
+      <ul>
+        <li>
+          Create a zip file of your extension (manifest.json, contentScript.js,
+          etc.)
+        </li>
+        <li>
+          Navigate to <code>https://chrome.google.com/webstore/devconsole</code>
+        </li>
+        <li>Click on the <code>+ New Item</code> button (top right)</li>
+        <li>Add your zip file</li>
+        <li>
+          Be sure to check regularly that your saved draft can be submitted for
+          review
+        </li>
+      </ul>
+      <h2>How to publish an extension</h2>
+      <p>
+        As part of the submission process, you will need to explain why you need
+        the permissions you requested (in the manifest.json)
+      </p>
+      <aside class="centre">
+        Tip: AN LLM will be of help in writing your permissions justifications
+      </aside>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="9">
+<source>../src\how-to\create-a-github-action.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="How to create a GitHub action using a workflow and a repository secret"
+    />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>How to create a GitHub action</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>Create a GitHub action</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <article>
+        <section aria-labelledby="pull-requests">
+          <h2 id="pull-requests">Pull requests</h2>
+          <p>
+            <em>Task</em>: create a GitHub action which automatically assigns a
+            new pull request (PR) to its author and creates a list of potential
+            reviewers from a permitted list.
+          </p>
+          <p>
+            <em>Note</em>: the examples link to the People and Code repository
+            for this website and are not public.
+          </p>
+          <section aria-labelledby="auto-assign">
+            <h3 id="auto-assign">Auto assign</h3>
+            <p>
+              This action uses
+              <a
+                href="https://github.com/marketplace/actions/auto-assign-action"
+                >Auto Assign Action</a
+              >
+            </p>
+            <blockquote>
+              <p>
+                An action which adds reviewers to the pull request when the pull
+                request is opened.
+              </p>
+            </blockquote>
+            <p>
+              To create a list of accepted reviewers and auto-assign PRs to
+              their author:
+            </p>
+            <ol>
+              <li>
+                Create a
+                <a
+                  class="local"
+                  href="/src/how-to/create-a-github-repository-secret.html"
+                  >repository secret</a
+                >
+                called <code>ASSIGN_REVIEWERS</code>
+              </li>
+              <li>Go to <code>~/actions</code></li>
+              <li>Click on "New workflow"</li>
+              <li>Click on "set up a workflow for yourself"</li>
+              <li>
+                Create two yml files. See
+                <a
+                  href="https://github.com/marketplace/actions/auto-assign-action"
+                  >Auto Assign Action</a
+                >
+                for yml specifics.
+                <ol>
+                  <li>
+                    Create <code>actions.yml</code> under
+                    <code>~/.github/workflow</code>
+                  </li>
+                  <li>
+                    <code>auto_assign.yml</code> under <code>~/.github</code>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                In order that the workflow has the correct permissions, add this
+                line to the end of the <code>actions.yml</code> file:
+                <div>
+                  <code>repo-token: ${{ secrets.ASSIGN_REVIEWERS }}</code>
+                </div>
+                <div>
+                  The <code>repo-token</code> must match the repository secret
+                  you created.
+                </div>
+              </li>
+            </ol>
+            <p>
+              <em>Outcome</em>: When a PR is made, the author is assigned and a
+              list of reviewers is generated. In our case (People and Code), the
+              reviewer is automatically assigned because there is only one
+              reviewer on the list who is not the author.
+            </p>
+            <section aria-labelledby="review-auto-assign">
+              <h4 id="review-auto-assign">Review auto assign</h4>
+              <p>To review or edit this action:</p>
+              <ol>
+                <li>
+                  Go to your repo <code>~/website</code>
+                  <div>
+                    e.g.
+                    <a href="https://github.com/p-n-c/website">website repo</a>
+                  </div>
+                </li>
+                <li>
+                  Select the actions tab
+                  <code>~/website/actions</code>
+                  <div>
+                    e.g.
+                    <a href="https://github.com/p-n-c/website/actions"
+                      >actions tab</a
+                    >
+                  </div>
+                </li>
+                <li>
+                  Click on workflow action in the "All workflows" panel
+                  <code>~/actions/workflows/actions.yml</code>
+                  <div>
+                    e.g.
+                    <a
+                      href="https://github.com/p-n-c/website/actions/workflows/actions.yml"
+                      >Auto Assign</a
+                    >
+                  </div>
+                </li>
+                <li>
+                  Click on the <code>actions.yml</code> link below the Auto
+                  Assign title
+                  <div>
+                    e.g.
+                    <a
+                      href="https://github.com/p-n-c/website/blob/main/.github/workflows/actions.yml"
+                      >actions.yml</a
+                    >
+                  </div>
+                </li>
+              </ol>
+            </section>
+            <p>
+              When you make a <abbr title="Pull request">PR</abbr>, the assignee
+              will now be set automatically, and list of reviewers displayed.
+              For details see
+              <a
+                href="https://github.com/marketplace/actions/auto-assign-action"
+                >Auto Assign Action</a
+              >.
+            </p>
+          </section>
+        </section>
+      </article>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="10">
+<source>../src\how-to\create-a-github-pull-request-template.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="How to create a GitHub pull request template using a markdown file"
+    />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>How to create a GitHub pull request template</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>Create a GitHub pull request template</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <article>
+        <p>
+          <em>Task</em>: Create a <abbr title="Pull request">PR</abbr> template
+        </p>
+        <section
+          aria-labelledby="adding-a create-a-github-pull-request-template"
+        >
+          <h2 id="adding-a create-a-github-pull-request-template">
+            Adding a pull request template
+          </h2>
+          <p>
+            Follow the instructions from GitHub for
+            <a
+              href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository"
+              >adding a pull request template</a
+            >.
+          </p>
+          <section aria-labelledby="feature-request">
+            <h3 id="feature-request">Feature request</h3>
+            <p>
+              Use a straightforward template such as the
+              <a
+                href="https://graphite.dev/guides/comprehensive-checklist-github-pr-template"
+                >Feature Addition PR Template</a
+              >
+              from Graphite.
+            </p>
+          </section>
+          <p>
+            <em>Tip</em>: To check a markdown checkbox insert an "x" between the
+            [] brackets with no spaces.
+          </p>
+        </section>
+      </article>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="11">
+<source>../src\how-to\create-a-github-repository-secret.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="How to create a repository secret for a personal access token in GitHub"
+    />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>How to create a repository secret in GitHub</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>Create a repository secret in GitHub</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <article>
+        <p><em>Task</em>: create a GitHub repository secret.</p>
+        <p>
+          The instructions pertain to the creation of any repository secret.
+        </p>
+        <p>
+          <em>
+            By way of example, we create a repository secret
+            <code>ASSIGN_REVIEWERS</code> that we will use when creating the
+            GitHub action
+            <a href="/src/how-to/create-a-github-action.html">Auto Assign</a>.
+          </em>
+        </p>
+        <section aria-labelledby="create-pat">
+          <h2 id="create-pat">Create a Personal Access Token (PAT)</h2>
+          <p>
+            In order to create a repository secret, it's first necessary to
+            create a <abbr title="Personal Access Token">PAT</abbr>.
+          </p>
+          <p>
+            <em>
+              Tip: for an overview of how
+              <abbr title="Personal Access Token">PAT</abbr>s and secrets are
+              related, we recommend reading the summary written by Claude in the
+              <a class="local" href="#appendix">appendix</a> before continuing.
+            </em>
+          </p>
+          <section aria-labelledby="how-to-create-a-pat">
+            <h3 id="how-to-create-a-pat">
+              How to create a <abbr title="Personal Access Token">PAT</abbr>
+            </h3>
+            <ol>
+              <li>
+                Navigate to Developer Settings > Personal Access Tokens > Tokens
+                (classic)
+                <div>
+                  <a href="https://github.com/settings/tokens">tokens</a>
+                </div>
+              </li>
+              <li>Click "Generate new token (classic)"</li>
+              <li>Give it a descriptive e.g. "Auto Assign Reviewers"</li>
+              <li>
+                Set an expiry date. if you're not sure, err on the side of
+                caution. You can always create another
+                <abbr title="Personal Access Token">PAT</abbr>.
+              </li>
+              <li>
+                Select the <strong>workflow</strong> scope for the necessary
+                permissions (this will automatically select
+                <strong>repo</strong> which is also required)
+              </li>
+              <li>
+                Copy the token immediately. This is critical; you won't be able
+                to access it later. If you don't copy the token now, you will
+                have to create a new one.
+              </li>
+            </ol>
+          </section>
+        </section>
+        <section aria-labelledby="create-repo-secret">
+          <h2 id="create-repo-secret">How to create a repository secret</h2>
+          <p>
+            Once you have copied the
+            <abbr title="Personal Access Token">PAT</abbr>:
+          </p>
+          <ol>
+            <li>
+              Navigate to Settings > Secrets and variables > Actions
+              <div>
+                e.g.
+                <a
+                  href="https://github.com/p-n-c/website/settings/secrets/actions"
+                  >actions</a
+                >
+              </div>
+              <div>
+                <em>
+                  Note: repository secrets are for a single repository only. You
+                  will find them in your repository settings under "Secrets and
+                  variables".
+                </em>
+              </div>
+            </li>
+            <li>Click "New repository secret"</li>
+            <li><strong>Name</strong>: e.g. ASSIGN_REVIEWERS</li>
+            <li>
+              <strong>Value</strong>: the
+              <abbr title="Personal Access Token">PAT</abbr> you just created
+            </li>
+          </ol>
+          <p>
+            You can review and manage secrets at ~/settings/secrets/actions e.g.
+            <a href="https://github.com/p-n-c/website/settings/secrets/actions"
+              >secrets/actions</a
+            >
+          </p>
+          <p>
+            You can now use the repo secret in a GitHub action to grant
+            permissions.
+          </p>
+        </section>
+      </article>
+      <section aria-labelledby="appendix">
+        <h2 id="appendix">Appendix</h2>
+        <p>
+          This appendix was written by the LLM
+          <a href="https://claude.ai/">Claude</a> in response to a request to
+          summarise how repository secrets and
+          <abbr title="Personal Access Tokens">PATs</abbr> are used in GitHub.
+        </p>
+        <section aria-labelledby="pats">
+          <h3 id="pats">Personal Access Tokens (PATs):</h3>
+          <ul>
+            <li>Act as your personal credentials/password for GitHub</li>
+            <li>
+              Allow you to authenticate when using GitHub's API or command line
+            </li>
+            <li>
+              Can be configured with specific permissions (like repo access,
+              workflow management, etc.)
+            </li>
+            <li>Are tied to your personal GitHub account</li>
+            <li>You control their lifespan and can revoke them at any time</li>
+          </ul>
+        </section>
+        <section aria-labelledby="repo-secrets">
+          <h3 id="repo-secrets">Repository Secrets:</h3>
+          <ul>
+            <li>
+              Are encrypted environment variables stored at the repository level
+            </li>
+            <li>
+              Allow you to securely store sensitive data (like PATs, API keys,
+              passwords)
+            </li>
+            <li>Are only accessible within GitHub Actions workflows</li>
+            <li>Cannot be viewed once created, only updated or deleted</li>
+            <li>Are automatically masked in logs if accidentally printed</li>
+          </ul>
+        </section>
+        <section aria-labelledby="how-pats-and-secrets-work-together">
+          <h3 id="how-pats-and-secrets-work-together">
+            How PATs and repository secrets work together:
+          </h3>
+          <ul>
+            <li>You create a PAT with specific permissions</li>
+            <li>You store that PAT as a repository secret</li>
+            <li>
+              Your GitHub Actions workflow references the secret using ${{
+              secrets.SECRET_NAME }}
+            </li>
+            <li>
+              GitHub securely injects the PAT value during workflow execution
+            </li>
+            <li>
+              The action can then use this token to authenticate and perform
+              operations on your behalf
+            </li>
+          </ul>
+        </section>
+      </section>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="12">
+<source>../src\how-to\create-a-snippet.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="How to create a VS Code snippet" />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>Create a VS Code snippet</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>Create a VS Code snippet</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <p>
+        We want to write a snippet in VS Code so that we can create HTML pages
+        from our template.
+      </p>
+      <h2>How to create the snippet</h2>
+      <ol>
+        <li>Go to "Code > Settings"</li>
+        <li>Select "Configure Snippets"</li>
+        <li>Select "HTML"</li>
+        <li>
+          Convert the existing HTML template into a VS Code snippet using
+          <a href="https://snippet-generator.app/">snippet generator</a>
+        </li>
+        <li>Check the prefixes, description and variables are correct</li>
+        <li>
+          Update your user preferences:
+          <code> "editor.tabCompletion": "on"</code>
+        </li>
+        <li>
+          NB To edit an existing snippet repeat the above and select "Existing
+          Snippets"
+        </li>
+      </ol>
+
+      <h2>How to use the snippet</h2>
+      <ol>
+        <li>Create a new HTML page</li>
+        <li>
+          Start typing one of the new template prefixes e.g. pac-page and select
+          a snippet e.g. "People & Code HTML Page"
+        </li>
+        <li>
+          Replace the variables, meta description, title and page header, with
+          values.
+        </li>
+      </ol>
+
+      <h3>Tips</h3>
+      <div>To access your "User preferences":</div>
+      <ol>
+        <li>Mac: ⌘ Shift + P / Windows: Ctrl Shift + P</li>
+        <li>
+          Type: "User Settings", short for "Preferences: Open User Settings
+          (JSON)"
+        </li>
+      </ol>
+      <div>To navigate between items:</div>
+      <ul>
+        <li>Use the Tab key</li>
+      </ul>
+      <p>To delete a project or global snippet:</p>
+      <ol>
+        <li>Mac: ⌘ Shift + P / Windows: Ctrl Shift + P</li>
+        <li>Enter or select: "Snippets: Configure Snippets"</li>
+        <li>Select the snippet to delete</li>
+        <li>Right click on the snippet tab name</li>
+        <li>Select "Reveal in Finder"</li>
+        <li>Delete the snippet</li>
+      </ol>
+    </main>
+    <h2>References</h2>
+    <dl>
+      <dt>
+        <a href="https://code.visualstudio.com/docs/editor/userdefinedsnippets"
+          >Snippets in Visual Studio Code</a
+        >
+      </dt>
+      <dd>
+        Code snippets are templates that make it easier to enter repeating code
+        patterns, such as loops or conditional-statements. Microsoft VS Code.
+      </dd>
+      <dt>
+        <a href="https://snippet-generator.app/">snippet generator</a>
+      </dt>
+      <dd>
+        Online snippet generator for VS Code, Sublime Text and Atom by Pawel
+        Grzybek.
+      </dd>
+      <dt>
+        <a
+          href="https://www.freecodecamp.org/news/definitive-guide-to-snippets-visual-studio-code/"
+          >Visual Studio Code Snippets – the Definitive VS Code Snippet Guide
+          for Beginners</a
+        >
+      </dt>
+      <dd>An introduction from Rob O'Leary at freecodecamp.</dd>
+    </dl>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="13">
+<source>../src\how-to\publish-to-github-pages.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="How to publish a website using GitHub Pages"
+    />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>Publish using GitHub Pages</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>Publish using GitHub Pages</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <ol>
+        <li>
+          Add the developer dependency
+          <a href="https://github.com/tschaub/gh-pages">gh-pages</a>
+        </li>
+        <li>
+          Create a new script in package.json
+          <code
+            >"rm -rf dist && rm -rf .parcel-cache && npm run build && gh-pages
+            -d dist"</code
+          >
+        </li>
+        <li>
+          Update the public url to match the GitHub repository name
+          <code>--public-url /website</code> in the npm build script
+        </li>
+        <li>Stop site running locally</li>
+        <li>Check you are on main</li>
+        <li><code>git push</code></li>
+        <li><code>npm run publish</code></li>
+      </ol>
+      <p>
+        This is a temporary workaround till the site is published to a custom
+        domain.
+      </p>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="14">
+<source>../src\how-to\review-a-github-pull-request-locally.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A comprehensive guide for reviewing GitHub pull requests locally"
+    />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>Review a Github pull request locally | People and Code</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>Review a Github pull request locally</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <article>
+        <p>
+          <em>Objective</em>: Learn how to effectively review and manage pull
+          requests on your local machine
+        </p>
+
+        <section aria-labelledby="initial-setup">
+          <h2 id="initial-setup">Initial Setup and Review</h2>
+          <ul>
+            <li>
+              Make sure you have direct repository access before doing the
+              following
+              <pre><code>git fetch origin                    # Download information about all remote branches 
+git switch origin/branch-name     # Switch to the specific PR branch (Detached HEAD state)</code></pre>
+            </li>
+            <li>
+              If you want to make changes while reviewing, create a local branch
+              <pre><code>git switch -c my-review-branch origin/branch-name</code></pre>
+            </li>
+            <li>
+              To go back to your previous work
+              <pre><code>git switch main                   # Or whatever branch you were on before</code></pre>
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="after-merge">
+          <h2 id="after-merge">After the PR is Merged</h2>
+          <ul>
+            <li>
+              Update your local main branch with the merged changes
+              <pre><code>git switch main                   # Switch to main branch
+git fetch origin                    # Get latest remote information
+git pull origin main                # Update local main with remote changes
+                </code></pre>
+            </li>
+            <li>
+              Clean up by removing your review branch if you created one
+              <pre><code>git branch -d my-review-branch      # Delete the local review branch safely</code></pre>
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="branch-management">
+          <h2 id="branch-management">Managing Local and Remote Branches</h2>
+          <ul>
+            <li>
+              View all your branches
+              <pre><code>git branch                          # List local branches
+git branch -r                       # List remote branches
+git branch -a                       # List both local and remote branches
+git branch -av                      # Show detailed information for all branches</code></pre>
+            </li>
+            <li>
+              Find out which branches have been merged
+              <pre><code>git branch --merged                 # Show branches merged into current branch
+git branch --no-merged              # Show unmerged branches</code></pre>
+            </li>
+
+            <li>
+              Clean up remote branch references
+              <pre><code>git fetch --prune                   # Remove references to deleted remote branches</code></pre>
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="sync-working-branch">
+          <h2 id="sync-working-branch">Keeping Your Working Branch Updated</h2>
+          <ul>
+            <li>
+              For shared branches in PRs, use <code>merge</code>. It preserves
+              history but adds complexity.
+              <pre><code>git switch main
+git pull origin main
+git switch your-branch-name
+git merge main</code></pre>
+            </li>
+            <li>
+              For personal branches, used <code>rebase</code>. It creates a
+              cleaner history by rewriting it.
+              <pre><code>git switch main
+git pull origin main
+git switch your-branch-name
+git rebase main</code></pre>
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="key-points">
+          <h2 id="key-points">Key Points to Remember</h2>
+          <p>
+            When reviewing pull requests locally, remember these important
+            practices:
+          </p>
+          <ul>
+            <li>
+              Always start with a fetch to ensure you have the latest remote
+              information
+            </li>
+            <li>
+              Don't worry about being in a detached HEAD state - it's normal
+              when checking out remote branches directly
+            </li>
+            <li>
+              Create a local branch if you need to make changes during review
+            </li>
+            <li>
+              Clean up your local branches after PRs are merged to keep your
+              repository tidy
+            </li>
+            <li>Use merge for shared branches and rebase for personal work</li>
+            <li>
+              Run git fetch --prune periodically to clean up references to
+              deleted remote branches
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="15">
+<source>../src\how-to\use-github-actions.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="How to use GitHub actions" />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>How to use GitHub actions</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>GitHub actions</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <section aria-labelledby="pull-requests">
+        <h3 id="pull-requests">Pull requests</h3>
+        <section aria-labelledby="auto-assign">
+          <h4 id="auto-assign">Auto assign</h4>
+          <p>
+            This action uses
+            <a href="https://github.com/marketplace/actions/auto-assign-action"
+              >Auto Assign Action</a
+            >
+          </p>
+          <blockquote>
+            <p>
+              An action which adds reviewers to the pull request when the pull
+              request is opened.
+            </p>
+          </blockquote>
+          <p>
+            To create a list of accepted reviewers and auto-assign PRs to their
+            author:
+          </p>
+          <ol>
+            <li>Go to <code>~/actions</code></li>
+            <li>Click on <code>New workflow</code></li>
+            <li>Click on <code>set up a workflow for yourself</code></li>
+            <li>
+              Create 2 yml workflows. See
+              <a
+                href="https://github.com/marketplace/actions/auto-assign-action"
+                >Auto Assign Action</a
+              >
+              for yml specifics.
+              <ol>
+                <li><code>actions.yml</code></li>
+                <li><code>auto_assign.yml</code></li>
+              </ol>
+            </li>
+          </ol>
+          <p>
+            When a PR is made, the author is assigned and a list of reviewers is
+            generated.
+          </p>
+          <p>Personal Access Token (PAT)</p>
+          <blockquote>
+            <p>repo-token: ${{ secrets.ASSIGN_REVIEWERS }}</p>
+          </blockquote>
+          <p>
+            <em
+              >Tip: Make sure the auto_assign.yml file is directly under
+              .github, not .github/workflows</em
+            >
+          </p>
+        </section>
+      </section>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="16">
+<source>../src\pledge-to\think-before-using-ai.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A collection of pledges made by the people at People and Code"
+    />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>Pledge to think before using AI</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>Think before using AI</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <article>
+        <section aria-labelledby="the-pledge">
+          <h2 id="the-pledge">The pledge</h2>
+          <p class="pledge">
+            <em>
+              I pledge to put down my ideas on paper before asking for help from
+              Claude or ChatGPT,
+              <time datetime="PT14">for the next two weeks</time>,
+              <span
+                >in order that I will produce better work in the same amount of
+                time.</span
+              >
+            </em>
+          </p>
+        </section>
+        <section aria-labelledby="intention">
+          <h3 id="intention">Intention</h3>
+          <p>
+            Why did I make this pledge? I use
+            <a href="https://claude.ai/">Claude</a> and
+            <a href="https://chat.openai.com/">ChatGPT</a> a lot. I know they
+            consume energy, create emissions, and use water both during their
+            training phase and when they are running.
+          </p>
+          <p>
+            The numbers for these operations (our calculations) are probably of
+            the correct magnitude but their significance is not clear to me.
+            Comparing the training of an LLM to X number of flights doesn't tell
+            me whether the training should have gone ahead, or whether I should
+            use the model. Should the flights have flown? Were they for a good
+            reason? What is a lot of flights?
+          </p>
+          <p>
+            Even if I knew the answer to these questions, I don't think it would
+            matter. If LLMs are useful - and they are - we are going to use
+            them. If the
+            <a href="https://en.wikipedia.org/wiki/Jevons_paradox"
+              >Jevons paradox</a
+            >
+            applies, we will use LLMs - or generative AI - to do more, whether
+            that more is valuable or not.
+          </p>
+        </section>
+        <section aria-labelledby="hypothesis">
+          <h3 id="hypothesis">Hypothesis</h3>
+          <p>
+            Therefore, I am looking at this the other way around. Rather than
+            monitor my LLM usage, I will keep a watchful eye on my intentions.
+            The idea is to know my goal in advance and use LLMs to achieve the
+            task in less time, or to do it better. Ideally both things would be
+            true.
+          </p>
+          <p>
+            I am assuming that by doing things quicker or better, I will save
+            energy (and by association emissions, water, etc.).
+          </p>
+        </section>
+        <section aria-labelledby="outcome">
+          <h3 id="outcome">Outcome</h3>
+          <p>I don't know how to measure the outcome of this pledge.</p>
+          <p>
+            I will therefore measure success by whether or not I do write things
+            down. I can verify that. In addition, I <em>aspire</em> to work
+            faster and better. This approach is unscientific but still, I think
+            valid, because the pledge is really about my - human - behaviour,
+            not whether or not AI can help me.
+          </p>
+          <p>
+            The outcome section was written after I asked Claude what it
+            thought. I didn't change anything. Here is part of its reply:
+          </p>
+          <blockquote>
+            <p>
+              This reminds me of other situations where the act of preparation
+              or reflection itself can be more valuable than any measurable
+              outcome. For instance, the practice of writing a project brief
+              often clarifies thinking regardless of whether the final product
+              strictly follows that brief.
+            </p>
+            <cite>Claude</cite>
+          </blockquote>
+        </section>
+        <small>
+          <p>
+            <em>
+              <time datetime="2024-11-06">Wed 06 Nov 2024</time>
+            </em>
+          </p>
+          <p class="pledger"><em>pledger: Dan</em></p>
+        </small>
+        <section aria-labelledby="update">
+          <h4 id="update">Update</h4>
+          <p>
+            I stuck to my pledge and committed more ideas to paper. I also began
+            to sketch out the idea of using AI as a ratchet for iterating on
+            ideas.
+          </p>
+          <p>
+            I completed one project without recourse to AI: a client/server
+            environment to accompany a workshop on HTTP messaging.
+          </p>
+        </section>
+        <section aria-labelledby="further-reading">
+          <h2 id="further-reading">Further reading</h2>
+          <ul>
+            <li>
+              <a
+                href="https://responsibletech.work/tools/development/pledge-works/"
+                >Pledge Works</a
+              >
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="17">
+<source>../src\summary-of\eu-accessibility-act.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Summary of the European Accessibility Act"
+    />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>The European Accessibility Act</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>The European Accessibility Act</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <article>
+        <h2>Overview</h2>
+        <p>
+          The EU Accessibility Act (EAA) is a directive set to take effect on
+          28th June 2025. Its primary goal is to enhance the accessibility of a
+          wide range of products and services across the European Union.
+        </p>
+        <h2>Scope</h2>
+        <ul>
+          <li>
+            <strong>Applies to</strong>:
+            <div>The public and private sector</div>
+            <div>
+              Any business that wishes to trade in the EU, wherever it is based
+            </div>
+          </li>
+          <li>
+            <strong>Includes</strong>: Websites, mobile apps, and web
+            applications
+          </li>
+          <li>
+            <strong>Covers</strong>: Consumer-facing (B2C). It does not apply to
+            business-to-business (B2B) services unless they also serve external
+            users.
+          </li>
+        </ul>
+        <h2>Exemptions</h2>
+        <ul>
+          <li>
+            <strong>Micro-enterprises</strong>: Generally exempt. A
+            micro-enterprise has fewer than 10 employees and turnover below €2
+            million
+            <div><em>Voluntary adoption is encouraged</em></div>
+          </li>
+          <li>
+            Products or services provided before 28 June 2025 are exempt for up
+            to five years or until any relevant contract expires.
+          </li>
+          <li>Software updates are not exempt.</li>
+        </ul>
+        <h2>Key Requirements</h2>
+        <ul>
+          <li>
+            Adherence to established accessibility standards. Meeting WCAG 2.1
+            Level AA ensures compliance.
+            <div>
+              <em>Please note WCAG 2.2 is officially a W3C recommendation</em>
+            </div>
+          </li>
+          <li>
+            Improvements may include:
+            <ul>
+              <li>Enhanced compatibility with assistive technologies</li>
+              <li>Improved keyboard navigability</li>
+              <li>Accessible visual content</li>
+            </ul>
+          </li>
+          <li>
+            The four principles of accessibility of websites and mobile
+            applications are:
+            <dl>
+              <dt><strong>Perceivability</strong></dt>
+              <dd>
+                Meaning that information and user interface components must be
+                presentable to users in ways they can perceive.
+              </dd>
+              <dt><strong>Operability</strong></dt>
+              <dd>
+                Meaning that user interface components and navigation must be
+                operable.
+              </dd>
+              <dt><strong>Understandability</strong></dt>
+              <dd>
+                Meaning that information and the operation of the user interface
+                must be understandable.
+              </dd>
+              <dt><strong>Robustness</strong></dt>
+              <dd>
+                Meaning that content must be robust enough to be interpreted
+                reliably by a wide variety of user agents, including assistive
+                technologies.
+              </dd>
+            </dl>
+          </li>
+          <li>
+            Accessibility should be achieved by the systematic removal and
+            prevention of barriers, preferably through a universal design or
+            <strong>Design for All</strong> (DfA) approach.
+          </li>
+        </ul>
+        <h2>Compliance Considerations</h2>
+        <ul>
+          <li><strong>Deadline</strong>: June 28th 2025</li>
+          <li>
+            <strong>Penalties</strong>: Vary by member state, may include:
+            <ul>
+              <li>Fines</li>
+              <li>Product removal from market</li>
+              <li>Legal action</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Compliance Costs</strong>: May involve:
+            <ul>
+              <li>Redesigning digital products</li>
+              <li>Staff training</li>
+              <li>Ongoing monitoring</li>
+            </ul>
+          </li>
+        </ul>
+        <h2>Impact on Different Businesses</h2>
+        <ul>
+          <li>
+            <strong>Simple websites</strong>: May require minimal adjustments
+          </li>
+          <li>
+            <strong>Complex platforms</strong>: Might need substantial
+            revisions, especially those providing:
+            <ul>
+              <li>Essential services</li>
+              <li>
+                Intricate data analysis (e.g. emissions data recording and
+                analysis)
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <h2>Conclusion</h2>
+        <p>
+          The EAA represents a significant step towards digital inclusivity in
+          the EU. Businesses must prepare for compliance to avoid penalties and
+          ensure their products and services are accessible to all, including
+          people with disabilities.
+        </p>
+      </article>
+      <h2>References</h2>
+      <dl>
+        <dt>
+          <a
+            href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019L0882"
+            >European Accessibility Act</a
+          >
+        </dt>
+        <dd>
+          To ensure the full participation of people with disabilities in
+          society, and to reduce the fragmentation of legislation governing
+          access to products and services, the European Commission has adopted a
+          proposal for a directive – often referred to as the European
+          Accessibility Act.
+        </dd>
+        <dt>
+          <a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/"
+            >What's New in WCAG 2.2</a
+          >
+        </dt>
+        <dd>
+          WCAG documents explain how to make web content more accessible to
+          people with disabilities.
+        </dd>
+        <dt>
+          <a
+            href="https://www.deque.com/blog/european-accessibility-act-eaa-top-20-key-questions-answered/"
+            >European Accessibility Act (EAA): Top 20 Key Questions Answered</a
+          >
+        </dt>
+        <dd>Covers exemptions, compliance and application.</dd>
+        <dt>
+          <a
+            href="https://www.interaction-design.org/literature/topics/design-for-all"
+            >Design for All</a
+          >
+        </dt>
+        <dd>
+          Design for All is a concept that describes a wide range of design
+          approaches, methods, techniques and tools for designers to meet the
+          vast diversity of users’ needs and requirements. Designers strive to
+          build access features into products from the start of their design
+          process. IxDF
+        </dd>
+      </dl>
+      <aside aria-labelledby="authors-heading">
+        <h3 id="authors-heading">Authors</h3>
+        <p>This document was created with the help of ChatGPT and Claude.</p>
+      </aside>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="18">
+<source>../src\summary-of\eu-ai-act.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Summary of the European AI Act for web development teams: compliance and preparation."
+    />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>Summary of the European AI Act</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>The European AI Act</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <article>
+        <h2>Overview</h2>
+        <p>
+          This article is intended for teams using or planning to use AI on
+          their websites and apps. It provides an overview of risk,
+          requirements, governance, and how to achieve compliance.
+        </p>
+        <p>
+          The majority of obligations fall on providers or developers of
+          high-risk AI systems but developers of apps, including those using AI
+          for educational purposes, may be involved in work that is classed as
+          minimal risk, and is therefore subject to (lighter) obligations.
+        </p>
+        <p>
+          The following summary of risk and requirements is taken from the
+          <a
+            href="https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence"
+            >summary</a
+          >
+          provided by the European Parliament.
+        </p>
+        <p>
+          The new rules establish obligations for providers and users depending
+          on the level of risk from artificial intelligence.
+        </p>
+        <h3>Unacceptable risk</h3>
+        <p>Don't do these things:</p>
+        <ul>
+          <li>
+            Cognitive behavioural manipulation of people or specific vulnerable
+            groups
+          </li>
+          <li>Social scoring</li>
+          <li>Biometric identification and categorisation of people</li>
+          <li>
+            Real-time and remote biometric identification systems, such as
+            facial recognition
+          </li>
+        </ul>
+        <p>
+          Article 5 of the act covers
+          <a href="https://artificialintelligenceact.eu/article/5/"
+            >prohibited AI practices</a
+          >
+          in detail.
+        </p>
+        <h3>High risk</h3>
+        <p>
+          <em>Category 1</em> is concerned with products such as lifts,
+          medicines and planes.
+        </p>
+        <p>
+          Some areas of <em>Category 2</em> are specialised but others may be of
+          relevance to developers of certain kinds of software.
+        </p>
+        <p>
+          If you are involved in any of the following, find out what your
+          obligations are:
+        </p>
+        <ul>
+          <li>Management and operation of critical infrastructure</li>
+          <li>Education and vocational training</li>
+          <li>Employment, worker management and access to self-employment</li>
+          <li>
+            Access to and enjoyment of essential private services and public
+            services and benefits
+          </li>
+          <li>Law enforcement</li>
+          <li>Migration, asylum and border control management</li>
+          <li>
+            Assistance in legal interpretation and application of the law.
+          </li>
+        </ul>
+        <h2>Transparency requirements</h2>
+        <h3>Use of Generative AI</h3>
+        <p>
+          While not classified as high-risk, the use of Generative AI, like
+          ChatGPT, will have to comply with transparency requirements and EU
+          copyright law.
+        </p>
+        <p>You can comply by:</p>
+        <ul>
+          <li>Disclosing that the content was generated by AI</li>
+          <li>
+            Designing the model to prevent it from generating illegal content
+          </li>
+          <li>Publishing summaries of copyrighted data used for training</li>
+        </ul>
+        <p>For example:</p>
+        <blockquote>
+          <p>
+            High-impact general-purpose AI models that might pose systemic risk,
+            such as the more advanced AI model GPT-4, would have to undergo
+            thorough evaluations and any serious incidents would have to be
+            reported to the European Commission.
+          </p>
+          <p>
+            Content that is either generated or modified with the help of AI -
+            images, audio or video files (for example deepfakes) - need to be
+            clearly labelled as AI generated so that users are aware when they
+            come across such content.
+          </p>
+          <cite
+            ><a
+              href="https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence"
+              >EU AI Act: first regulation on artificial intelligence</a
+            ></cite
+          >
+        </blockquote>
+        <h3>How should AI generated content be labelled?</h3>
+        <p>
+          <a href="https://osf.io/preprints/psyarxiv/v4mfz"
+            >What label should be applied to content produced by generative
+            AI?</a
+          >
+          by Epstein et al., considered how nine labels are perceived by people
+          in the US, Mexico, Brazil, India, and China.
+        </p>
+        <p>The paper is worth a read, here is a flavour of it:</p>
+        <blockquote>
+          <p>
+            <strong>AI generated</strong>,
+            <strong>Generated with an AI tool</strong>, and
+            <strong>AI Manipulated</strong> are the terms that participants most
+            consistently associated with content that was generated using AI.
+          </p>
+          <p>
+            However, if the goal is to identify content that is misleading
+            (e.g., our second research question), these terms perform quite
+            poorly. Instead, <strong>Deepfake</strong> and
+            <strong>Manipulated</strong>
+            are the terms most consistently associated with content that is
+            potentially misleading.
+          </p>
+          <p>[<em>Ed. the labels have been highlighted for emphasis.</em>]</p>
+        </blockquote>
+        <h2>Governance</h2>
+        <p>How will the AI Act be implemented?</p>
+        <blockquote>
+          <p>
+            The
+            <a
+              href="https://digital-strategy.ec.europa.eu/en/policies/ai-office"
+              >AI Office</a
+            >
+            will be established, sitting within the Commission, to monitor the
+            effective implementation and compliance of
+            <abbr title="General purpose AI">GPAI</abbr> model providers.
+          </p>
+        </blockquote>
+        <h2>Next steps</h2>
+        <p>
+          For the majority of app developers, the AI Act will not apply until
+          thirty-six months from the date of the entry into force of the AI Act:
+          <a
+            href="https://artificialintelligenceact.eu/responsibilities-of-european-commission-ai-office/"
+            >2 August 2027</a
+          >.
+        </p>
+        <p>
+          Although that may seem a long way off, compliance may not be trivial;
+          we advise you to begin assessing your responsibilities.
+        </p>
+        <p>
+          In an appendix to the summary, there are a number of use cases you may
+          find useful.
+        </p>
+        <p>For example:</p>
+        <blockquote>
+          <p>
+            <strong>Education and vocational training</strong>: AI systems
+            determining access, admission or assignment to educational and
+            vocational training institutions at all levels. Evaluating learning
+            outcomes, including those used to steer the student’s learning
+            process.
+          </p>
+          <p>
+            Assessing the appropriate level of education for an individual.
+            Monitoring and detecting prohibited student behaviour during tests.
+          </p>
+          <p>[<em>Ed. the use case has been highlighted for emphasis.</em>]</p>
+        </blockquote>
+        <aside>
+          <p>
+            For most apps, the date when the EU AI Act comes into force is
+            <strong>2 August 2027</strong>.
+          </p>
+          <p>
+            Check your obligations under the act using the
+            <a
+              href="https://artificialintelligenceact.eu/assessment/eu-ai-act-compliance-checker/"
+              >EU AI Act Compliance Checker</a
+            >.
+          </p>
+        </aside>
+        <hr />
+        <p><em>This article was published on 18th October 2024.</em></p>
+        <hr />
+        <h2>Links to external references</h2>
+        <dl>
+          <dt>
+            <a
+              href="https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence"
+              >EU AI Act: first regulation on artificial intelligence</a
+            >
+          </dt>
+          <dd>
+            <p>
+              The use of artificial intelligence in the EU will be regulated by
+              the AI Act, the world’s first comprehensive AI law.
+            </p>
+            <p><em>Article published by the European Parliament.</em></p>
+          </dd>
+          <dt>
+            <a href="https://artificialintelligenceact.eu/high-level-summary/"
+              >High-level summary of the AI Act
+            </a>
+          </dt>
+          <dd>
+            <p>
+              <em
+                >Updated on 30 May 2024 in accordance with the Corrigendum
+                version of the AI Act.</em
+              >
+            </p>
+            <p>
+              In this article we provide you with a high-level summary of the AI
+              Act, selecting the parts which are most likely to be relevant to
+              you regardless of who you are. We provide links to the original
+              document where relevant so that you can always reference the Act
+              text.
+            </p>
+            <p><em>The EU Artificial Intelligence Act.</em></p>
+          </dd>
+          <dt>
+            <a
+              href="https://artificialintelligenceact.eu/assessment/eu-ai-act-compliance-checker/"
+              >EU AI Act Compliance Checker</a
+            >
+          </dt>
+          <dd>
+            <p>
+              The EU AI Act introduces new obligations to entities located
+              within the EU and elsewhere. Use our interactive tool to determine
+              whether or not your AI system will be subject to these.
+            </p>
+            <p><em>The EU Artificial Intelligence Act.</em></p>
+          </dd>
+        </dl>
+      </article>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="19">
+<source>../src\thoughts-on\an-all-purpose-api.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Thoughts on an All-Purpose API" />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>An All-Purpose API</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>An All-Purpose API</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <article>
+        <p>
+          An All-Purpose API (AP-API) embraces all that an entity is and does.
+          It extends the traditional
+          <abbr title="Application Programming Interface">API</abbr> which
+          handles domain data (books, native wildflowers, films) to include
+          things about an entity itself, and how that entity would like others
+          to interact with it.
+        </p>
+        <p>
+          In this article, we consider how we might protect an API from being
+          cannibalised by multiple external interests (LLM agents). By adding
+          context to our API we influence how our data are used.
+        </p>
+        <p>
+          <em
+            >An AP-API may be seen as a practical interpretation of
+            <a
+              class="local"
+              href="http://localhost:1234/thoughts-on/contract-based-web-design.html"
+              >Contract-based Web Design</a
+            >.</em
+          >
+        </p>
+        <section aria-labelledby="the-value-of-ap-apis">
+          <h2 id="the-value-of-ap-apis">The value of All-Purpose APIs</h2>
+          <p>
+            LLMs need data to act on, and data must be secure. LLMs cannot be
+            given unfettered access to databases or have knowledge of their
+            internal schema.
+          </p>
+          <p>
+            APIs provide a controlled and safe way to access data whilst
+            preserving an entity's privacy and honouring data protection issues.
+          </p>
+          <p>An AP-API works on the same principles as an API.</p>
+          <section aria-labelledby="internal-value-of-ap-apis">
+            <h3 id="internal-value-of-ap-apis">Internal value of AP-APIs</h3>
+
+            <p>An AP-API is the single source of truth:</p>
+            <ul>
+              <li>From which the API is derived</li>
+              <li>From which the database scheme is derived</li>
+              <li>
+                Which front and backend developers use as the contract in
+                contract-first development whilst iterating on the API
+              </li>
+              <li>Is the reference for front and backend tests</li>
+            </ul>
+            <p>Additionally it is:</p>
+            <ul>
+              <li>The source of tariffs and pricing details</li>
+              <li>
+                The home for business rules and statements pertaining to ethics,
+                sustainability and accessibility
+              </li>
+              <li>
+                A conduit for information from other systems e.g. bug tracking
+                and source control
+              </li>
+            </ul>
+          </section>
+          <section aria-labelledby="external-value-of-ap-apis">
+            <h3 id="external-value-of-ap-apis">External value of AP-APIs</h3>
+            <p>
+              Because an AP-API adds to an API, it is attractive to LLMs which
+              are gluttons for data.
+            </p>
+            <ul>
+              <li>Watermarks, trademarks and copyright</li>
+              <li>Design solutions (widgets, components, best practices)</li>
+              <li>Information pertaining to the quality of the data</li>
+              <li>
+                Information pertaining to how the data were derived and by whom
+              </li>
+              <li>Teasers, promotions, links and inducements</li>
+            </ul>
+            <p>
+              The AP-API is an opportunity for web development teams to
+              articulate different modes of presentation and to take the lead on
+              how their data should be used, explored, exploited and processed.
+            </p>
+            <p>
+              <em>
+                APIs are typically defined by a schema but endpoints and
+                examples are probably enough for LLMs to work out what to do.
+                Which is good news for web development teams because schemas are
+                not trivial.
+              </em>
+            </p>
+          </section>
+          <section aria-labelledby="ap-api-setup">
+            <h3 id="ap-api-setup">Setting up an AP-API</h3>
+            <ul>
+              <li>Create an API if there isn't one</li>
+              <li>
+                Internal uses
+                <ul>
+                  <li>Single source of truth in contract-first development</li>
+                  <li>Single source of truth for front and backend tests</li>
+                </ul>
+              </li>
+              <li>
+                External communication
+                <ul>
+                  <li>
+                    The interface for data exchange. Consumers may be other
+                    programmes, apps, sites or LLMs
+                  </li>
+                  <li>
+                    First step towards an entity opening itself up to unknown
+                    interested parties
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <section aria-labelledby="converting-an-api-into-a-ap-api">
+              <h3 id="converting-an-api-into-a-ap-api">
+                Converting an API into an AP-API
+              </h3>
+              <p>
+                An API is-an AP-API. You don't have to change anything. But you
+                might want to so that the world knows more about you.
+              </p>
+              <p>
+                It's a good way to document (in a serious, maintainable way) how
+                the different parts of your entity work. This will help them
+                better communicate with one another.
+              </p>
+              <p>
+                It can also be used to support non-technical parts of an entity
+                such as sales and marketing.
+              </p>
+              <p>
+                An AP-API encourages a rethinking of how we want our data to
+                appear in the world. It's unlikely that it will be via
+                'monolithic' apps or sites. This has a huge knock-on effect on
+                job titles, team dynamics, tooling, etc.
+              </p>
+              <p>
+                <em
+                  >In conjunction or in parallel with setting up an AP-API,
+                  consider
+                  <a
+                    class="local"
+                    href="/src/how-to/break-down-monolithic-apps.html"
+                    >How to break down monolithic apps</a
+                  >.</em
+                >
+              </p>
+              <section aria-labelledby="sales-deck">
+                <h4 id="sales-deck">AP-API example: The sales deck</h4>
+                <p>A sales pitch or deck is created from an AP-API.</p>
+                <p>
+                  Given a clear brief, a combination of people and code possibly
+                  involving an LLM, creates a sales deck which the sales team
+                  can be confident represents the services they are selling.
+                </p>
+                <ul>
+                  <li>
+                    The data part of the AP-API has endpoints which explicitly
+                    state what can be done (which services can be offered).
+                  </li>
+                  <li>
+                    Employee biographies, repositories and bug tracking tools
+                    can be parsed to work out what is achievable (which promises
+                    can be met).
+                  </li>
+                  <li>
+                    Other departments can be confident they are working in-step
+                    with sales because of the single source of truth AP-API.
+                  </li>
+                </ul>
+              </section>
+            </section>
+          </section>
+          <section aria-labelledby="pros-and-cons-of-ap-apis">
+            <h3 id="pros-and-cons-of-ap-apis">Pros and cons of AP-APIs</h3>
+            <section aria-labelledby="pros">
+              <h4 id="pros">Pros</h4>
+              <ul>
+                <li>
+                  Teams prepare for inevitable change (even though the nature of
+                  the change is uncertain)
+                </li>
+                <li>
+                  They retain knowledge by adaptation, creating teams that are
+                  better suited to ecosystems in which LLMs are prevalent, and
+                  access to data and ideas is distributed and unpredictable.
+                </li>
+              </ul>
+            </section>
+            <section aria-labelledby="cons">
+              <h4 id="cons">Cons</h4>
+              <ul>
+                <li>Maintenance of the AP-API may be costly</li>
+                <li>
+                  A single source of truth paradigm excludes other approaches
+                </li>
+                <li>
+                  It may be an overly mechanistic solution that blocks creative
+                  thinking and novel ideas
+                </li>
+                <li>
+                  A one-size-fits-all solution may lead to loss of detail,
+                  nuance and turn everything grey
+                </li>
+              </ul>
+            </section>
+            <p>
+              We've added more cons than pros. That's sensible. This is a
+              sketchy, unproven idea and we are assuming LLMs will be prominent,
+              ubiquitous and capable, unsupervised, of constructing complex
+              solutions from disparate parts.
+            </p>
+          </section>
+        </section>
+        <section aria-labelledby="conclusion">
+          <h2 id="conclusion">Conclusion</h2>
+          <p>
+            The reason for an AP-API is to prepare us for a digital future in
+            which traditional sites and apps are replaced by LLMs that consume
+            data from multiple sources and create custom interfaces for their
+            clients.
+          </p>
+          <p>
+            Because an AP-API is-an API it is the sine qua non of contract-first
+            development, and the interface for mediating requests from and
+            responses to known consumers.
+          </p>
+          <p>
+            An AP-API is also how we shape future discourse with LLMs. In order
+            to have some say in how our data are presented, we (entities)
+            provide context to our data through the AP-API. This might take the
+            form of lots of
+            <a href="https://en.wikipedia.org/wiki/Web_widget">widgets</a>, or
+            public components that can be assembled in multiple ways.
+            Programming Lego.
+          </p>
+          <p>
+            A word of caution. The value of LLMs is unclear in most cases. Do
+            not become overly reliant on them. Treat LLMs as disposable.
+          </p>
+        </section>
+      </article>
+      <hr />
+      <p>
+        <em
+          >This article was finished on 21st December 2024 and published shortly
+          after.</em
+        >
+      </p>
+      <hr />
+      <aside>
+        <h3>Development approaches that shared characteristics with AP-APIs</h3>
+        <ul>
+          <li>
+            <a
+              href="https://medium.com/@harutyunabgaryann/the-api-contract-bridging-the-gap-between-backend-and-frontend-development-3074effc642b"
+              >Contract-First Development</a
+            >
+          </li>
+          <li><a href="https://mswjs.io/">API mocking for JavaScript</a></li>
+          <li>
+            <a href="https://swagger.io/specification/"
+              >OpenAPI Specification</a
+            >
+          </li>
+          <li>Domain-Driven Design</li>
+        </ul>
+      </aside>
+      <hr />
+      <section aria-labelledby="references">
+        <h2 id="references">References</h2>
+        <ul>
+          <li>
+            <a
+              href="https://apidesignmatters.substack.com/p/your-guide-to-the-language-of-api-design"
+              >API Design Matters: Your Guide to The Language of API Design |
+              David Biesack</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="20">
+<source>../src\thoughts-on\contract-based-web-design.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contract-base Web Design" />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>Thoughts on... Contract-based Web Design | People and Code</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>Contract-based Web Design</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main id="main" class="main">
+      <div class="subtitle">From Protocols to Natural Language Contracts</div>
+      <p>
+        Within the next decade, automated AI agents will mediate most web
+        browsing. In such a paradigm, the owners of content will have little or
+        no control over the user interface and experience. This shift requires
+        rethinking how we structure web interactions so consumer-side agents can
+        communicate effectively with their content owner-side counterparts. We
+        propose moving from rigid protocols to natural language contracts that
+        both humans and AI can understand and negotiate.
+      </p>
+
+      <h2>Key Concepts</h2>
+
+      <p>
+        Natural language contracts between AI agents require three fundamental
+        properties:
+      </p>
+      <ul>
+        <li>
+          Observability: Established during handshake between consumer and data
+          owner
+        </li>
+        <li>
+          Verifiability: Using blockchain or repositories for verification
+        </li>
+        <li>
+          Privity: Knowledge distribution limited to necessary parties (privacy
+          is one component of maintaining privity)
+        </li>
+      </ul>
+
+      <p>
+        Having a publicly available contract creates a focal point - a default
+        solution both parties understand without detailed communication. Unlike
+        traditional APIs embedded in interfaces, these contracts can be adapted
+        through AI negotiation while maintaining security through established
+        verification mechanisms.
+      </p>
+
+      <h2>The Evolution of Web Contracts</h2>
+
+      <p>
+        The web's development shows a clear progression toward more flexible
+        interactions. Initially, protocols provided unambiguous but rigid rules
+        for machine-to-machine communication. APIs followed, offering more
+        flexibility while remaining machine-first. Now, natural language
+        contracts represent the next step - agreements that humans can read and
+        AI can execute.
+      </p>
+
+      <p>
+        This evolution trades unambiguity for flexibility, enabling richer
+        interactions through controlled ambiguity. AI agents make this trade-off
+        valuable by bridging human and machine understanding.
+      </p>
+
+      <h2>AI Agents as Contract Mediators</h2>
+
+      <p>
+        AI agents serve as ideal mediators because they communicate in natural
+        language while understanding machine code. This dual capability enables:
+      </p>
+      <ul>
+        <li>Concatenation of information from different sources</li>
+        <li>Interface-agnostic interactions</li>
+        <li>
+          Reduced interface costs between human/software and software/software
+        </li>
+        <li>Natural clarification of ambiguities</li>
+      </ul>
+
+      <p>
+        For example, when a bank requests personal information, traditional
+        smart contracts must specify exact cryptographic requirements. With AI
+        mediation, the contract can remain implementation-agnostic while
+        ensuring security through negotiation.
+      </p>
+
+      <h2>Verification and Security</h2>
+
+      <p>
+        While embracing natural language flexibility, these contracts maintain
+        security through:
+      </p>
+      <ul>
+        <li>Blockchain resilience via decentralised networks</li>
+        <li>Integrity through open source protocols</li>
+        <li>Public transparency</li>
+        <li>Consensus-based modification</li>
+      </ul>
+
+      <p>
+        This framework preserves trust while allowing implementation details to
+        emerge through AI negotiation.
+      </p>
+
+      <h2>Risks and Challenges</h2>
+
+      <p>
+        The shift to natural language contracts introduces several
+        considerations:
+      </p>
+      <ul>
+        <li>Knowledge loop concerns in AI-mediated content</li>
+        <li>Content reliability verification</li>
+        <li>Intellectual property protection</li>
+        <li>Service provider brand identity preservation</li>
+        <li>Cybersecurity safeguards</li>
+        <li>Potential increase in contract-related litigation</li>
+      </ul>
+
+      <h2>Open Questions</h2>
+
+      <p>
+        As we move toward AI-mediated web interactions, several questions
+        require exploration:
+      </p>
+      <ul>
+        <li>
+          How do we ensure contract fulfillment while maintaining flexibility?
+        </li>
+        <li>What mechanisms enable contract discovery between agents?</li>
+        <li>How do we handle controversial information and disputes?</li>
+        <li>
+          How can natural language contracts maintain security without
+          specifying implementation details?
+        </li>
+        <li>
+          How can we ensure the segregation of duty between the parties in a
+          context where there are only a few major providers of AI agents?
+        </li>
+      </ul>
+      <h2>Conclusion</h2>
+      <p>
+        The transition from protocols to natural language contracts mediated by
+        AI agents offers more flexible, human-readable web services while
+        preserving machine executability. This evolution promises to reshape how
+        we interact with web services. However, the inherent tension between
+        natural language ambiguity and secure machine execution remains a
+        fundamental challenge to overcome.
+      </p>
+
+      <hr />
+      <p>
+        <em
+          >This article was published on 9th December 2024 with the help of
+          <a href="https://claude.ai">Claude</a>.</em
+        >
+      </p>
+      <hr />
+
+      <h2>References</h2>
+
+      <p>
+        Barnett, J., & Treleaven, P. (2018). Algorithmic Dispute Resolution—The
+        Automation of Professional Dispute Resolution Using AI and Blockchain
+        Technologies. <i>Computer Journal, 61</i>, 399-408,
+        <a href="https://doi.org/10.1093/comjnl/bxx103"
+          >doi.org/10.1093/comjnl/bxx103</a
+        >
+      </p>
+
+      <p>
+        Szabo, N. (1997). Formalizing and Securing Relationships on Public
+        Networks.
+        <i>First Monday, 2</i>(9),
+        <a
+          href="https://doi.org/10.5210/fm.v2i9.548
+          "
+          >doi.org/10.5210/fm.v2i9.548</a
+        >
+      </p>
+
+      <p>
+        Wikipedia contributors. (2024). Focal point (game theory). In
+        <i>Wikipedia</i>. Retrieved from
+        <a href="https://en.m.wikipedia.org/wiki/Focal_point_(game_theory)"
+          >https://en.m.wikipedia.org/wiki/Focal_point_(game_theory)</a
+        >
+      </p>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="21">
+<source>../src\thoughts-on\the-colleague-in-an-adjoining-room.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Thoughts on how people in teams work together in the face of change"
+    />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>The colleague in an adjoining room</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>The colleague in an adjoining room</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <article>
+        <div class="subtitle">
+          This article assumes others (or more accurately their LLM interpreters
+          and agents) no longer want to visit our sites and apps.
+        </div>
+        <p>
+          It is a follow up piece to
+          <a
+            class="local"
+            href="/src/thoughts-on/the-colleague-with-the-mona-lisa-smile.html"
+            >The colleague with the Mona Lisa smile</a
+          >.
+        </p>
+        <p>
+          We begin by imagining that LLMs are gatekeepers to the latest
+          iteration of Internet portals (after AOL, Flash, etc). Instead of
+          visiting sites and downloading apps, we (users, readers, people)
+          funnel everything through Claude or ChatGPT or some other intermediary
+          that assembles a multitude of LLMs in order to trawl the Internet for
+          data which they synthesise and repackage as they see fit. We pay for
+          this and/or the advertising that accompanies it.
+        </p>
+        <section aria-labelledby="the-old-dispensation">
+          <h2 id="the-old-dispensation">The old dispensation</h2>
+          <p>We can say a few things about web development and LLMs.</p>
+          <ul>
+            <li>The cost of web app and page development is high</li>
+            <li>Interfaces must adapt to a variety of devices and visitors</li>
+            <li>LLMs are widely used by web development teams</li>
+            <li>
+              LLMs are perceived of as assisting people, but may replace them
+            </li>
+            <li>LLMs are used to increase productivity and to educate</li>
+            <li>
+              Companies like OpenAI want to mediate (control) our every
+              interaction
+            </li>
+            <li>
+              Things will continue in a similar vein until the means of
+              production excludes all but a handful of humans
+            </li>
+          </ul>
+          <h3>Pro di immortales!</h3>
+          <p>What happens next?</p>
+          <p>
+            Jakob Nielsen suggested that generative AI could lead to
+            <a href="https://www.uxtigers.com/post/accessibility-generative-ui"
+              >Individualized UI</a
+            >.
+          </p>
+          <p>
+            It is possible that web development teams will use LLMs (generative
+            AI) to create multiple custom UIs (though the idea has not gone down
+            well).
+          </p>
+          <p>
+            It's also possible that external LLMs will help people create
+            interfaces specific to their needs thereby bypassing our interfaces,
+            and us.
+          </p>
+          <p>
+            In this imagined future, for example, online newspapers cease to
+            exist. Their content is syndicated by third parties who bundle it
+            with other content, wrap the aggregate with metadata (contracts,
+            tariffs, advertising) which (a string of) LLMs consume in order to
+            render a simulacrum of the original content in the form we (the
+            reader) demand.
+          </p>
+          <p>
+            A reader's digest might appeal to the reader. They get what the
+            want, when they want it, in the format they want.
+          </p>
+          <p>Things are never that simple. There's always a cost.</p>
+          <section aria-labelledby="benefits-to-readers-of-syndicated-material">
+            <h3 id="benefits-to-readers-of-syndicated-material">
+              Benefits to readers of syndicated material
+            </h3>
+            <ul>
+              <li>
+                A bespoke newspaper made up only of stories they are interested
+                in.
+              </li>
+              <li>
+                Content moderated so that it doesn't grow endlessly, and older
+                stories are culled.
+              </li>
+              <li>
+                Alternative formats generated by AI such as an audio (or graphic
+                novel) version of an article.
+              </li>
+              <li>A synthesis of, or comparison between, articles.</li>
+            </ul>
+          </section>
+          <section
+            aria-labelledby="downsides-to-readers-of-syndicated-material"
+          >
+            <h3 id="downsides-to-readers-of-syndicated-material">
+              Downsides to readers of syndicated material
+            </h3>
+            <ul>
+              <li>
+                Multiple fees and tariffs or a bundled offering. The reader gets
+                more, or less, than they want.
+              </li>
+              <li>
+                Advertising. Either required by the owner or writer of the
+                article, or by a syndicate or by the platform or LLM that
+                mediates the process.
+              </li>
+              <li>
+                Loss of oversight. Provence is buried or obscured, bylines lost
+                or subject to controls and deals.
+              </li>
+              <li>Loss of broader editorial concerns and considerations.</li>
+            </ul>
+            <p>
+              This is a fragmented world of news. For readers and for writers.
+              Imprints will no longer have a masthead around which staff can
+              rally. Without colleagues, editors, and a common purpose or remit,
+              writers are adrift. Free to say what they want but unchallenged,
+              and unsupported.
+            </p>
+            <p>
+              If a newspaper no longer has a site of its own, what of its web
+              development team?
+            </p>
+            <p>
+              Web development contract work pays well. It's easier to make a
+              living as a freelance programmer than as a freelance writer. But
+              if the mainstays of digital life, sites and apps, are no longer
+              relevant (wanted or needed), contracted and freelance developers,
+              designers, product managers, UX specialists, QAs, etc. will
+              confront a changed world where some of what they know is
+              redundant.
+            </p>
+            <p>
+              Tools, processes, and environments are secondary to the know-how
+              in communicating via digital interfaces. If control over those
+              interfaces is not wrested from them (us), colleagues must work
+              together on finding new ways to communicate, demonstrating that
+              their (our) experience should not be carelessly discarded.
+            </p>
+            <section aria-labelledby="conclusion">
+              <h3 id="conclusion">Conclusion</h3>
+              <p>
+                We foresee upheaval in web development. If we do not imagine new
+                ways of doing things, we will have little influence over what
+                happens next. If we do, we can invent new roles and participate
+                in change.
+              </p>
+              <p>
+                In the next article,
+                <a class="local" href="/src/thoughts-on/an-all-purpose-api.html"
+                  >An All-Purpose API</a
+                >, we explore how digital teams anticipate change and establish
+                a new paradigm for both showcasing information (articles, data,
+                insights, etc.) and interpreting and representing it.
+              </p>
+            </section>
+          </section>
+        </section>
+      </article>
+      <hr />
+      <p>
+        <em
+          >This article was finished on 21st December 2024 and published shortly
+          after.</em
+        >
+      </p>
+      <hr />
+      <section aria-labelledby="appendix">
+        <h2 id="appendix">Appendix</h2>
+        <ul>
+          <li>
+            "In an adjoining Room - " is a line from
+            <a href="https://allpoetry.com/I-died-for-Beauty--but-was-scarce"
+              >I died for Beauty - but was scarce</a
+            >
+            by Emily Dickinson
+          </li>
+          <li>
+            The old dispensation is a line from
+            <a href="https://allpoetry.com/The-Journey-Of-The-Magi"
+              >The Journey Of The Magi</a
+            >
+            by T.S. Eliot.
+          </li>
+          <li>
+            Pro di immortales is Latin for "Good Heavens!" or more colloquially,
+            "Yikes!"
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+<document index="22">
+<source>../src\thoughts-on\the-colleague-with-the-mona-lisa-smile.html</source>
+<document_content>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Thoughts on how we work with LLMs from People and Code"
+    />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>The colleague with the Mona Lisa smile</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-text">
+        <h1>The colleague with the Mona Lisa smile</h1>
+        <div class="tagline">People and Code</div>
+      </div>
+    </header>
+    <main class="main">
+      <article>
+        <div class="subtitle">
+          Sometimes interacting with LLMs feels like a walkthrough with someone
+          who has never been on stage and who also happens to be our understudy.
+        </div>
+        <h2>If consequence do but approve my dream</h2>
+        <p>
+          There is a human and environmental cost to training LLMs. Running them
+          consumes resources too. Their output, however, can be valuable. It's a
+          question of knowing when to turn to them.
+        </p>
+        <p>An LLM can be:</p>
+        <ul>
+          <li>A tool for creating other tools</li>
+          <li>A means of iterating over a problem or idea</li>
+          <li>A way to explore (and not a crutch)</li>
+          <li>A patient cartographer who maps our sprawling ideas</li>
+          <li>
+            The pawl which stops the ratchet of our thoughts from slipping back
+          </li>
+        </ul>
+        <p>
+          It's also a question of why. An LLM is, like evolution, undirected. To
+          get going, LLMs require impetus and direction. But what direction, and
+          why. If we are undisciplined we get back nonsense, if we are casual or
+          lazy, the response will be anodyne. It's up to us to provide intent.
+        </p>
+        <p>
+          LLMs are literal. They do, as best they can, what we ask. Where our
+          request is vague, or poorly phrased, or incomplete, they will find the
+          most likely interpretation. This is both good and bad.
+        </p>
+        <p>
+          We interpret what other people say in context. LLMs do something
+          similar. (<em
+            >The language we use here to describe LLMs may suggest they have
+            agency. We don't think they do</em
+          >). Unless we want them to guess the context, which can be handy for
+          trivial things, it's advisable to fill them in. Remember they know
+          nothing about what we want other than what we tell them.
+        </p>
+        <p>
+          It's also best to do one thing at a time. By all means, brainstorm
+          with an LLM. But don't expect it to come up with all the answers. It's
+          not a has-all-the-answers machine (although you could ask it to help
+          you build one).
+        </p>
+        <section aria-labelledby="waiting-for-god-2.0">
+          <h3 id="waiting-for-god-2.0">Waiting for God 2.0</h3>
+          <p>
+            Communication with an LLM is a rehearsal for a conversation yet to
+            come. We don't always feel in control. LLMs are precocious neophytes
+            eager to display their knowledge. They pour out words and code. We
+            have to set the stage and determine the pace we want to go at. Keep
+            things in hand.
+          </p>
+          <p>
+            The chat is a soliloquy not a dialogue and we perfect it by trying
+            out different inflections and new metaphors. The LLM is our
+            audience, not the writer.
+          </p>
+        </section>
+        <section aria-labelledby="let-the-right-one-in">
+          <h3 id="let-the-right-one-in">Let the right one in</h3>
+          <p>
+            Some cuckoos are brood parasites, they lay their eggs in other
+            bird's nests. It's in their nature. It's in the nature of tech
+            companies to smuggle their interests into our lives. But, like the
+            reluctant host of the cuckoo's egg, we can avoid being duped.
+          </p>
+          <h4>Intravenous AI</h4>
+          <p>
+            I received an email a couple of days ago. This was how it began:
+          </p>
+          <blockquote>
+            <p>
+              Your GitHub account now includes free use of GitHub Copilot in VS
+              Code and on GitHub, powered by your choice of AI models from
+              OpenAI and Anthropic. This is now part of your personal GitHub
+              account, and accessible via VS Code and on GitHub.
+            </p>
+          </blockquote>
+          <cite>GitHub</cite>
+          <p>
+            I haven't enabled GitHub Copilot. I'm not ready to have it on call
+            and I don't want to become dependent on something I may not need (I
+            haven't until now). Worse, it may distract me from my own thoughts
+            and ideas. I prefer to go in search of an LLM when I need it. On the
+            way, I will
+            <a class="local" href="/src/pledge-to/think-before-using-ai.html"
+              >stop to think if the trip is necessary</a
+            >.
+          </p>
+        </section>
+        <section aria-labelledby="its-goodnight-from-him">
+          <h3 id="its-goodnight-from-him">And it's goodnight from him</h3>
+          <p>
+            In addition to talking to an LLM, we might want to talk to a human
+            colleague in a real or metaphorical
+            <a
+              class="local"
+              href="/src/thoughts-on/the-colleague-in-an-adjoining-room.html"
+              >adjoining room</a
+            >.
+          </p>
+          <p>
+            <em
+              >I showed this article to ChatGPT after I'd finished. I made no
+              changes but I was struck by the closing line of its response:</em
+            >
+          </p>
+          <blockquote>
+            <p>
+              Would you like to refine or repurpose the article for a specific
+              audience or platform?
+            </p>
+          </blockquote>
+          <cite>ChatGPT</cite>
+        </section>
+        <hr />
+        <p>
+          <em
+            >This article was finished on 21st December 2024 and published
+            shortly after.</em
+          >
+        </p>
+        <hr />
+        <section aria-labelledby="appendix">
+          <h2 id="appendix">Appendix</h2>
+          <ul>
+            <li>
+              Mona Lisa, a Gioconda, is famous for her enigmatic smile. The
+              colleague, or colleagues, are LLMs.
+            </li>
+            <li>
+              "If consequence do but approve my dream" is from a soliloquy by
+              Iago in Othello Act II, Scene II by William Shakespeare.
+            </li>
+            <li>
+              <a
+                href="https://en.wikipedia.org/wiki/Let_the_Right_One_In_(film)"
+                >Let the right one in</a
+              >
+              is a Swedish horror film by Tomas Alfredson.
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Waiting_for_Godot"
+                >Waiting for Godot</a
+              >
+              is a play by Samuel Beckett.
+            </li>
+            <li>
+              "And it's goodnight from him" was the closing line from Ronnie
+              Barker on the BBC TV programme The Two Ronnies.
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+</document_content>
+</document>
+</documents>
+
+
+## System:
+
+Please use the html files to create a purely css styling (no javascript at all) that is responsive, accessible, minimalist, grayscale, and conveys the contents of the html files. If needed, please also suggest any modification necessary to the html code. Return the full CSS file but just advice for the html code modifs.
+
+## Response:
+
+Here's a CSS file that creates a responsive, accessible, minimalist, and grayscale styling for the provided HTML files:
+
+```css
+/* Base styles */
+:root {
+  --primary-color: #333;
+  --secondary-color: #666;
+  --background-color: #f5f5f5;
+  --accent-color: #999;
+  --max-width: 800px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p, ul, ol, dl {
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+a:hover, a:focus {
+  color: var(--secondary-color);
+}
+
+/* Header */
+header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--accent-color);
+  padding-bottom: 1rem;
+}
+
+.header-text {
+  text-align: center;
+}
+
+.tagline {
+  font-style: italic;
+  color: var(--secondary-color);
+}
+
+/* Navigation */
+nav {
+  margin-bottom: 1rem;
+}
+
+nav a {
+  display: inline-block;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+/* Main content */
+main {
+  margin-bottom: 2rem;
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 2rem;
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid var(--accent-color);
+  background-color: #e0e0e0;
+}
+
+/* Code */
+code, pre {
+  font-family: monospace;
+  background-color: #e0e0e0;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  border-top: 1px solid var(--accent-color);
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  nav a {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Accessibility */
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+/* Additional styles for specific elements */
+.subtitle {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.centre {
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--accent-color);
+  margin: 2rem 0;
+}
+
+.pledge {
+  font-style: italic;
+  background-color: #e0e0e0;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+figcaption {
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.copyright {
+  margin-top: 1rem;
+}
+```
+
+This CSS file provides a minimalist, grayscale styling that is responsive and accessible. It uses variables for easy customization of colors and maintains a consistent look across different pages.
+
+For the HTML files, I would suggest the following modifications:
+
+1. Ensure all images have appropriate `alt` text for accessibility.
+2. Use semantic HTML elements consistently across all pages (e.g., `<article>`, `<section>`, `<aside>`).
+3. Add `aria-label` attributes to navigation elements for better screen reader support.
+4. Consider adding a "skip to main content" link at the beginning of each page for keyboard accessibility.
+5. Ensure proper heading hierarchy (h1, h2, h3, etc.) is maintained on all pages.
+6. Use `<time>` elements for dates where appropriate.
+7. Consider adding `aria-labelledby` attributes to sections to improve structure for screen readers.
+
+These modifications will enhance the accessibility and semantic structure of the HTML without changing the overall content or layout.
+
