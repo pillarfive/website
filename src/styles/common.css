@@ -234,8 +234,12 @@ pre {
 .logo-container {
   display: flex;
   align-items: center;
-  padding: 1rem 0 0;
+  margin: 1rem 0 0;
   line-height: 1.2;
+}
+
+.logo-container > div {
+  margin-top: 0.35rem;
 }
 
 .tagline {
