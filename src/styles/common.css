@@ -41,24 +41,25 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 0;
+  margin: 0 calc(0.75rem + 1vw) 0.5rem;
 }
 
 /* Elements */
 
-header,
-main,
-footer {
+main {
+  font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
   -webkit-font-smoothing: antialiased;
   color: var(--fg-colour);
   padding: 0 var(--padding-width);
-  font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
   max-width: var(--max-width);
   width: 100%;
-  text-wrap: balance;
+  background-color: var(--bg-colour);
+  margin-bottom: var(--footer-height);
 }
 
 header,
 footer {
+  padding: 0 var(--padding-width);
   background-color: var(--bg-accent-colour);
   box-shadow: 0 0 0 100vw var(--bg-accent-colour);
   clip-path: inset(0 -100vw);
@@ -72,11 +73,6 @@ header {
   font-size: var(--header-font-size);
 }
 
-main {
-  background-color: var(--bg-colour);
-  margin-bottom: var(--footer-height);
-}
-
 footer {
   position: fixed;
   height: var(--footer-height);
@@ -88,7 +84,8 @@ footer {
 
 nav {
   font-size: calc(var(--footer-height) / 4.5);
-  width: 100%;
+  width: var(--max-width);
+  max-width: var(--max-width);
   color: var(--fg-colour);
   display: flex;
   justify-content: space-between;
