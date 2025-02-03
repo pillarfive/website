@@ -274,41 +274,12 @@ pre {
   font-size: calc(var(--byline-logo-height) / 4);
 }
 
-.tagline {
-  display: flex;
-  padding: 0.1em 0;
-  font-size: 0.8em;
-
-  & + div {
-    font-size: 0.7em;
-  }
-}
-
 .copyright {
   font-size: calc(var(--footer-height) / 6);
   text-align: right;
   padding-top: calc(var(--footer-height) / 10);
   letter-spacing: 0.01em;
   font-family: sans-serif;
-}
-
-.header-text {
-  display: flex;
-  flex-direction: column;
-  place-content: center;
-  font-size: 1em;
-}
-
-.header-logo {
-  height: var(--logo-height);
-  margin-right: 0.5em;
-}
-
-@media (width >= 480px) {
-  .header-logo,
-  .tagline-logo {
-    display: block;
-  }
 }
 
 .subtitle {
