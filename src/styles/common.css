@@ -54,7 +54,8 @@ footer {
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
   max-width: var(--max-width);
   width: 100%;
-  text-wrap: balance;
+
+  /* text-wrap: balance; */
 }
 
 header,
