@@ -14,7 +14,7 @@
   --min-font-size: 0.875rem;
   --max-font-size: 1.1rem;
   --logo-height: clamp(3em, 10vw, 4em);
-  --header-font-size: clamp(var(--min-font-size), 3vw, var(--max-font-size));
+  --header-font-size: clamp(var(--min-font-size), 10vw, var(--max-font-size));
   --footer-height: clamp(
     calc(var(--min-font-size) * 4),
     11vw,
@@ -231,25 +231,34 @@ pre {
   text-align: center;
 }
 
-.logo-container {
+.byline {
+  --byline-logo-height: calc(var(--logo-height) * 0.75);
+
   display: flex;
   align-items: center;
-  margin: 1rem 0 0;
-  line-height: 1.2;
+  margin: calc(var(--byline-logo-height) / 3) 0 0;
 }
 
-.logo-container > div {
-  margin-top: 0.35rem;
+.byline-logo {
+  height: var(--byline-logo-height);
+  margin-right: calc(var(--byline-logo-height) / 5);
+}
+
+.byline-brand {
+  font-size: calc(var(--byline-logo-height) / 3);
+}
+
+.byline-tagline {
+  font-size: calc(var(--byline-logo-height) / 4);
 }
 
 .tagline {
   display: flex;
-  margin-top: -0.5em;
   padding: 0.1em 0;
-  font-size: 0.9em;
+  font-size: 0.8em;
 
   & + div {
-    font-size: 0.7rem;
+    font-size: 0.7em;
   }
 }
 
@@ -270,7 +279,7 @@ pre {
 
 .header-logo {
   height: var(--logo-height);
-  margin: 0 0.25rem 0 0;
+  margin-right: 0.5em;
 }
 
 @media (width >= 480px) {
