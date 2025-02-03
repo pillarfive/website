@@ -6,13 +6,28 @@
     <meta name="description" content="Site contents for People and Code" />
     <link rel="stylesheet" href="styles/common.css" />
     <title>Contents</title>
-    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/src/media/favicon.ico" />
   </head>
   <body class="body">
     <header>
-      <h1>Contents</h1>
+      <a href="#main" class="skip">Skip to main content</a>
+      <div>
+        <h1>Contents</h1>
+      </div>
     </header>
-    <main class="main">
+
+    <main id="main" class="main">
+      <div class="byline">
+        <img
+          class="byline-logo"
+          src="/src/media/pac-logo.svg"
+          alt="People and code logo."
+        />
+        <div>
+          <div class="byline-brand">People and Code</div>
+          <div class="byline-tagline">At Your Disposal</div>
+        </div>
+      </div>
       <ul>
         <li><a class="local" href="/src/index.html">Home</a></li>
         <li>
@@ -28,7 +43,8 @@
           >Workshops home</a
         >
       </p>
-      <h2>How to…</h2>
+      <h2 id="writing">Writing</h2>
+      <h3>How to…</h3>
       <ul>
         <li>
           <a class="local" href="/src/how-to/create-a-snippet.html"
@@ -91,7 +107,7 @@
           >
         </li>
       </ul>
-      <h2>Summary of…</h2>
+      <h3>Summary of…</h3>
       <ul>
         <li>
           <a class="local" href="/src/summary-of/eu-accessibility-act.html"
@@ -104,7 +120,7 @@
           >
         </li>
       </ul>
-      <h2>Thoughts on…</h2>
+      <h3>Thoughts on…</h3>
       <ul>
         <li>
           <a
@@ -151,10 +167,17 @@
         </p>
       </section>
     </main>
-    <footer>
+    <footer id="footer">
       <nav aria-label="Primary">
         <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
       </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
     </footer>
   </body>
 </html>
