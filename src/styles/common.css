@@ -259,7 +259,7 @@ pre {
 
   display: flex;
   align-items: center;
-  margin: calc(var(--byline-logo-height) / 3) 0 0;
+  margin: calc(var(--byline-logo-height) / 3) 0;
 }
 
 .byline-logo {
