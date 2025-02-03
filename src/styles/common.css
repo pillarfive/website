@@ -13,8 +13,7 @@
   --radius: calc(var(--d));
   --min-font-size: 0.875rem;
   --max-font-size: 1.1rem;
-  --logo-height: clamp(3em, 10vw, 4em);
-  --header-font-size: clamp(var(--min-font-size), 10vw, var(--max-font-size));
+  --logo-height: clamp(3rem, 10vw, 4rem);
   --footer-height: clamp(
     calc(var(--min-font-size) * 4),
     11vw,
@@ -64,10 +63,13 @@ footer {
 }
 
 header {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
   display: flex;
-  place-content: center space-between;
+  justify-content: flex-start;
+}
+
+header > div {
+  --header-font-size: calc(var(--logo-height) / 4);
+
   font-size: var(--header-font-size);
 }
 
