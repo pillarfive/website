@@ -75,6 +75,7 @@ header > div {
 
 main {
   background-color: var(--bg-colour);
+  padding-bottom: calc(var(--d) * 4);
   margin-bottom: var(--footer-height);
 }
 
