@@ -13,7 +13,7 @@
   --radius: calc(var(--d));
   --min-font-size: 0.875rem;
   --max-font-size: 1.1rem;
-  --logo-height: clamp(3rem, 10vw, 4rem);
+  --logo-height: clamp(4rem, 12vw, 6rem);
   --footer-height: clamp(
     calc(var(--min-font-size) * 4),
     11vw,
@@ -233,8 +233,29 @@ pre {
   text-align: center;
 }
 
+.home-header {
+  display: flex;
+  align-items: center;
+  margin: calc(var(--logo-height) / 5) 0;
+}
+
+.home-header-logo {
+  height: var(--logo-height);
+  margin-right: calc(var(--logo-height) / 4);
+}
+
+.home-header-brand {
+  font-size: calc(var(--logo-height) / 3);
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+.home-header-tagline {
+  font-size: calc(var(--logo-height) / 4.5);
+}
+
 .byline {
-  --byline-logo-height: calc(var(--logo-height) * 0.75);
+  --byline-logo-height: calc(var(--logo-height) * 0.66);
 
   display: flex;
   align-items: center;
