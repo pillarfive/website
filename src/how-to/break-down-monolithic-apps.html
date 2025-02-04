@@ -5,17 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="How to break down monolithic apps into parts that serve a single purpose"
+      content="Break down monolithic apps into parts that serve a single purpose"
     />
     <link rel="stylesheet" href="/src/styles/common.css" />
     <title>How to break down monolithic apps</title>
-    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/src/media/favicon.ico" />
   </head>
   <body class="body">
     <header>
-      <h1>How to break down monolithic apps</h1>
+      <a href="#main" class="skip">Skip to main content</a>
+      <div>
+        <h1>Break down monolithic apps</h1>
+      </div>
     </header>
-    <main class="main">
+
+    <main id="main" class="main">
+      <div class="byline">
+        <img
+          class="byline-logo"
+          src="/src/media/pac-logo.svg"
+          alt="People and code logo."
+        />
+        <div>
+          <div class="byline-brand">People and Code</div>
+          <div class="byline-tagline">At Your Disposal</div>
+        </div>
+      </div>
       <article>
         <p>
           This article makes the case for tackling complexity in web app
@@ -218,10 +233,17 @@
       </p>
       <hr />
     </main>
-    <footer>
+    <footer id="footer">
       <nav aria-label="Primary">
-        <a href="/src/sitemap.html">Content</a>
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
       </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
     </footer>
   </body>
 </html>

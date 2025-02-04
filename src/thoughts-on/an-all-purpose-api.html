@@ -6,37 +6,52 @@
     <meta name="description" content="Thoughts on an All-Purpose API" />
     <link rel="stylesheet" href="/src/styles/common.css" />
     <title>An All-Purpose API</title>
-    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/src/media/favicon.ico" />
   </head>
   <body class="body">
     <header>
-      <h1>An All-Purpose API</h1>
-      <p>
-        An All-Purpose API (AP-API) embraces all that an entity is and does. It
-        extends the traditional
-        <abbr title="Application Programming Interface">API</abbr> which handles
-        domain data (books, native wildflowers, films) to include things about
-        an entity itself, and how that entity would like others to interact with
-        it.
-      </p>
-      <p>
-        In this article, we consider how we might protect an API from being
-        cannibalised by multiple external interests (LLM agents). By adding
-        context to our API we influence how our data are used.
-      </p>
-      <p>
-        <em
-          >An AP-API may be seen as a practical interpretation of
-          <a
-            class="local"
-            href="http://localhost:1234/thoughts-on/contract-based-web-design.html"
-            >Contract-based Web Design</a
-          >.</em
-        >
-      </p>
+      <a href="#main" class="skip">Skip to main content</a>
+      <div>
+        <h1>An All-Purpose API</h1>
+      </div>
     </header>
-    <main class="main">
+
+    <main id="main" class="main">
+      <div class="byline">
+        <img
+          class="byline-logo"
+          src="/src/media/pac-logo.svg"
+          alt="People and code logo."
+        />
+        <div>
+          <div class="byline-brand">People and Code</div>
+          <div class="byline-tagline">At Your Disposal</div>
+        </div>
+      </div>
       <article>
+        <p>
+          An All-Purpose API (AP-API) embraces all that an entity is and does.
+          It extends the traditional
+          <abbr title="Application Programming Interface">API</abbr> which
+          handles domain data (books, native wildflowers, films) to include
+          things about an entity itself, and how that entity would like others
+          to interact with it.
+        </p>
+        <p>
+          In this article, we consider how we might protect an API from being
+          cannibalised by multiple external interests (LLM agents). By adding
+          context to our API we influence how our data are used.
+        </p>
+        <p>
+          <em
+            >An AP-API may be seen as a practical interpretation of
+            <a
+              class="local"
+              href="http://localhost:1234/thoughts-on/contract-based-web-design.html"
+              >Contract-based Web Design</a
+            >.</em
+          >
+        </p>
         <section aria-labelledby="the-value-of-ap-apis">
           <h2 id="the-value-of-ap-apis">The value of All-Purpose APIs</h2>
           <p>
@@ -298,10 +313,17 @@
         </ul>
       </section>
     </main>
-    <footer>
+    <footer id="footer">
       <nav aria-label="Primary">
-        <a href="/src/sitemap.html">Contents</a>
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
       </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
     </footer>
   </body>
 </html>

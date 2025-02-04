@@ -9,18 +9,33 @@
     />
     <link rel="stylesheet" href="/src/styles/common.css" />
     <title>The colleague with the Mona Lisa smile</title>
-    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/src/media/favicon.ico" />
   </head>
   <body class="body">
     <header>
-      <h1>The colleague with the Mona Lisa smile</h1>
-      <p>
-        Sometimes interacting with LLMs feels like a walkthrough with someone
-        who has never been on stage and who also happens to be our understudy.
-      </p>
+      <a href="#main" class="skip">Skip to main content</a>
+      <div>
+        <h1>The colleague with the Mona Lisa smile</h1>
+      </div>
     </header>
-    <main class="main">
+
+    <main id="main" class="main">
+      <div class="byline">
+        <img
+          class="byline-logo"
+          src="/src/media/pac-logo.svg"
+          alt="People and code logo."
+        />
+        <div>
+          <div class="byline-brand">People and Code</div>
+          <div class="byline-tagline">At Your Disposal</div>
+        </div>
+      </div>
       <article>
+        <div class="subtitle">
+          Sometimes interacting with LLMs feels like a walkthrough with someone
+          who has never been on stage and who also happens to be our understudy.
+        </div>
         <h2>If consequence do but approve my dream</h2>
         <p>
           There is a human and environmental cost to training LLMs. Running them
@@ -175,10 +190,17 @@
         </section>
       </article>
     </main>
-    <footer>
+    <footer id="footer">
       <nav aria-label="Primary">
-        <a href="/src/sitemap.html">Contents</a>
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
       </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
     </footer>
   </body>
 </html>

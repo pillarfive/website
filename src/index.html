@@ -11,7 +11,7 @@
     <meta name="timestamp" content="1737113878578" />
     <link rel="stylesheet" href="/src/styles/common.css" />
     <title>P&C - Specialists in responsible web development.</title>
-    <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/src/media/favicon.ico" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -30,14 +30,20 @@
   </head>
   <body class="body">
     <header>
-      <p>
-        <a href="#main" tabindex="0" class="local"
-          >Jump link to the main content</a
-        >
-      </p>
-      <h1>Welcome</h1>
-      <p>This is the website of Jean-Philippe Drécourt and Daniel Hartley.</p>
+      <a href="#main" class="skip">Skip to main content</a>
+      <div class="home-header">
+        <img
+          class="home-header-logo"
+          src="/src/media/pac-logo.svg"
+          alt="People and code logo."
+        />
+        <div>
+          <div class="home-header-brand">People and Code</div>
+          <div class="home-header-tagline">At Your Disposal</div>
+        </div>
+      </div>
     </header>
+
     <main id="main" class="main">
       <h2>What we do</h2>
 
@@ -220,8 +226,15 @@
     </main>
     <footer id="footer">
       <nav aria-label="Primary">
-        <a href="/src/sitemap.html">Contents</a>
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
       </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
     </footer>
   </body>
 </html>
