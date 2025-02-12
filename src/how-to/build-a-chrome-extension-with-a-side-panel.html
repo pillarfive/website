@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="build a chrome extension with a side panel"
+    />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <title>Build a Chrome extension with a side panel | People and Code</title>
+    <link rel="icon" type="image/x-icon" href="/src/media/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <a href="#main" class="skip">Skip to main content</a>
+      <div>
+        <h1>Build a Chrome Extension with a Side Panel</h1>
+      </div>
+    </header>
+    <main id="main" class="main">
+      <div class="byline">
+        <img
+          class="byline-logo"
+          src="/src/media/pac-logo.svg"
+          alt="People and code logo."
+        />
+        <div>
+          <div class="byline-brand">People and Code</div>
+          <div class="byline-tagline">At Your Disposal</div>
+        </div>
+      </div>
+      <p>
+        Side panels are really useful to create a fully independent DOM for your
+        Chrome extension. But they can be tricky to manage. Here are some tips
+        and tricks to simplify your side panel development.
+      </p>
+      <p>
+        This article assumes that you’re familiar with basic extension
+        development. If not, consult the
+        <a href="https://developer.chrome.com/docs/extensions/get-started/"
+          >Get Started</a
+        >
+        article for Google Developers.
+      </p>
+      <h2 id="the-people-and-code-chrome-extension-creator">
+        The People and Code Chrome extension creator
+      </h2>
+      TBA
+      <h2 id="structuring-your-code">Structuring your code</h2>
+      <p>
+        To avoid confusion with the different contexts of your extension
+        (service worker, content, side panel), split the scripts into separate
+        directories.
+      </p>
+      <pre class="bash"><code>publish
+├── background
+│   └── service-worker.js
+├── content-scripts
+│   ├── content-script.js
+├── icons
+│   ├── icon128.png
+│   ├── icon16.png
+│   ├── icon32.png
+│   └── icon48.png
+├── manifest.json
+└── sidepanel
+    ├── side-panel-script.js
+    ├── side-panel.html
+    └── styles.css</code></pre>
+      <p>
+        And refer to them properly in the manifest with the right permissions:
+      </p>
+      <pre class="json"><code>{
+  &quot;manifest_version&quot;: 3,
+  &quot;name&quot;: &quot;My Extension&quot;,
+  &quot;version&quot;: &quot;0.0.0.3&quot;,
+  &quot;permissions&quot;: [&quot;activeTab&quot;, &quot;sidePanel&quot;, &quot;scripting&quot;],
+  &quot;incognito&quot;: &quot;split&quot;,
+  &quot;host_permissions&quot;: [&quot;http://*/*&quot;, &quot;https://*/*&quot;],
+  &quot;background&quot;: {
+    &quot;service_worker&quot;: &quot;background/service-worker.js&quot;,
+    &quot;type&quot;: &quot;module&quot;
+  },
+  &quot;content_scripts&quot;: [
+    {
+      &quot;matches&quot;: [&quot;http://*/*&quot;, &quot;https://*/*&quot;],
+      &quot;js&quot;: [&quot;content-scripts/content-script.js&quot;]
+    }
+  ],
+  &quot;action&quot;: {},
+  &quot;icons&quot;: {
+    &quot;16&quot;: &quot;icons/icon16.png&quot;,
+    &quot;32&quot;: &quot;icons/icon32.png&quot;,
+    &quot;48&quot;: &quot;icons/icon48.png&quot;,
+    &quot;128&quot;: &quot;icons/icon128.png&quot;
+  },
+  &quot;side_panel&quot;: {
+    &quot;default_path&quot;: &quot;sidepanel/side-panel.html&quot;
+  }
+}</code></pre>
+      <p>Note the following:</p>
+      <ul>
+        <li>The <code>sidePanel</code> permission</li>
+        <li>
+          The path to the side panel html page (relative to the
+          <code>publish</code> directory)
+        </li>
+      </ul>
+      <h2 id="global-or-tab-specific-side-panel">
+        Global or tab-specific side panel
+      </h2>
+      TBA + Reference to tab specific side panel demo (in progress)
+      <h2 id="managing-communication">Managing communication</h2>
+      <p>
+        One easy way to manage the communication is to use a hub-and-spoke
+        model. The service worker acts as the central hub and communicates with
+        the content script and the side panel. All the communication happens
+        with serialization-safe objects as the data has to cross between
+        execution contexts.
+      </p>
+      <h3 id="service-worker-and-content-scripts">
+        Service worker and content scripts
+      </h3>
+      <p>
+        To send information to the content scripts, you can use the
+        <a
+          href="https://developer.chrome.com/docs/extensions/reference/api/tabs?authuser=2#method-sendMessage"
+          ><code>chrome.tabs.sendMessage</code></a
+        >
+        method. This sends a message to a specific the content script of a given
+        tab which is more specific than the
+        <a
+          href="https://developer.chrome.com/docs/extensions/reference/api/runtime#method-sendMessage"
+          ><code>chrome.runtime.sendMessage</code></a
+        >
+        equivalent.
+      </p>
+      <pre class="js"><code>// Context: service worker
+// Service Worker to Content Script - Any serialization-safe object
+chrome.tabs.sendMessage(tabId, {
+  from: "service-worker",
+  type: "data",
+  data: serializedData,
+})
+
+// Context: content script
+// Message event listener
+chrome.runtime.onMessage.addListener((message) =&gt; {
+  // Filter only messages from the service worker
+  if (message.from === "service-worker") {
+    switch (message.type) {
+      case "data":
+        // Handle message.data
+        break
+    }
+  }
+})</code></pre>
+      <p>
+        To send information back from the content script to the service worker,
+        it is the service worker that triggers the injection of a script in the
+        content script context and recovers the result.
+        <a
+          href="https://developer.chrome.com/docs/extensions/reference/api/scripting?authuser=2#type-ScriptInjection"
+          >The ScriptInjection type</a
+        >.
+      </p>
+      <pre class="js"><code>// Context: service worker
+const answers = await chrome.scripting.executeScript({
+  // ScriptInjection object example
+  target: { tabId },
+  func: functionToInject,
+})
+const result = answers[0].result // The value returned by functionToInject
+
+const functionToInject = () =&gt; {
+  // Any script that can be run in the CONTENT SCRIPT context
+  // NOT the service worker!
+  return myResult // The result that will be in answers[0].result
+}</code></pre>
+      <h3 id="service-worker-and-side-panel">Service worker and side panel</h3>
+      <p>
+        To manage communication between the service worker and the side panel,
+        you can use the
+        <a
+          href="https://developer.chrome.com/docs/extensions/reference/api/runtime#method-sendMessage"
+          ><code>chrome.runtime.sendMessage</code></a
+        >
+        which sends messages to any event listeners in the extension.
+      </p>
+      <p>In the service worker:</p>
+      <pre class="js"><code>// Send message
+chrome.runtime.sendMessage({
+  from: "service-worker",
+  to: "side-panel",
+  type: "service-worker-message-type"
+  data: serializedData,
+})
+
+// Message event listener
+chrome.runtime.onMessage.addListener((message) =&gt; {
+  if (message.from === "side-panel") {
+    // Message type triage
+    switch (message.type) {
+    }
+  }
+})</code></pre>
+      <p>In the side panel:</p>
+      <pre class="js"><code>// Sent message
+chrome.runtime.sendMessage({
+  from: "side-panel",
+  type: "side-panel-message-type",
+  data: serializedData,
+})
+
+// Message event listener checking from and to fields
+chrome.runtime.onMessage.addListener((message) =&gt; {
+  if (message.to === "side-panel" &amp;&amp; message.from === "service-worker") {
+    // Message type triage
+    switch (message.type) {
+    }
+  }
+})</code></pre>
+      <h3 id="suggested-message-structure">Suggested message structure</h3>
+      <p>
+        For ease of management, we suggest the following properties for the
+        message object:
+      </p>
+      <ul>
+        <li><code>from</code> (string): The origin of the message</li>
+        <li>
+          <code>to</code> (string, optional): The destination of the message
+          (useful if you have same message types for different contexts)
+        </li>
+        <li>
+          <code>type</code> (string): the type of message to be triaged in the
+          event listener of the destination
+        </li>
+        <li>
+          And then any other JSON serialized data needed for the given type of
+          message.
+        </li>
+      </ul>
+      <h2 id="concluding-remarks">Concluding remarks</h2>
+      <p>Things that didn’t work for us:</p>
+      <ul>
+        <li>
+          Establishing a
+          <a
+            href="https://developer.chrome.com/docs/extensions/develop/concepts/messaging#connect"
+            >long-lived connection</a
+          >. The <code>runtime.Port</code> closed unexpectedly when opening and
+          closing the side panel. We found it easier to just use
+          <code>chrome.runtime.sendMessage</code> and sort the messages.
+        </li>
+      </ul>
+    </main>
+    <footer id="footer">
+      <nav aria-label="Primary">
+        <a href="/src/index.html">Home</a>
+        <a href="/src/people.html">People</a>
+        <a href="/src/code.html">Code</a>
+        <a href="/src/sitemap.html#writing">Writing</a>
+        <a href="https://workshops.people-and-code.com">Workshops</a>
+      </nav>
+      <div class="copyright">
+        &copy; 2025 People and Code. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>

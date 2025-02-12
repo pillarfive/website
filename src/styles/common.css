@@ -181,7 +181,7 @@ cite {
 }
 
 pre {
-  white-space: pre-line;
+  white-space: pre-wrap;
   background-color: var(--box-colour);
   padding: calc(var(--d) * 2);
 }
